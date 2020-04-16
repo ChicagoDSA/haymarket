@@ -4,6 +4,6 @@ google_analytics:
 github:
   is_project_page: true
 show_downloads: true
+remote_theme: ChicagoDSA/Haymarket
 plugins:
   - jekyll-seo-tag
-theme: jekyll-theme-cayman
