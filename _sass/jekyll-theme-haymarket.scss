@@ -29,7 +29,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "ManifoldDSA", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: $body-text-color;
 }
@@ -64,62 +64,37 @@ a {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background-color: $dsa-red;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #000;
   }
 
   + .btn {
     margin-left: 1rem;
   }
-
-  @include large {
-    padding: 0.75rem 1rem;
-  }
-
-  @include medium {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
-  }
-
-  @include small {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem;
-
-    + .btn {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
-  }
 }
 
 .page-header {
   color: $header-heading-color;
-  text-align: center;
+  text-align: left;
   background-color: $header-bg-color;
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 4rem 0rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 2rem 0rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 1rem 0rem;
   }
 }
 
@@ -143,7 +118,7 @@ a {
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
-  opacity: 0.7;
+  opacity: 0.8;
 
   @include large {
     font-size: 1.25rem;
@@ -158,28 +133,27 @@ a {
   }
 }
 
+.project-area, .main-content {
+  @include large {
+    max-width: 56rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+  }
+}
+
 .main-content {
   word-wrap: break-word;
 
   :first-child {
     margin-top: 0;
-  }
-
-  @include large {
-    max-width: 64rem;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
-
-  @include medium {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  }
-
-  @include small {
-    padding: 2rem 1rem;
-    font-size: 1rem;
   }
   
   kbd {
@@ -359,18 +333,7 @@ a {
   padding-top: 2rem;
   margin-top: 2rem;
   border-top: solid 1px $hr-border-color;
-
-  @include large {
-    font-size: 1rem;
-  }
-
-  @include medium {
-    font-size: 1rem;
-  }
-
-  @include small {
-    font-size: 0.9rem;
-  }
+  font-size: 1rem;
 }
 
 .site-footer-owner {
@@ -379,5 +342,34 @@ a {
 }
 
 .site-footer-credits {
+  float: left;
+  max-width: 50%;
   color: $blockquote-text-color;
+
+  @include medium {
+    float: none;
+    max-width: 75%;
+    padding-bottom: 1.5rem;
+  }
+
+  @include small {
+    float: none;
+    max-width: 75%;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.site-footer-join {
+  float: right;
+  color: $blockquote-text-color;
+
+  @include medium {
+    display: block;
+    float: none;
+  }
+
+  @include small {
+    display: block;
+    float: none;
+  }
 }

@@ -1,7 +1,10 @@
 title: Haymarket theme
 description: A template to easily launch Chicago DSA websites.
+chapter:
+  name: Chicago DSA
+  location: Chicago
+  url: https://www.chicagodsa.org/
 google_analytics:
-show_downloads: true
 remote_theme: ChicagoDSA/Haymarket
 plugins:
   - jekyll-seo-tag
