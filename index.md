@@ -51,12 +51,12 @@ end
 
 ###### Header 6
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+| head1        | head two            | three |
+|:-------------|:--------------------|:------|
+| ok           | good social justice | nice  |
+| out of stock | good and plenty     | nice  |
+| ok           | good `oreos`        | hmm   |
+| ok           | good `zoute` drop   | yumm  |
 
 ### There's a horizontal rule below this.
 
@@ -94,24 +94,24 @@ end
 
 ### Small image
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Side profile of W.E.B. DuBois](assets/images/WEB-DuBois.png)
 
 ### Large image
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![Flyer preceding Haymarket affair](assets/images/Haymarket-flyer.png)
 
 
 ### Definition lists can be used with HTML syntax.
 
 <dl>
 <dt>Name</dt>
-<dd>Godzilla</dd>
+<dd>William</dd>
 <dt>Born</dt>
-<dd>1952</dd>
+<dd>1868</dd>
 <dt>Birthplace</dt>
-<dd>Japan</dd>
+<dd>Massachusetts</dd>
 <dt>Color</dt>
-<dd>Green</dd>
+<dd>Red</dd>
 </dl>
 
 ```

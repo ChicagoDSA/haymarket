@@ -6,6 +6,6 @@ description: This is just another page
 
 ## Welcome to another page
 
-_yay_
+_comrade_
 
 [back](./)
