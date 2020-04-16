@@ -6,3 +6,4 @@ github:
 show_downloads: true
 plugins:
   - jekyll-seo-tag
+theme: jekyll-theme-cayman
