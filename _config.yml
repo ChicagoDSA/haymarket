@@ -5,4 +5,3 @@ show_downloads: true
 remote_theme: ChicagoDSA/Haymarket
 plugins:
   - jekyll-seo-tag
-  - jekyll-remote-theme
