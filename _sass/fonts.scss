@@ -1,0 +1,19 @@
+@font-face {
+ 	font-family: "ManifoldDSA";
+ 	src: url("../fonts/ManifoldDSA/ManifoldDSA-Medium.eot"); 
+ 	src: url("../fonts/ManifoldDSA/ManifoldDSA-Medium.eot?#iefix") format("embedded-opentype"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-Medium.woff2") format("woff2"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-Medium.woff") format("woff"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-Medium.ttf") format("truetype");
+    font-weight: regular;
+}
+
+@font-face {
+ 	font-family: "ManifoldDSA";
+ 	src: url("../fonts/ManifoldDSA/ManifoldDSA-ExtraBold.eot"); 
+ 	src: url("../fonts/ManifoldDSA/ManifoldDSA-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-ExtraBold.woff2") format("woff2"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-ExtraBold.woff") format("woff"), 
+      	url("../fonts/ManifoldDSA/ManifoldDSA-ExtraBold.ttf") format("truetype");
+	font-weight: bold;
+}
