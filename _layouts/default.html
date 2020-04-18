@@ -1,46 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <!-- Made by Chicago DSA. Contribute at github.com/ChicagoDSA/Haymarket. -->
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon/favicon-16x16.png' | relative_url }}">
-    <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | relative_url }}">
-
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <div class="project-area">
-        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      </div>
-    </header>
-
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-
-      <footer class="site-footer">
-        {% if site.chapter.location and site.chapter.url %}
-          <div class="site-footer-credits">This site was made by the <a href="{{ site.chapter.url }}">{{ site.chapter.location }}</a> chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.</div>
-        {% endif %}
-        <div class="site-footer-join"><a href="https://www.dsausa.org/join" class="btn">Join DSA</a></div>
-        <div style="clear: both;"></div> 
-      </footer>
-    </main>
-  </body>
+	<html lang="{{ site.lang | default: "en-US" }}">
+		{%- include head.html -%}
+		<body>
+			{%- include header.html -%}
+			<main id="content" class="main-content" role="main">
+				{{ content }}
+				{%- include footer.html -%}
+			</main>
+		</body>
 </html>
