@@ -1,5 +1,12 @@
 <header class="page-header" role="banner">
 	<div class="project-area">
+		{% if site.chapter.name and site.chapter.url %}
+		<div class="project-chapter">
+			<h3><a href="{{ site.chapter.url }}">🌹 {{ site.chapter.name }}</a></h3>
+			<div style="clear: both;"></div> 
+		</div>
+		<div style="clear: both;"></div> 
+		{% endif %}
 		<h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
 		<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 	</div>

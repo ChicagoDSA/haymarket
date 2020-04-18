@@ -70,10 +70,26 @@ a {
   color: $header-heading-color;
   text-align: left;
   background-color: $header-bg-color;
+
+  a {
+    color: #fff;
+  }
+}
+
+.project-chapter {
+  padding-top: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #fff;
+
+  h3 {
+    float: left;
+    margin-top: .5rem;
+  }
 }
 
 .project-name {
-  margin: 0rem;
+  margin: 0;
 
   @include large {
     font-size: 3.25rem;
@@ -106,23 +122,33 @@ a {
   }
 }
 
+.project-area {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
 .project-area, .main-content {
   @include large {
     max-width: 56rem;
-    padding: 2rem 6rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
     margin: 0 auto;
   }
 
   @include medium {
-    padding: 2rem 4rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
 .main-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   word-wrap: break-word;
 
   :first-child {
