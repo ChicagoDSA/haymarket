@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Sample site
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

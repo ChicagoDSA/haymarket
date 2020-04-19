@@ -2,7 +2,7 @@
 	<div class="project-area">
 		{% if site.chapter.name and site.chapter.url %}
 		<div class="project-chapter">
-			<h3><a href="{{ site.chapter.url }}">🌹 {{ site.chapter.name }}</a></h3>
+			<h3><a href="{{ site.chapter.url }}">{{ site.chapter.name }}</a></h3>
 			<div style="clear: both;"></div> 
 		</div>
 		<div style="clear: both;"></div> 
@@ -11,5 +11,8 @@
 			<a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
 		</h1>
 		<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+		<div class="background-logo">
+			<img src="{{ '/assets/images/DSA-logo-white-on-transparent.svg' | relative_url }}" onerror="this.src='{{ '/assets/images/DSA-logo-white-on-transparent.png' | relative_url }}'; this.onerror=null;">
+		</div>
 	</div>
 </header>

@@ -76,6 +76,31 @@ a {
   }
 }
 
+.project-area, .main-content {
+  @include large {
+    max-width: 56rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    margin: 0 auto;
+  }
+
+  @include medium {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  @include small {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.project-area {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
 .project-chapter {
   padding-top: 1rem;
   padding-bottom: 0;
@@ -108,42 +133,46 @@ a {
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
-  opacity: 0.8;
 
   @include large {
+    max-width: 100%;
     font-size: 1.25rem;
   }
 
   @include medium {
+    max-width: 75%;
     font-size: 1.15rem;
   }
 
   @include small {
+    max-width: 75%;
     font-size: 1.15rem;
   }
 }
 
-.project-area {
-  padding-top: 0;
-  padding-bottom: 2rem;
-}
+.background-logo img {
+  position: absolute;
+  opacity: 30%;
 
-.project-area, .main-content {
   @include large {
-    max-width: 56rem;
-    padding-right: 6rem;
-    padding-left: 6rem;
-    margin: 0 auto;
+    top: -16rem;
+    right: -20rem;
+    width: 50rem;
+    height: 50rem;
   }
 
   @include medium {
-    padding-right: 4rem;
-    padding-left: 4rem;
+    top: -14rem;
+    right: -19rem;
+    width: 45rem;
+    height: 45rem;
   }
 
   @include small {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    top: -12rem;
+    right: -18rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 
