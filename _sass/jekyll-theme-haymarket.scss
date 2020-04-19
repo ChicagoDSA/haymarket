@@ -154,6 +154,7 @@ a {
 .background-logo img {
   position: absolute;
   opacity: 20%;
+  pointer-events: none;
 
   @include large {
     top: -16rem;
