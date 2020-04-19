@@ -67,6 +67,7 @@ a {
 }
 
 .page-header {
+  overflow: hidden;
   color: $header-heading-color;
   text-align: left;
   background-color: $header-bg-color;
@@ -152,7 +153,7 @@ a {
 
 .background-logo img {
   position: absolute;
-  opacity: 30%;
+  opacity: 20%;
 
   @include large {
     top: -16rem;
