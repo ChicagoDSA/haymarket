@@ -1,6 +1,6 @@
 # Haymarket
 
-[![GitHub version](https://badge.fury.io/gh/ChicagoDSA%2FHaymarket.svg)](https://badge.fury.io/gh/ChicagoDSA%2FHaymarket)
+[![GitHub version](https://badge.fury.io/gh/ChicagoDSA%2FHaymarket.svg)](https://github.com/ChicagoDSA/Haymarket/releases)
 
 A GitHub Pages theme to easily launch Chicago DSA websites.
 
