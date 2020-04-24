@@ -8,3 +8,4 @@ google_analytics:
 remote_theme: ChicagoDSA/Haymarket
 plugins:
   - jekyll-seo-tag
+  
