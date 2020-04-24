@@ -27,8 +27,24 @@ google_analytics:
 remote_theme: ChicagoDSA/Haymarket
 plugins:
   - jekyll-seo-tag
- ```
+```
  
- You need to set `title`, `description`, `name`, `location`, and `url`. 
+You need to set `title`, `description`, `name`, `location`, and `url`. 
  
- `google_analytics` takes your tracking ID. It's optional.
+`google_analytics` takes your tracking ID. It's optional.
+ 
+### Adding content
+ 
+1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
+2. Set your file's name as `index.md` and add the following content:
+
+```
+---
+layout: default
+---
+
+Hello, world!
+```
+3. Commit your change. You now have a new homepage!
+
+For more information on GitHub Pages content, check out the [documentation](https://help.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
