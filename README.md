@@ -3,7 +3,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 [Cayman](https://github.com/pages-themes/cayman) provided the source templates, and David Darnes wrote an immensely helpful [tutorial on setting up your own Jekyll themes](https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/). Color palettes and typography are from the [DSA National Design Committee](https://design.dsausa.org/).
 
-### Getting started
+## Getting started
 
 1. Create your new repository, `my-new-site`.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
@@ -12,7 +12,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 5. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
 6. Woohoo, your theme is working!
 
-### Configuration
+## Configuration
 
 In order to fully use your site, open `_config.yaml` again. Replace your content with this:
 
@@ -33,7 +33,7 @@ You need to set `title`, `description`, `name`, `location`, and `url`.
  
 `google_analytics` takes your tracking ID. It's optional.
  
-### Adding content
+## Adding content
  
 1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
 2. Set your file's name as `index.md` and add the following content:
