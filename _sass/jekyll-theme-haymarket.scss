@@ -105,7 +105,6 @@ a {
 .project-chapter {
   padding-top: 1rem;
   padding-bottom: 0;
-  margin-bottom: 2rem;
   border-bottom: 2px solid #fff;
 
   h3 {
@@ -116,7 +115,7 @@ a {
 }
 
 .project-name {
-  margin: 0;
+  margin: 2rem 0 0 0;
 
   @include large {
     font-size: 3.25rem;
