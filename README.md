@@ -9,6 +9,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
 3. Under **Source**, select `master`. Under **Theme Chooser**, select any theme.
 4. Go to the root directory of `my-new-site` and open `_config.yml`. Clear it out and add `remote-theme: ChicagoDSA/Haymarket`.
+    - Optional: You can specify a specific release to use by setting `remote-theme: ChicagoDSA/Haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
 5. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
 6. Woohoo, your theme is working!
 
