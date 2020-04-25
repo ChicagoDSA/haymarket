@@ -5,7 +5,6 @@ chapter:
   location: Chicago
   url: https://www.chicagodsa.org/
 google_analytics:
-remote_theme: ChicagoDSA/Haymarket
+remote_theme: ChicagoDSA/haymarket
 plugins:
   - jekyll-seo-tag
-  
