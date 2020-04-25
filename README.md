@@ -20,7 +20,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 In order to fully use your site, open `_config.yml` again. Replace your content with:
 
-```
+```yaml
 title: My New Site
 description: A description of my new site.
 chapter:
@@ -40,7 +40,7 @@ You need to set `title`, `description`, `name`, `location`, and `url`.
 1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
 2. Set your file's name as `index.md` and add the following content:
 
-```
+```markdown
 ---
 layout: default
 ---
@@ -57,7 +57,7 @@ For more information on GitHub Pages content, check out the [documentation](http
 2. Clone your repository and `cd` into the local directory.
 3. Run `bundle init` to create a Gemfile. Replace the Gemfile's contents with:
 
-```
+```ruby
 source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
