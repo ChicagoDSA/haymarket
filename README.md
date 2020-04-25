@@ -29,8 +29,6 @@ chapter:
   url: My chapter's website
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
-plugins:
-  - jekyll-seo-tag
 ```
  
 You need to set `title`, `description`, `name`, `location`, and `url`. 
