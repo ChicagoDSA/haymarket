@@ -121,7 +121,7 @@ a {
   padding-bottom: 4rem;
 
   @include print {
-    border-bottom: 2px solid $border-color;
+    padding-bottom: 2rem;
   }
 }
 
