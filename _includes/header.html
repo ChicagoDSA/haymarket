@@ -14,7 +14,9 @@
 		<h1 class="project-name">
 			<a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
 		</h1>
+		{% if site.description or site.github.project_tagline %}
 		<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+		{% endif %}
 		<div class="background-logo">
 			<img src="{{ '/assets/images/DSA-logo-white-on-transparent.svg' | relative_url }}" onerror="this.src='{{ '/assets/images/DSA-logo-white-on-transparent.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="Two hands holding each other. A rose is behind them.">
 		</div>

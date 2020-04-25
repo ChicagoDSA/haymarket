@@ -99,7 +99,7 @@ a {
 .project-area {
   position: relative;
   padding-top: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .project-chapter {
@@ -131,7 +131,7 @@ a {
 }
 
 .project-tagline {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   font-weight: normal;
 
   @include large {
