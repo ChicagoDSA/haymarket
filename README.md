@@ -1,4 +1,7 @@
 # Haymarket
+
+[![GitHub version](https://badge.fury.io/gh/ChicagoDSA%2FHaymarket.svg)](https://github.com/ChicagoDSA/Haymarket/releases/latest)
+
 A GitHub Pages theme to easily launch Chicago DSA websites.
 
 [Cayman](https://github.com/pages-themes/cayman) provided the source templates, and David Darnes wrote an immensely helpful [tutorial on setting up your own Jekyll themes](https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/). Color palettes and typography are from the [DSA National Design Committee](https://design.dsausa.org/).
@@ -15,7 +18,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 ## Configuration
 
-In order to fully use your site, open `_config.yaml` again. Replace your content with this:
+In order to fully use your site, open `_config.yml` again. Replace your content with this:
 
 ```
 title: My New Site
