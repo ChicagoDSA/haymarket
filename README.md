@@ -1,6 +1,6 @@
 # Haymarket
 
-[![GitHub version](https://badge.fury.io/gh/ChicagoDSA%2FHaymarket.svg)](https://github.com/ChicagoDSA/Haymarket/releases/latest)
+[![GitHub version](https://img.shields.io/github/v/release/ChicagoDSA/Haymarket)](https://github.com/ChicagoDSA/Haymarket/releases/latest)
 
 A GitHub Pages theme to easily launch Chicago DSA websites.
 
@@ -18,7 +18,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 ## Configuration
 
-In order to fully use your site, open `_config.yml` again. Replace your content with this:
+In order to fully use your site, open `_config.yml` again. Replace your content with:
 
 ```
 title: My New Site
@@ -52,3 +52,27 @@ Hello, world!
 3. Commit your change. You now have a new homepage!
 
 For more information on GitHub Pages content, check out the [documentation](https://help.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
+
+## Local development
+
+1. Open your terminal window and run `gem install github-pages`.
+2. Clone your repository and `cd` into the local directory.
+3. Run `bundle init` to create a Gemfile. Replace the Gemfile's contents with:
+
+```
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+```
+
+4. Run `bundle exec jekyll serve --watch` and open your local URL!
+
+#### Keep your repository tidy
+Building your site locally will add a lot of files. Don't commit them. 
+
+Create a `.gitignore` file in your root directory and add this:
+
+```
+_site
+Gemfile.lock
+```
