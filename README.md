@@ -18,7 +18,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 ## Configuration
 
-In order to fully use your site, open `_config.yaml` again. Replace your content with this:
+In order to fully use your site, open `_config.yml` again. Replace your content with this:
 
 ```
 title: My New Site
