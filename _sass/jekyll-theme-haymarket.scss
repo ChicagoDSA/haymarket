@@ -4,425 +4,466 @@
 @import "fonts";
 
 @mixin large {
-  @media screen and (min-width: #{$large-breakpoint}) {
-    @content;
-  }
+	@media screen and (min-width: #{$large-breakpoint}) {
+		@content;
+	}
 }
 
 @mixin medium {
-  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
-    @content;
-  }
+	@media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+		@content;
+	}
 }
 
 @mixin small {
-  @media screen and (max-width: #{$medium-breakpoint}) {
-    @content;
-  }
+	@media screen and (max-width: #{$medium-breakpoint}) {
+		@content;
+	}
 }
 
 @mixin print {
-  @media print {
-    @content;
-  }
+	@media print {
+		@content;
+	}
 }
 
 @page {
-  margin: 2cm;
+	margin: 2cm;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "ManifoldDSA", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  color: $body-text-color;
+	padding: 0;
+	margin: 0;
+	font-family: "ManifoldDSA", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	color: $body-text-color;
 }
 
 a {
-  color: $body-link-color;
-  text-decoration: none;
+	color: $body-link-color;
+	text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+	&:hover {
+		text-decoration: underline;
+	}
 
-  &:focus {
-    outline: 2px dashed $body-link-color;
-    outline-offset: 2px;
-  }
+	&:focus {
+		outline: 2px dashed $body-link-color;
+		outline-offset: 2px;
+	}
 }
 
 .btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 1rem;
-  color: #fff;
-  background-color: $dsa-purple;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.75rem 1rem;
+	color: #fff;
+	background-color: $dsa-purple;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+	transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-  &:hover {
-    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
-  }
+	&:hover {
+		box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+	}
 
-  + .btn {
-    margin-left: 1rem;
-  }
+	+ .btn {
+		margin-left: 1rem;
+	}
 }
 
 .page-header {
-  overflow: hidden;
-  color: $header-heading-color;
-  text-align: left;
-  background-color: $header-bg-color;
+	overflow: hidden;
+	color: $header-heading-color;
+	text-align: left;
+	background-color: $header-bg-color;
 
-  a {
-    color: #fff;
-  }
+	a {
+		color: #fff;
+	}
 
-  @include print {
-    color: $section-headings-color;
-    background: none;
+	@include print {
+		color: $section-headings-color;
+		background: none;
 
-    a {
-      color: $section-headings-color;
-    }
-  }
+		a {
+			color: $section-headings-color;
+		}
+	}
 }
 
 .project-area, .main-content {
-  @include large {
-    max-width: 56rem;
-    padding-right: 6rem;
-    padding-left: 6rem;
-    margin: 0 auto;
-  }
+	@include large {
+		max-width: 56rem;
+		padding-right: 6rem;
+		padding-left: 6rem;
+		margin: 0 auto;
+	}
 
-  @include medium {
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
+	@include medium {
+		padding-right: 4rem;
+		padding-left: 4rem;
+	}
 
-  @include small {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
+	@include small {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
 }
 
 .project-area {
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 4rem;
+	position: relative;
+	padding-top: 0;
+	padding-bottom: 4rem;
 
-  @include print {
-    padding-bottom: 2rem;
-  }
+	@include print {
+		padding-bottom: 2rem;
+	}
 }
 
 .project-chapter {
-  padding-top: 1rem;
-  padding-bottom: 0;
-  border-bottom: 2px solid #fff;
+	padding-top: 1rem;
+	padding-bottom: 0;
+	border-bottom: 2px solid #fff;
 
-  h3 {
-    float: left;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
+	h3 {
+		float: left;
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
 
-  @include print {
-    border-bottom: 2px solid $section-headings-color;
-  }
+	@include print {
+		border-bottom: 2px solid $section-headings-color;
+	}
 }
 
 .project-name {
-  margin: 2rem 0 0 0;
+	margin: 2rem 0 0 0;
 
-  @include large {
-    font-size: 3.25rem;
-  }
+	@include large {
+		font-size: 3.25rem;
+	}
 
-  @include medium {
-    font-size: 2.25rem;
-  }
+	@include medium {
+		font-size: 2.25rem;
+	}
 
-  @include small {
-    font-size: 2.25rem;
-  }
+	@include small {
+		font-size: 2.25rem;
+	}
 }
 
 .project-tagline {
-  margin-bottom: 0;
-  font-weight: normal;
+	margin-bottom: 0;
+	font-weight: normal;
 
-  @include large {
-    max-width: 100%;
-    font-size: 1.25rem;
-  }
+	@include large {
+		max-width: 100%;
+		font-size: 1.25rem;
+	}
 
-  @include medium {
-    max-width: 75%;
-    font-size: 1.15rem;
-  }
+	@include medium {
+		max-width: 75%;
+		font-size: 1.15rem;
+	}
 
-  @include small {
-    max-width: 75%;
-    font-size: 1.15rem;
-  }
+	@include small {
+		max-width: 75%;
+		font-size: 1.15rem;
+	}
 
-  @include print {
-    font-size: 1.15rem;
-  }
+	@include print {
+		font-size: 1.15rem;
+	}
 }
 
 .background-logo img {
-  position: absolute;
-  opacity: 20%;
-  pointer-events: none;
+	position: absolute;
+	opacity: 20%;
+	pointer-events: none;
 
-  @include large {
-    top: -16rem;
-    right: -20rem;
-    width: 50rem;
-    height: 50rem;
-  }
+	@include large {
+		top: -16rem;
+		right: -20rem;
+		width: 50rem;
+		height: 50rem;
+	}
 
-  @include medium {
-    top: -14rem;
-    right: -19rem;
-    width: 45rem;
-    height: 45rem;
-  }
+	@include medium {
+		top: -14rem;
+		right: -19rem;
+		width: 45rem;
+		height: 45rem;
+	}
 
-  @include small {
-    top: -12rem;
-    right: -18rem;
-    width: 40rem;
-    height: 40rem;
-  }
+	@include small {
+		top: -12rem;
+		right: -18rem;
+		width: 40rem;
+		height: 40rem;
+	}
 
-  @include print {
-    display: none;
-  }
+	@include print {
+		display: none;
+	}
 }
 
 .main-content {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  word-wrap: break-word;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	word-wrap: break-word;
 
-  :first-child {
-    margin-top: 0;
-  }
+	:first-child {
+		margin-top: 0;
+	}
 
-  img {
-    max-width: 100%;
-  }
+	img {
+		max-width: 100%;
+	}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    color: $section-headings-color;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-weight: bold;
+		color: $section-headings-color;
+	}
 
-  h5,
-  h6 {
-    text-transform: uppercase;
-    letter-spacing: .125em;
-  }
+	h5,
+	h6 {
+		text-transform: uppercase;
+		letter-spacing: .125em;
+	}
 
-  p {
-    margin-bottom: 1em;
-  }
+	p {
+		margin-bottom: 1em;
+	}
 
-  code {
-    padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.9rem;
-    color: $code-text-color;
-    background-color: $code-bg-color;
-    border-radius: 0.3rem;
-  }
+	code {
+		padding: 2px 4px;
+		font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		font-size: 0.9rem;
+		color: $code-text-color;
+		background-color: $code-bg-color;
+		border-radius: 0.3rem;
+	}
 
-  pre {
-    padding: 0.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: $code-text-color;
-    word-wrap: normal;
-    background-color: $code-bg-color;
-    border: solid 1px $code-border-color;
-    border-radius: 0.3rem;
+	pre {
+		padding: 0.8rem;
+		margin-top: 0;
+		margin-bottom: 1rem;
+		font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		color: $code-text-color;
+		word-wrap: normal;
+		background-color: $code-bg-color;
+		border: solid 1px $code-border-color;
+		border-radius: 0.3rem;
 
-    > code {
-      padding: 0;
-      margin: 0;
-      font-size: 0.9rem;
-      color: $code-text-color;
-      word-break: normal;
-      white-space: pre;
-      background: transparent;
-      border: 0;
-    }
-  }
+		> code {
+			padding: 0;
+			margin: 0;
+			font-size: 0.9rem;
+			color: $code-text-color;
+			word-break: normal;
+			white-space: pre;
+			background: transparent;
+			border: 0;
+		}
+	}
 
-  .highlight {
-    margin-bottom: 1rem;
+	.tile-list {
+		margin-right: -1rem;
+	}
 
-    pre {
-      margin-bottom: 0;
-      word-break: normal;
-    }
-  }
+	.tile-container {
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 15rem;
+		margin-bottom: 1rem;
+	}
 
-  .highlight pre,
-  pre {
-    padding: 0.8rem;
-    overflow: auto;
-    font-size: 0.9rem;
-    line-height: 1.45;
-    border-radius: 0.3rem;
-    -webkit-overflow-scrolling: touch;
-  }
+	.tile {
+		position: absolute;
+		top: 0;
+		right: 1rem;
+		bottom: 0;
+		left: 0;
+		background-color: #000;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+		transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-  pre code,
-  pre tt {
-    display: inline;
-    max-width: initial;
-    padding: 0;
-    margin: 0;
-    overflow: initial;
-    line-height: inherit;
-    word-wrap: normal;
-    background-color: transparent;
-    border: 0;
+		&:hover {
+			box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+		}
+	}
 
-    &:before,
-    &:after {
-      content: normal;
-    }
-  }
+	.tile-title {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 0.75rem 1rem;
+		background-color: $dsa-purple;
+	}
 
-  ul,
-  ol {
-    margin-top: 0;
-  }
+	.tile-title h4 {
+		margin: 0;
+		color: $header-heading-color;
+	}
 
-  blockquote {
-    padding: 0 1rem;
-    margin-left: 0;
-    color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
+	.highlight {
+		margin-bottom: 1rem;
 
-    > :first-child {
-      margin-top: 0;
-    }
+		pre {
+			margin-bottom: 0;
+			word-break: normal;
+		}
+	}
 
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
+	.highlight pre,
+	pre {
+		padding: 0.8rem;
+		overflow: auto;
+		font-size: 0.9rem;
+		line-height: 1.45;
+		border-radius: 0.3rem;
+		-webkit-overflow-scrolling: touch;
+	}
 
-  table {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
-    -webkit-overflow-scrolling: touch;
+	pre code,
+	pre tt {
+		display: inline;
+		max-width: initial;
+		padding: 0;
+		margin: 0;
+		overflow: initial;
+		line-height: inherit;
+		word-wrap: normal;
+		background-color: transparent;
+		border: 0;
 
-    th {
-      font-weight: bold;
-    }
+		&:before,
+		&:after {
+			content: normal;
+		}
+	}
 
-    th,
-    td {
-      padding: 0.5rem 1rem;
-      border: 1px solid $border-color;
-    }
-  }
+	ul,
+	ol {
+		margin-top: 0;
+	}
 
-  dl {
-    padding: 0;
+	blockquote {
+		padding: 0 1rem;
+		margin-left: 0;
+		color: $blockquote-text-color;
+		border-left: 0.3rem solid $border-color;
 
-    dt {
-      padding: 0;
-      margin-top: 1rem;
-      font-size: 1rem;
-      font-weight: bold;
-    }
+		> :first-child {
+			margin-top: 0;
+		}
 
-    dd {
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-  }
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
 
-  hr {
-    border-width: 2px;
-    border-style: solid;
-    border-color: $border-color;
-  }
+	table {
+		display: block;
+		width: 100%;
+		overflow: auto;
+		word-break: normal;
+		word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+		-webkit-overflow-scrolling: touch;
+
+		th {
+			font-weight: bold;
+		}
+
+		th,
+		td {
+			padding: 0.5rem 1rem;
+			border: 1px solid $border-color;
+		}
+	}
+
+	dl {
+		padding: 0;
+
+		dt {
+			padding: 0;
+			margin-top: 1rem;
+			font-size: 1rem;
+			font-weight: bold;
+		}
+
+		dd {
+			padding: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	hr {
+		border-width: 2px;
+		border-style: solid;
+		border-color: $border-color;
+	}
 }
 
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px $border-color;
-  font-size: 1rem;
+	padding-top: 2rem;
+	margin-top: 2rem;
+	border-top: solid 1px $border-color;
+	font-size: 1rem;
 }
 
 .site-footer-owner {
-  display: block;
-  font-weight: bold;
+	display: block;
+	font-weight: bold;
 }
 
 .site-footer-credits {
-  float: left;
-  max-width: 50%;
-  color: $blockquote-text-color;
+	float: left;
+	max-width: 50%;
+	color: $blockquote-text-color;
 
-  @include medium {
-    float: none;
-    max-width: 75%;
-    padding-bottom: 1.5rem;
-  }
+	@include medium {
+		float: none;
+		max-width: 75%;
+		padding-bottom: 1.5rem;
+	}
 
-  @include small {
-    float: none;
-    max-width: 100%;
-    padding-bottom: 1.5rem;
-  }
+	@include small {
+		float: none;
+		max-width: 100%;
+		padding-bottom: 1.5rem;
+	}
 }
 
 .site-footer-join {
-  float: right;
-  color: $blockquote-text-color;
+	float: right;
+	color: $blockquote-text-color;
 
-  @include medium {
-    display: block;
-    float: none;
-  }
+	@include medium {
+		display: block;
+		float: none;
+	}
 
-  @include small {
-    display: block;
-    float: none;
-  }
+	@include small {
+		display: block;
+		float: none;
+	}
 
-  @include print {
-    display: none;
-  }
+	@include print {
+		display: none;
+	}
 }

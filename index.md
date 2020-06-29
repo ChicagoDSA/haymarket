@@ -119,6 +119,13 @@ end
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
-```
-The final element.
-```
+### Tiles
+
+{% capture include_content %}
+{% include tile.html title="Defund CPD" %}
+{% include tile.html title="Lift the Ban" %}
+{% include tile.html title="Democratize ComEd" %}
+{% include tile.html title="Free Heartland" %}
+{% endcapture %}
+
+{% include tile-list.html content=include_content %}
