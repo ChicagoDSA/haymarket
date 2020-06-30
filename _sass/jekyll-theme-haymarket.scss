@@ -183,10 +183,12 @@ a {
 
 .background-logo img {
 	position: absolute;
+	opacity: 20%;
 	
+	/* IE fixes */
 	zoom: 1;
 	filter: alpha(opacity=20);
-	opacity: 0.2;
+	
 	pointer-events: none;
 
 	@include large {
@@ -305,7 +307,6 @@ a {
 		transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
 		&:hover {
-			text-decoration: underline;
 			box-shadow: 0 5px 10px rgba(0,0,0,0.25);
 		}
 	}
