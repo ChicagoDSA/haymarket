@@ -151,6 +151,7 @@ a {
 			margin-left: .5rem;
 			text-align: center;
 			color: $dsa-red;
+			background-color: $header-heading-color;
 			border-radius: .5rem;
 
 			&:hover {
@@ -163,16 +164,8 @@ a {
 			background-color: #1da1f2;
 		}
 
-		#instagram {
-			  /* IE fix */
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fdf497, endColorstr=#285aeb, GradientType=1);
-		}
-
 		#instagram:hover {
 			  background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-
-			  /* IE fix */
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fdf497, endColorstr=#285aeb, GradientType=1);
 		}
 
 		#facebook:hover {
