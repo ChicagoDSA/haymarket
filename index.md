@@ -129,3 +129,9 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 {% endcapture %}
 
 {% include tile-list.html content=include_content %}
+
+### Buttons
+
+{% include button.html text="I'm a new member" link="another-page" %}
+{% include button.html text="I want to contact the EC" link="another-page" %}
+{% include button.html text="I'm at a protest and I need help" link="another-page" %}
