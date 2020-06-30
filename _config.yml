@@ -4,6 +4,9 @@ chapter:
   name: Chicago DSA
   location: Chicago
   url: https://www.chicagodsa.org/
+  facebook: ChicagoDemSocialists
+  instagram: chicagodsa
+  twitter: ChicagoCityDSA
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
 plugins:

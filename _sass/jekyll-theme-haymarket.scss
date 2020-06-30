@@ -58,21 +58,9 @@ a {
 	}
 }
 
-.btn-container,
-.btn {
+.btn,
+.btn-container {
 	display: inline-block;
-}
-
-.btn {
-	margin-right: 1rem;
-	margin-bottom: 1rem;
-	background-color: $dsa-red;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
-	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
-
-	&:hover {
-		box-shadow: 0 5px 10px rgba(0, 0, 0, .25);
-	}
 }
 
 .btn,
@@ -87,8 +75,14 @@ a {
 }
 
 .btn,
-.tile-title {
+.tile .title {
 	padding: .75rem 1rem;
+}
+
+.btn {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	background-color: $dsa-red;
 }
 
 .page-header {
@@ -138,97 +132,128 @@ a {
 	@include print {
 		padding-bottom: 2rem;
 	}
-}
 
-.project-chapter {
-	padding-top: 1rem;
-	padding-bottom: 0;
-	border-bottom: 2px solid #fff;
+	.chapter {
+		position: relative;
+		padding-top: 1rem;
+		padding-bottom: 0;
+		border-bottom: 2px solid #fff;
 
-	h3 {
-		float: left;
-		margin-top: 0;
-		margin-bottom: 1rem;
+		h3 {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
+
+		.social {
+			float: right;
+			width: 2rem;
+			height: 2rem;
+			margin-left: .5rem;
+			text-align: center;
+			color: $dsa-red;
+			background-color: $header-heading-color;
+			border-radius: .5rem;
+
+			&:hover {
+				color: $header-heading-color;
+				box-shadow: 0 0 0 2px $header-heading-color;
+			}
+		}
+
+		#twitter:hover {
+			background-color: #1da1f2;
+		}
+
+		#instagram:hover {
+			  background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+
+			  /* IE fix */
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdf497", endColorstr="#285aeb", GradientType=1);
+		}
+
+		#facebook:hover {
+			background-color: #4267b2;
+		}
+
+		@include print {
+			border-bottom: 2px solid $section-headings-color;
+		}
 	}
 
-	@include print {
-		border-bottom: 2px solid $section-headings-color;
-	}
-}
+	.name {
+		margin: 2rem 0 0 0;
 
-.project-name {
-	margin: 2rem 0 0 0;
+		@include large {
+			font-size: 3.25rem;
+		}
 
-	@include large {
-		font-size: 3.25rem;
-	}
+		@include medium {
+			font-size: 2.25rem;
+		}
 
-	@include medium {
-		font-size: 2.25rem;
-	}
-
-	@include small {
-		font-size: 2.25rem;
-	}
-}
-
-.project-tagline {
-	margin-bottom: 0;
-	font-weight: normal;
-
-	@include large {
-		max-width: 100%;
-		font-size: 1.25rem;
+		@include small {
+			font-size: 2.25rem;
+		}
 	}
 
-	@include medium {
-		max-width: 75%;
-		font-size: 1.15rem;
+	.tagline {
+		margin-bottom: 0;
+		font-weight: normal;
+
+		@include large {
+			max-width: 100%;
+			font-size: 1.25rem;
+		}
+
+		@include medium {
+			max-width: 75%;
+			font-size: 1.15rem;
+		}
+
+		@include small {
+			max-width: 75%;
+			font-size: 1.15rem;
+		}
+
+		@include print {
+			font-size: 1.15rem;
+		}
 	}
 
-	@include small {
-		max-width: 75%;
-		font-size: 1.15rem;
-	}
+	.background-logo img {
+		position: absolute;
+		opacity: .2;
+		
+		/* IE fixes */
+		zoom: 1;
+		filter: alpha(opacity=20);
 
-	@include print {
-		font-size: 1.15rem;
-	}
-}
+		pointer-events: none;
 
-.background-logo img {
-	position: absolute;
-	opacity: .2;
-	
-	/* IE fixes */
-	zoom: 1;
-	filter: alpha(opacity=20);
+		@include large {
+			top: -16rem;
+			right: -20rem;
+			width: 50rem;
+			height: 50rem;
+		}
 
-	pointer-events: none;
+		@include medium {
+			top: -14rem;
+			right: -19rem;
+			width: 45rem;
+			height: 45rem;
+		}
 
-	@include large {
-		top: -16rem;
-		right: -20rem;
-		width: 50rem;
-		height: 50rem;
-	}
+		@include small {
+			top: -12rem;
+			right: -18rem;
+			width: 40rem;
+			height: 40rem;
+		}
 
-	@include medium {
-		top: -14rem;
-		right: -19rem;
-		width: 45rem;
-		height: 45rem;
-	}
-
-	@include small {
-		top: -12rem;
-		right: -18rem;
-		width: 40rem;
-		height: 40rem;
-	}
-
-	@include print {
-		display: none;
+		@include print {
+			display: none;
+		}
 	}
 }
 
@@ -322,76 +347,77 @@ a {
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
-	}
 
-	.tile img,
-	.tile-background {
-		min-width: 100%;
-		min-height: 100%;
-	}
+		.background,
+		.title-only,
+		.title {
+			background-color: $dsa-purple;
+		}
 
-	.tile-background {
-		background-color: $dsa-purple;
-		opacity: .5;
+		.background,
+		.img {
+			min-width: 100%;
+			min-height: 100%;
+		}
 
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=50);
-	}
+		.background {
+			opacity: .5;
 
-	.tile-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #000;
-		opacity: 0;
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=50);
+		}
 
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=0);
-	}
+		.title-only {
+			width: 100%;
+			height: 100%;
+		}
 
-	.tile-overlay:hover {
-		opacity: .2;
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity: 0;
 
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=20);
-	}
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=0);
+		}
 
-	.tile-title {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
+		.title {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
 
-	.tile-title i {
-		float: right;
-		line-height: 1.5;
-		opacity: .5;
+			i {
+				float: right;
+				line-height: 1.5;
+				opacity: .5;
 
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=50);
-	}
+				/* IE fixes */
+				zoom: 1;
+				filter: alpha(opacity=50);
+			}
+		}
 
-	.tile-title h4,
-	.tile .title-only h4 {
-		margin: 0;
-		color: $header-heading-color;
-	}
+		h4 {
+			margin: 0;
+			color: $header-heading-color;
+		}
 
-	.tile-title,
-	.tile .title-only {
-		background-color: $dsa-purple;
-	}
+		&:hover {
+			.overlay {
+				opacity: .2;
 
-	.tile .title-only {
-		width: 100%;
-		height: 100%;
+				/* IE fixes */
+				zoom: 1;
+				filter: alpha(opacity=20);
+			}
+		}
 	}
 
 	.highlight {
@@ -527,6 +553,11 @@ a {
 	float: right;
 	color: $blockquote-text-color;
 
+	.btn {
+		margin-right: 0;
+		background-color: $dsa-purple;
+	}
+
 	@include medium {
 		display: block;
 		float: none;
@@ -540,9 +571,4 @@ a {
 	@include print {
 		display: none;
 	}
-}
-
-.site-footer-join .btn {
-	margin-right: 0;
-	background-color: $dsa-purple;
 }
