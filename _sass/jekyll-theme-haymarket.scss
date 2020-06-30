@@ -183,7 +183,10 @@ a {
 
 .background-logo img {
 	position: absolute;
-	opacity: 20%;
+	
+	zoom: 1;
+	filter: alpha(opacity=20);
+	opacity: 0.2;
 	pointer-events: none;
 
 	@include large {
