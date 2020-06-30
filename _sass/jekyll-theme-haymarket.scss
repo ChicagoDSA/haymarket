@@ -58,11 +58,16 @@ a {
 	}
 }
 
+.btn-container,
 .btn {
 	display: inline-block;
+}
+
+.btn {
 	margin-right: 1rem;
 	margin-bottom: 1rem;
 	padding: 0.75rem 1rem;
+	color: #fff;
 	background-color: $dsa-red;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 	transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -70,10 +75,6 @@ a {
 	&:hover {
 		box-shadow: 0 5px 10px rgba(0,0,0,0.25);
 	}
-}
-
-.btn a {
-	color: #fff;
 }
 
 .page-header {
