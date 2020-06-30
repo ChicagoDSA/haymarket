@@ -345,6 +345,12 @@ a {
 		}
 	}
 
+	.tile,
+	.title-only,
+	.title {
+		background-color: $dsa-purple;
+	}
+
 	.tile {
 		position: absolute;
 		top: 0;
@@ -353,29 +359,9 @@ a {
 		left: 0;
 		overflow: hidden;
 
-		.background,
-		.title-only,
-		.title {
-			background-color: $dsa-purple;
-		}
-
-		.background,
 		.img {
 			min-width: 100%;
 			min-height: 100%;
-		}
-
-		.background {
-			opacity: .5;
-
-			/* IE fixes */
-			zoom: 1;
-			filter: alpha(opacity=50);
-		}
-
-		.title-only {
-			width: 100%;
-			height: 100%;
 		}
 
 		.overlay {
