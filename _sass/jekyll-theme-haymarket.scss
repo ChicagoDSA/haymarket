@@ -148,8 +148,12 @@ a {
 			margin-bottom: 1rem;
 		}
 
-		.social {
+		#social-container {
 			float: right;
+		}
+
+		.social {
+			float: left;
 			width: 2rem;
 			height: 2rem;
 			margin-left: .5rem;
