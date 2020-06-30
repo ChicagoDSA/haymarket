@@ -1,24 +1,42 @@
 <header class="page-header" role="banner">
 	<div class="project-area">
-		<div class="project-chapter">
-			<h3>
-				{% if site.chapter.name and site.chapter.url %}
-				<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-				{% else %}
-				<a href="https://www.dsausa.org/">Democratic Socialists of America</a>
-				{% endif %}
-			</h3>
-			<div style="clear: both;"></div> 
-		</div>
-		<div style="clear: both;"></div> 
-		<h1 class="project-name">
-			<a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-		</h1>
-		{% if site.description or site.github.project_tagline %}
-		<h2 class="project-tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
-		{% endif %}
 		<div class="background-logo">
 			<img src="{{ '/assets/images/DSA-logo-white-on-transparent.svg' | relative_url }}" onerror="this.src='{{ '/assets/images/DSA-logo-white-on-transparent.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="Two hands holding each other. A rose is behind them.">
 		</div>
+		<div class="chapter">
+			<h3>
+				{% if site.chapter.name and site.chapter.url %}
+					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+				{% else %}
+					<a href="https://www.dsausa.org/">Democratic Socialists of America</a>
+				{% endif %}
+
+				{% if site.chapter.twitter %}
+					<a id="twitter" class="social" href="https://twitter.com/{{ site.chapter.twitter }}">
+						<i class="fab fa-twitter"></i>
+					</a>
+				{% endif %}
+
+				{% if site.chapter.instagram %}
+					<a id="instagram" class="social" href="https://www.instagram.com/{{ site.chapter.instagram }}">
+						<i class="fab fa-instagram"></i>
+					</a>
+				{% endif %}
+
+				{% if site.chapter.facebook %}
+					<a id="facebook" class="social" href="https://www.facebook.com/{{ site.chapter.facebook }}">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				{% endif %}
+
+				<div style="clear: both;"></div> 
+			</h3>
+		</div>
+		<h1 class="name">
+			<a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+		</h1>
+		{% if site.description or site.github.project_tagline %}
+			<h2 class="tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+		{% endif %}
 	</div>
 </header>

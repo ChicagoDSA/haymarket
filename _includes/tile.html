@@ -2,17 +2,17 @@
 	<a class="tile" href="{{ include.link }}">
 		{% if include.image %}
 			<img src="{{ include.image }}" />
-			<div class="tile-overlay"></div>
-			<div class="tile-title">
+			<div class="overlay"></div>
+			<div class="title">
 				<h4>{{ include.title }}
 					<i class="fas fa-arrow-right"></i>
 					<div style="clear:both"></div>
 				</h4>
 			</div>
 		{% else %}
-			<div class="tile-background"></div>
-			<div class="tile-overlay"></div>
-			<div class="tile-title">
+			<div class="background"></div>
+			<div class="overlay"></div>
+			<div class="title">
 				<h4>{{ include.title }}
 					<i class="fas fa-arrow-right"></i>
 					<div style="clear:both"></div>
