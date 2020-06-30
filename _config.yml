@@ -11,3 +11,7 @@ google_analytics:
 remote_theme: ChicagoDSA/haymarket
 plugins:
   - jekyll-seo-tag
+
+banner:
+  text: "**Current uprising:** view the Executive Committee's statement"
+  link: another-page
