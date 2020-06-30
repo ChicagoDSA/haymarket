@@ -1,4 +1,19 @@
 <header class="page-header" role="banner">
+	{% if site.banner.link %}
+		<a id="banner-link" href="{{ site.banner.link }}">
+			<div id="banner">
+				<p id="banner-content">{{ site.banner.text | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+				<div style="clear:both"></div>
+			</div>
+		</a>
+	{% elsif site.banner.text %}
+		<div id="banner">
+			<p id="banner-content">
+				{{ site.banner.text | markdownify | remove: '<p>' | remove: '</p>' }}
+			</p>
+			<div style="clear:both"></div>
+		</div>
+	{% endif %}
 	<div class="project-area">
 		<div class="background-logo">
 			<img src="{{ '/assets/images/DSA-logo-white-on-transparent.svg' | relative_url }}" onerror="this.src='{{ '/assets/images/DSA-logo-white-on-transparent.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="Two hands holding each other. A rose is behind them.">
