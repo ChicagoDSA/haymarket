@@ -122,10 +122,10 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ### Tiles
 
 {% capture include_content %}
-{% include tile.html title="Defund CPD" link="another-page" %}
-{% include tile.html title="Lift the Ban" link="another-page" %}
-{% include tile.html title="Democratize ComEd" link="another-page" %}
-{% include tile.html title="Free Heartland" link="another-page" %}
+{% include tile.html title="Defund CPD" link="another-page" image="assets/images/police.png" %}
+{% include tile.html title="Lift the Ban" link="another-page" image="assets/images/protest.png" %}
+{% include tile.html title="Democratize ComEd" link="another-page" image="assets/images/truck.png" %}
+{% include tile.html title="Free Heartland" link="another-page" image="assets/images/migrants.png" %}
 {% endcapture %}
 
 {% include tile-list.html content=include_content %}
