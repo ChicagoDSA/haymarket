@@ -187,8 +187,8 @@ a {
 	/* IE fixes */
 	zoom: 1;
 	filter: alpha(opacity=20);
-	
-	opacity: 20%;
+
+	opacity: 0.2;
 	pointer-events: none;
 
 	@include large {
@@ -323,7 +323,7 @@ a {
 		zoom: 1;
 		filter: alpha(opacity=0);
 
-		opacity: 0%;
+		opacity: 0;
 	}
 
 	.tile-overlay:hover {
@@ -331,7 +331,7 @@ a {
 		zoom: 1;
 		filter: alpha(opacity=20);
 
-		opacity: 20%;
+		opacity: 0.2;
 	}
 
 	.tile img {
