@@ -65,7 +65,7 @@ a {
 
 .btn,
 .tile {
-	color: #fff;
+	color: $header-heading-color;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
 
@@ -96,7 +96,15 @@ a {
 	background-color: $header-bg-color;
 
 	a {
-		color: #fff;
+		color: $header-heading-color;
+	}
+
+	#banner-link {
+		color: $body-text-color;
+
+		&:hover p {
+			text-decoration: underline;
+		}
 	}
 
 	@include print {
@@ -109,7 +117,27 @@ a {
 	}
 }
 
-.project-area, .main-content {
+#banner {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding: 1rem 0;
+	color: $body-text-color;
+	background-color: $dsa-yellow;
+}
+
+#banner-content {
+	margin: 0;
+
+	i {
+		margin-left: .5rem;
+		line-height: 1.5;
+	}
+}
+
+#banner-content,
+.project-area,
+.main-content {
 	@include large {
 		max-width: 56rem;
 		padding-right: 6rem;
@@ -141,7 +169,7 @@ a {
 		position: relative;
 		padding-top: 1rem;
 		padding-bottom: 0;
-		border-bottom: 2px solid #fff;
+		border-bottom: 2px solid $header-heading-color;
 
 		h3 {
 			margin-top: 0;
@@ -150,12 +178,14 @@ a {
 
 		#social-container {
 			float: right;
+			margin-bottom: -1rem;
 		}
 
 		.social {
 			float: left;
 			width: 2rem;
 			height: 2rem;
+			margin-bottom: .5rem;
 			margin-left: .5rem;
 			text-align: center;
 			color: $dsa-red;
