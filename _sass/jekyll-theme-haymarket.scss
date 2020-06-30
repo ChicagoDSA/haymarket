@@ -183,12 +183,12 @@ a {
 
 .background-logo img {
 	position: absolute;
+	opacity: 0.2;
 	
 	/* IE fixes */
 	zoom: 1;
 	filter: alpha(opacity=20);
 
-	opacity: 0.2;
 	pointer-events: none;
 
 	@include large {
@@ -294,6 +294,10 @@ a {
 		width: 50%;
 		height: 15rem;
 		margin-bottom: 1rem;
+
+		@include small {
+			width: 100%;
+		}
 	}
 
 	.tile {
@@ -318,20 +322,19 @@ a {
 		width: 100%;
 		height: 100%;
 		background-color: #000;
+		opacity: 0;
 
 		/* IE fixes */
 		zoom: 1;
 		filter: alpha(opacity=0);
-
-		opacity: 0;
 	}
 
 	.tile-overlay:hover {
+		opacity: 0.2;
+
 		/* IE fixes */
 		zoom: 1;
 		filter: alpha(opacity=20);
-
-		opacity: 0.2;
 	}
 
 	.tile img {
