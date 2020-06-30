@@ -76,11 +76,6 @@ a {
 			text-decoration: underline;
 		}
 	}
-
-	&:focus {
-		outline: 2px dashed $body-link-color;
-		outline-offset: 2px;
-	}
 }
 
 .btn,
