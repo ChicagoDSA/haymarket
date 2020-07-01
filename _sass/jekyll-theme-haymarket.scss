@@ -382,7 +382,7 @@ a {
 
 	.empty-tile-container {
 		.tile {
-		background-color: $dsa-purple;
+			background-color: $dsa-purple;
 		}
 
 		@include small {
@@ -417,9 +417,6 @@ a {
 			left: 0;
 			width: 100%;
 			height: 100%;
-		}
-
-		.overlay {
 			background-color: #000;
 			opacity: 0;
 
