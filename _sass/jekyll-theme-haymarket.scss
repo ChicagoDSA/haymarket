@@ -89,6 +89,21 @@ a {
 	background-color: $dsa-red;
 }
 
+.background-logo img {
+	position: absolute;
+	opacity: .2;
+	
+	/* IE fixes */
+	zoom: 1;
+	filter: alpha(opacity=20);
+
+	pointer-events: none;
+
+	@include print {
+		display: none;
+	}
+}
+
 .page-header {
 	overflow: hidden;
 	color: $header-heading-color;
@@ -117,7 +132,7 @@ a {
 
 #banner {
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 	width: 100%;
 	padding: 1rem 0;
 	color: $body-text-color;
@@ -254,15 +269,6 @@ a {
 	}
 
 	.background-logo img {
-		position: absolute;
-		opacity: .2;
-		
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=20);
-
-		pointer-events: none;
-
 		@include large {
 			top: -16rem;
 			right: -20rem;
@@ -282,10 +288,6 @@ a {
 			right: -18rem;
 			width: 40rem;
 			height: 40rem;
-		}
-
-		@include print {
-			display: none;
 		}
 	}
 }
@@ -373,12 +375,6 @@ a {
 		}
 	}
 
-	.tile,
-	.title-only,
-	.title {
-		background-color: $dsa-purple;
-	}
-
 	.tile {
 		position: absolute;
 		top: 0;
@@ -392,12 +388,37 @@ a {
 			min-height: 100%;
 		}
 
+		.background,
+		.title-only,
+		.title {
+			background-color: $dsa-purple;
+		}
+
+		.background,
 		.overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+		}
+
+		.background {
+			opacity: .5;
+
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=50);
+		}
+
+		.background-logo img {
+			top: -15rem;
+			right: -15rem;
+			max-width: 40rem;
+			height: 40rem;
+		}
+
+		.overlay {
 			background-color: #000;
 			opacity: 0;
 
