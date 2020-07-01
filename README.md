@@ -26,14 +26,18 @@ description: A description of my new site.
 chapter:
   name: Public name of my chapter
   location: Where my chapter is located
-  url: My chapter's website
+  url: my-chapter-website.org
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
+
+banner:
+  text: "Banner text"
+  link: linked-page
 ```
  
 You need to set `title`, `description`, `name`, `location`, and `url`. 
  
-`google_analytics` takes your tracking ID. It's optional.
+`google_analytics` takes your tracking ID. It's optional. Leave the banner's `text` and `link` empty to hide it.
  
 ## Adding content
  
