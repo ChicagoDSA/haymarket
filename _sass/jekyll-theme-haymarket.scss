@@ -64,8 +64,7 @@ a {
 }
 
 .btn,
-.tile {
-	color: $header-heading-color;
+.column-fix {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
 
@@ -79,8 +78,9 @@ a {
 }
 
 .btn,
-.tile .title {
+.title {
 	padding: .75rem 1rem;
+	color: $header-heading-color;
 }
 
 .btn {
@@ -359,103 +359,90 @@ a {
 
 	.tile-list {
 		margin-right: -1rem;
-	}
 
-	.tile-container,
-	.empty-tile-container {
-		position: relative;
-		float: left;
-		width: 50%;
-		height: 15rem;
-		margin-bottom: 1rem;
-	}
+		.tile-container {
+			position: relative;
+			float: left;
+			width: 50%;
+			margin-bottom: 1rem;
 
-	.tile-container {
-		@include small {
-			width: 100%;
+			.column-fix {
+				margin-right: 1rem;
+
+				&:hover {
+					.image .overlay {
+						opacity: .2;
+
+						/* IE fixes */
+						zoom: 1;
+						filter: alpha(opacity=20);
+					}
+				}
+			}
+
+			.image,
+			.no-image {
+				position: relative;
+				width: 100%;
+				height: 12rem;
+				margin-right: 1rem;
+			}
+
+			.image {
+				overflow: hidden;
+				background-size: cover;
+				background-repeat: no-repeat;
+	  			background-position: 50% 50%;
+
+	  			.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: #000;
+					opacity: 0;
+
+					/* IE fixes */
+					zoom: 1;
+					filter: alpha(opacity=0);
+				}
+			}
+
+			.no-image {
+				background-color: $dsa-purple;
+
+				@include small {
+					display: none;
+				}
+			}
 
 			.title {
 				position: relative;
-			}
-		}
-	}
+				width: 100%;
+				background-color: $dsa-purple;
 
-	.empty-tile-container {
-		.tile {
-			background-color: $dsa-purple;
+				h4 {
+					margin: 0;
+					color: $header-heading-color;
+				}
+
+				i {
+					float: right;
+					line-height: 1.5;
+					opacity: .5;
+
+					/* IE fixes */
+					zoom: 1;
+					filter: alpha(opacity=50);
+				}
+			}
+
+			@include small {
+				width: 100%;
+			}
 		}
 
 		@include small {
-			width: 100%;
-			height: 30px;
-
-			.tile {
-				position: relative;
-
-				.title {
-					position: relative;
-					margin-right: 1rem;
-				}
-			}
-		}
-	}
-
-	.tile {
-		position: absolute;
-		top: 0;
-		right: 1rem;
-		bottom: 0;
-		left: 0;
-		overflow: hidden;
-		background-size: cover;
-		background-repeat: no-repeat;
-  		background-position: 50% 50%;
-
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #000;
-			opacity: 0;
-
-			/* IE fixes */
-			zoom: 1;
-			filter: alpha(opacity=0);
-		}
-
-		.title {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			background-color: $dsa-purple;
-
-			i {
-				float: right;
-				line-height: 1.5;
-				opacity: .5;
-
-				/* IE fixes */
-				zoom: 1;
-				filter: alpha(opacity=50);
-			}
-		}
-
-		h4 {
-			margin: 0;
-			color: $header-heading-color;
-		}
-
-		&:hover {
-			.overlay {
-				opacity: .2;
-
-				/* IE fixes */
-				zoom: 1;
-				filter: alpha(opacity=20);
-			}
+			margin-right: 0;
 		}
 	}
 
@@ -563,51 +550,46 @@ a {
 	margin-top: 2rem;
 	border-top: solid 1px $border-color;
 	font-size: 1rem;
-}
 
-.site-footer-owner {
-	display: block;
-	font-weight: bold;
-}
+	.credits {
+		float: left;
+		max-width: 50%;
+		color: $blockquote-text-color;
 
-.site-footer-credits {
-	float: left;
-	max-width: 50%;
-	color: $blockquote-text-color;
+		@include medium {
+			float: none;
+			max-width: 75%;
+			padding-bottom: 1.5rem;
+		}
 
-	@include medium {
-		float: none;
-		max-width: 75%;
-		padding-bottom: 1.5rem;
+		@include small {
+			float: none;
+			max-width: 100%;
+			padding-bottom: 1.5rem;
+		}
 	}
 
-	@include small {
-		float: none;
-		max-width: 100%;
-		padding-bottom: 1.5rem;
-	}
-}
+	.join {
+		float: right;
+		color: $blockquote-text-color;
 
-.site-footer-join {
-	float: right;
-	color: $blockquote-text-color;
+		.btn {
+			margin-right: 0;
+			background-color: $dsa-purple;
+		}
 
-	.btn {
-		margin-right: 0;
-		background-color: $dsa-purple;
-	}
+		@include medium {
+			display: block;
+			float: none;
+		}
 
-	@include medium {
-		display: block;
-		float: none;
-	}
+		@include small {
+			display: block;
+			float: none;
+		}
 
-	@include small {
-		display: block;
-		float: none;
-	}
-
-	@include print {
-		display: none;
+		@include print {
+			display: none;
+		}
 	}
 }
