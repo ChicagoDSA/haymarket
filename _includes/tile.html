@@ -1,7 +1,6 @@
-<div class="tile-container">
-	{% if include.image %}
-		<a class="tile" href="{{ include.link }}">
-			<img src="{{ include.image }}" />
+{% if include.image %}
+	<div class="tile-container">
+		<a class="tile" href="{{ include.link }}" style="background-image: url('{{ include.image }}');">
 			<div class="overlay"></div>
 			<div class="title">
 				<h4>{{ include.title }}
@@ -10,10 +9,10 @@
 				</h4>
 			</div>
 		</a>
-	{% else %}
+	</div>
+{% else %}
+	<div class="empty-tile-container">
 		<a class="tile" href="{{ include.link }}">
-			<div class="background"></div>
-			<div class="overlay"></div>
 			<div class="title">
 				<h4>{{ include.title }}
 					<i class="fas fa-arrow-right"></i>
@@ -21,5 +20,5 @@
 				</h4>
 			</div>
 		</a>
-	{% endif %}
-</div>
+	</div>
+{% endif %}
