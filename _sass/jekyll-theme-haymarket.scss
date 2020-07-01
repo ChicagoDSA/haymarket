@@ -89,21 +89,6 @@ a {
 	background-color: $dsa-red;
 }
 
-.background-logo img {
-	position: absolute;
-	opacity: .2;
-	
-	/* IE fixes */
-	zoom: 1;
-	filter: alpha(opacity=20);
-
-	pointer-events: none;
-
-	@include print {
-		display: none;
-	}
-}
-
 .page-header {
 	overflow: hidden;
 	color: $header-heading-color;
@@ -269,6 +254,15 @@ a {
 	}
 
 	.background-logo img {
+		position: absolute;
+		opacity: .2;
+		
+		/* IE fixes */
+		zoom: 1;
+		filter: alpha(opacity=20);
+
+		pointer-events: none;
+
 		@include large {
 			top: -16rem;
 			right: -20rem;
@@ -288,6 +282,10 @@ a {
 			right: -18rem;
 			width: 40rem;
 			height: 40rem;
+		}
+
+		@include print {
+			display: none;
 		}
 	}
 }
@@ -409,13 +407,6 @@ a {
 			/* IE fixes */
 			zoom: 1;
 			filter: alpha(opacity=50);
-		}
-
-		.background-logo img {
-			top: -15rem;
-			right: -15rem;
-			max-width: 40rem;
-			height: 40rem;
 		}
 
 		.overlay {
