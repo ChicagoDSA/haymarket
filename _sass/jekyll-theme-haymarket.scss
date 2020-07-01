@@ -100,7 +100,7 @@ a {
 	}
 
 	#banner-link {
-		color: $body-text-color;
+		color: $section-headings-color;
 
 		&:hover p {
 			text-decoration: underline;
@@ -122,7 +122,7 @@ a {
 	z-index: 2;
 	width: 100%;
 	padding: 1rem 0;
-	color: $body-text-color;
+	color: $section-headings-color;
 	background-color: $dsa-yellow;
 }
 
