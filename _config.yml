@@ -13,5 +13,5 @@ plugins:
   - jekyll-seo-tag
 
 banner:
-  text: "**Here's a banner:** you can enable, style, and link it"
+  text: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
   link: another-page
