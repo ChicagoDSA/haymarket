@@ -13,5 +13,5 @@ plugins:
   - jekyll-seo-tag
 
 banner:
-  text: "**Current uprising:** view the Executive Committee's statement"
+  text: "**Here's a banner:** you can enable, style, and link it"
   link: another-page
