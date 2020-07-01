@@ -299,10 +299,6 @@ a {
 		margin-top: 0;
 	}
 
-	img {
-		max-width: 100%;
-	}
-
 	h1,
 	h2,
 	h3,
@@ -323,6 +319,10 @@ a {
 
 	p {
 		margin-bottom: 1em;
+
+		img {
+			max-width: 100%;
+		}
 	}
 
 	code {
@@ -361,15 +361,42 @@ a {
 		margin-right: -1rem;
 	}
 
-	.tile-container {
+	.tile-container,
+	.empty-tile-container {
 		position: relative;
 		float: left;
 		width: 50%;
 		height: 15rem;
 		margin-bottom: 1rem;
+	}
+
+	.tile-container {
+		@include small {
+			width: 100%;
+
+			.title {
+				position: relative;
+			}
+		}
+	}
+
+	.empty-tile-container {
+		.tile {
+		background-color: $dsa-purple;
+		}
 
 		@include small {
 			width: 100%;
+			height: 30px;
+
+			.tile {
+				position: relative;
+
+				.title {
+					position: relative;
+					margin-right: 1rem;
+				}
+			}
 		}
 	}
 
@@ -380,33 +407,16 @@ a {
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
+		background-size: cover;
+		background-repeat: no-repeat;
+  		background-position: 50% 50%;
 
-		.img {
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		.background,
-		.title-only,
-		.title {
-			background-color: $dsa-purple;
-		}
-
-		.background,
 		.overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-		}
-
-		.background {
-			opacity: .5;
-
-			/* IE fixes */
-			zoom: 1;
-			filter: alpha(opacity=50);
 		}
 
 		.overlay {
@@ -423,6 +433,7 @@ a {
 			right: 0;
 			bottom: 0;
 			left: 0;
+			background-color: $dsa-purple;
 
 			i {
 				float: right;
