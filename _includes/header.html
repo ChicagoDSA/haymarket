@@ -25,19 +25,19 @@
 				{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 					<div id="social-container">
 						{% if site.chapter.twitter %}
-							<a id="twitter" class="social" href="https://twitter.com/{{ site.chapter.twitter }}">
+							<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
 								<i class="fab fa-twitter"></i>
 							</a>
 						{% endif %}
 
 						{% if site.chapter.instagram %}
-							<a id="instagram" class="social" href="https://www.instagram.com/{{ site.chapter.instagram }}">
+							<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
 								<i class="fab fa-instagram"></i>
 							</a>
 						{% endif %}
 
 						{% if site.chapter.facebook %}
-							<a id="facebook" class="social" href="https://www.facebook.com/{{ site.chapter.facebook }}">
+							<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
 								<i class="fab fa-facebook-f"></i>
 							</a>
 						{% endif %}
