@@ -1,12 +1,12 @@
 title: Haymarket theme
 description: A GitHub Pages theme to easily launch Chicago DSA websites.
 chapter:
-  name: Chicago DSA
-  location: Chicago
+  name: Your DSA Chapter
+  location: Your City
   url: /
-  facebook: ChicagoDemSocialists
-  instagram: chicagodsa
-  twitter: ChicagoCityDSA
+  facebook: /
+  instagram: /
+  twitter: /
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
 plugins:
