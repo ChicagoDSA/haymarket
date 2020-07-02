@@ -1,7 +1,13 @@
 <footer class="site-footer">
+	{% if site.chapter.url %}
+		{% assign url = site.chapter.url %}
+	{% else %}
+		{% assign url = site.baseurl %}
+	{% endif %}
+
 	{% if site.chapter.location %}
 		<div class="credits">
-			This site was made by the <a href="{{ site.chapter.url }}">{{ site.chapter.location | markdownify | remove: '<p>' | remove: '</p>' }}</a> chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.
+			This site was made by the <a href="{{ url }}">{{ site.chapter.location | markdownify | remove: '<p>' | remove: '</p>' }}</a> chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.
 		</div>
 	{% endif %}
 	<div class="join">
