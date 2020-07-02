@@ -31,6 +31,7 @@ chapter:
   instagram: instagram-url
   twitter: twitter-url
 google_analytics:
+permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
 banner:
