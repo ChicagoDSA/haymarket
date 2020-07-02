@@ -27,6 +27,9 @@ chapter:
   name: Public name of my chapter
   location: Where my chapter is located
   url: my-chapter-website.org
+  facebook: facebook-url
+  instagram: instagram-url
+  twitter: twitter-url
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
 
@@ -36,8 +39,10 @@ banner:
 ```
  
 You need to set `title`, `description`, `name`, `location`, and `url`. 
- 
-`google_analytics` takes your tracking ID. It's optional. Leave the banner's `text` and `link` empty to hide it.
+#### Optional values
+- When a social media URL is added, the icon will appear in your header.
+- `google_analytics` takes your tracking ID.
+- Add banner `text` and `link` values to display it.
  
 ## Adding content
  
