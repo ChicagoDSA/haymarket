@@ -8,6 +8,7 @@ chapter:
   instagram: "?"
   twitter: "?"
 google_analytics:
+permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 plugins:
   - jekyll-seo-tag
