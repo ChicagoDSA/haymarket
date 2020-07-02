@@ -4,9 +4,9 @@ chapter:
   name: Your DSA Chapter
   location: Your City
   url:
-  facebook: "/?"
-  instagram: "/?"
-  twitter: "/?"
+  facebook: "?"
+  instagram: "?"
+  twitter: "?"
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
 plugins:
