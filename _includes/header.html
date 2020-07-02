@@ -20,11 +20,7 @@
 		</div>
 		<div class="chapter">
 			<h3>
-				{% if site.chapter.name and site.chapter.url %}
-					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-				{% else %}
-					<a href="https://www.dsausa.org/">Democratic Socialists of America</a>
-				{% endif %}
+				<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
 
 				{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 					<div id="social-container">

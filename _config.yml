@@ -3,10 +3,10 @@ description: A GitHub Pages theme to easily launch Chicago DSA websites.
 chapter:
   name: Your DSA Chapter
   location: Your City
-  url: /
-  facebook: /
-  instagram: /
-  twitter: /
+  url:
+  facebook: "?"
+  instagram: "?"
+  twitter: "?"
 google_analytics:
 remote_theme: ChicagoDSA/haymarket
 plugins:
