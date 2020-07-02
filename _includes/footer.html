@@ -1,5 +1,5 @@
 <footer class="site-footer">
-	{% if site.chapter.location and site.chapter.url %}
+	{% if site.chapter.location %}
 		<div class="credits">
 			This site was made by the <a href="{{ site.chapter.url }}">{{ site.chapter.location | markdownify | remove: '<p>' | remove: '</p>' }}</a> chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.
 		</div>
