@@ -52,10 +52,10 @@ You need to set `title`, `description`, `name`, `location`, and `url`.
 ```markdown
 ---
 layout: default
-title: My New Page
-description: Workers of the world, unite!
-headline: This is an optional headline.
-subhead: And optional text.
+title: <!-- optional metadata -->
+description: <!-- optional metadata -->
+headline: <!-- optional display text -->
+subhead: <!-- optional display text -->
 ---
 
 Hello, world!
