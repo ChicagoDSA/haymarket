@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Sample site
+subhead: Add a custom subhead.
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
