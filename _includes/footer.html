@@ -2,7 +2,7 @@
 	{% if site.chapter.url %}
 		{% assign chapterURL = site.chapter.url %}
 	{% else %}
-		{% assign chapterURL = site.baseurl %}
+		{% assign chapterURL = '/' | absolute_url }} %}
 	{% endif %}
 
 	{% if site.chapter.location %}

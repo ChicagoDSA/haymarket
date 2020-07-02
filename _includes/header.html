@@ -23,7 +23,7 @@
 				{% if site.chapter.url %}
 					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
 				{% else %}
-					<a href="{{ site.baseurl }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+					<a href="{{ '/' | absolute_url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
 				{% endif %}
 				{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 					<div id="social-container">
