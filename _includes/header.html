@@ -47,7 +47,7 @@
 			</h3>
 		</div>
 		<h1 class="name">
-			<a href="{{ page.url }}">
+			<a href="{{ page.url | absolute_url }}">
 				{% if page.headline %}
 					{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
 				{% elsif page.title %}
