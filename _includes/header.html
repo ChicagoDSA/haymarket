@@ -46,7 +46,7 @@
 				{% endif %}
 			</h3>
 		</div>
-		<h1 class="name" href>
+		<h1 class="name" href="{{ page.url }}">
 			{% if page.headline %}
 				{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
 			{% elsif page.title %}
