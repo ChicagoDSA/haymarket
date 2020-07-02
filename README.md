@@ -31,11 +31,16 @@ chapter:
   instagram: instagram-url
   twitter: twitter-url
 google_analytics:
+permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
 banner:
   text: "Banner text"
   link: linked-page
+  
+# Add collections here
+# https://jekyllrb.com/docs/collections/
+collections:
 ```
  
 You need to set `title`, `description`, `name`, `location`, and `url`. 
