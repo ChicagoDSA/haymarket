@@ -47,10 +47,20 @@
 			</h3>
 		</div>
 		<h1 class="name">
-			{{ page.headline | default: page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+			{% if page.headline %}
+				{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
+			{% elsif page.title %}
+				{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+			{% else %}
+				{{ site.title | default: page.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}
+			{% endif %}
 		</h1>
-		{% if site.description or site.github.project_tagline %}
-			<h2 class="tagline">{{ page.subhead | default: page.description | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+		{% if page.subhead %}
+			<h2 class="tagline">{{ page.subhead | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+		{% elsif page.description %}
+			<h2 class="tagline">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+		{% else %}
+			<h2 class="tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
 		{% endif %}
 	</div>
 </header>
