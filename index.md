@@ -120,16 +120,9 @@ end
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
 
-### Tiles can highlight your campaigns.
+### Use tiles to style your collections.
 
-{% capture include_content %}
-{% include tile.html title="Defund CPD" link="another-page" image="assets/images/police.png" %}
-{% include tile.html title="Lift the Ban" link="another-page" image="assets/images/protest.png" %}
-{% include tile.html title="Democratize ComEd" link="another-page" image="assets/images/truck.png" %}
-{% include tile.html title="No image? No problem!" link="another-page" %}
-{% endcapture %}
-
-{% include tile-list.html content=include_content %}
+{% include tile-list.html collection="tiles" %}
 
 ### Buttons are more prominent than links.
 

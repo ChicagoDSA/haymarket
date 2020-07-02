@@ -1,4 +1,6 @@
 <div class="tile-list">
-	{{ include.content }}
+	{% for item in site.[include.collection] %}
+		{% include tile.html title=item.title link=item.url image=item.image %}
+	{% endfor %}
 	<div style="clear:both"></div>
 </div>
