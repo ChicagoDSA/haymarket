@@ -46,14 +46,16 @@
 				{% endif %}
 			</h3>
 		</div>
-		<h1 class="name" href="{{ page.url }}">
-			{% if page.headline %}
-				{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
-			{% elsif page.title %}
-				{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
-			{% else %}
-				{{ site.title | default: page.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}
-			{% endif %}
+		<h1 class="name">
+			<a href="{{ page.url }}">
+				{% if page.headline %}
+					{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
+				{% elsif page.title %}
+					{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+				{% else %}
+					{{ site.title | default: page.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}
+				{% endif %}
+			</a>
 		</h1>
 		{% if page.subhead %}
 			<h2 class="tagline">{{ page.subhead | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
