@@ -15,3 +15,7 @@ plugins:
 banner:
   text: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
   link: another-page
+
+collections:
+  tiles:
+    output: true
