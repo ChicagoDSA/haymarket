@@ -23,7 +23,7 @@ defaults:
     scope:
       path: "" # All files
     values:
-      image: "assets/images/og:image.png"
+      image: "assets/images/og-image.png"
 
 # Create collections here
 collections:
