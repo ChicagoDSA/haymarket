@@ -157,11 +157,7 @@ a {
 .project-area {
 	position: relative;
 	padding-top: 0;
-	padding-bottom: 4rem;
-
-	@include print {
-		padding-bottom: 2rem;
-	}
+	padding-bottom: 3rem;
 
 	.chapter {
 		position: relative;
@@ -287,6 +283,10 @@ a {
 		@include print {
 			display: none;
 		}
+	}
+
+	@include print {
+		padding-bottom: 2rem;
 	}
 }
 
