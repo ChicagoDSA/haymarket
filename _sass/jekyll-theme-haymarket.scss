@@ -231,21 +231,19 @@ a {
 	}
 
 	.tagline {
+		max-width: 75%;
 		margin-bottom: 0;
 		font-weight: normal;
 
 		@include large {
-			max-width: 100%;
 			font-size: 1.25rem;
 		}
 
 		@include medium {
-			max-width: 75%;
 			font-size: 1.15rem;
 		}
 
 		@include small {
-			max-width: 75%;
 			font-size: 1.15rem;
 		}
 
