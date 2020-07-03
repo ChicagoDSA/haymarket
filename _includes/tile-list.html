@@ -1,7 +1,8 @@
 <div class="tile-list">
 	{% for item in site.[include.collection] %}
 		{% assign url = item.url | relative_url %}
-		{% include tile.html title=item.title link=url image=item.image %}
+		{% assign image = item.image | relative_url %}
+		{% include tile.html title=item.title link=url image=image %}
 	{% endfor %}
 	<div style="clear:both"></div>
 </div>
