@@ -1,7 +1,7 @@
 <div class="tile-container">
 	<div class="column-fix">
 		<a href="{{ include.link }}">
-			{% if include.image %}
+			{% if site.defaults[0].values.image != item.image %}
 				<div class="image" style="background-image: url('{{ include.image }}');">
 					<div class="overlay"></div>
 				</div>
