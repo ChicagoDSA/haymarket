@@ -96,11 +96,11 @@ end
 
 ### Small image
 
-![Side profile of W.E.B. DuBois](assets/images/WEB-DuBois.png)
+![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
 
 ### Large image
 
-![Flyer preceding Haymarket affair](assets/images/Haymarket-flyer.png)
+![Flyer preceding Haymarket affair](assets/images/theme-Haymarket-flyer.png)
 
 
 ### Definition lists can be used with HTML syntax.
