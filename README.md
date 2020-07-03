@@ -24,19 +24,27 @@ In order to fully use your site, open `_config.yml` again. Replace your content 
 title: My New Site
 description: A description of my new site.
 chapter:
-  name: Public name of my chapter
-  location: Where my chapter is located
-  url: my-chapter-website.org
-  facebook: facebook-url
-  instagram: instagram-url
-  twitter: twitter-url
+  name: # Public name of your chapter
+  location: # Where your chapter is located
+  url: # your-chapter-website.org
+  facebook: # Facebook URL
+  instagram: # Instagram URL
+  twitter: # Twitter URL
 google_analytics:
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
+# Leave empty to disable
 banner:
   text: "Banner text"
   link: linked-page
+  
+defaults:
+  -
+    scope:
+      path: "" # All files
+    values:
+      image: "assets/images/og-image.png"
   
 # Add collections here
 # https://jekyllrb.com/docs/collections/
