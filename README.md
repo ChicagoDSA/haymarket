@@ -30,6 +30,7 @@ chapter:
   facebook: # Facebook URL
   instagram: # Instagram URL
   twitter: # Twitter URL
+custom-join: # Add custom join URL here
 google_analytics:
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
