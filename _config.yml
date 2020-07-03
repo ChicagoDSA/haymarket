@@ -13,10 +13,19 @@ remote_theme: ChicagoDSA/haymarket
 plugins:
   - jekyll-seo-tag
 
+# Leave empty to disable
 banner:
   text: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
   link: another-page
 
+defaults:
+  -
+    scope:
+      path: "" # All files
+    values:
+      image: "assets/images/og:image.png"
+
+# Create collections here
 collections:
   tiles:
     output: true
