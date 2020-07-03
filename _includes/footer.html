@@ -12,7 +12,12 @@
 	{% endif %}
 	<div class="join">
 		<div class="btn-container">
-			<a href="https://www.dsausa.org/join" class="btn">Join DSA</a>
+			{% if site.custom-join %}
+				{% assign joinURL = site.custom-join | relative_url %}
+			{% else %}
+				{% assign joinURL = "https://www.dsausa.org/join" %}
+			{% endif %}
+			<a href="{{ joinURL }}" class="btn">Join DSA</a>
 		</div>
 	</div>
 	<div style="clear: both;"></div> 
