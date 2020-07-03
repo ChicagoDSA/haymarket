@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Sample site
 subhead: Add a custom subhead.
 ---
