@@ -312,6 +312,10 @@ a {
 		margin-bottom: 1rem;
 		font-weight: bold;
 		color: $section-headings-color;
+
+		a {
+			color: $section-headings-color;
+		}
 	}
 
 	h5,
