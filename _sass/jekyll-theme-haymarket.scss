@@ -159,8 +159,13 @@ a {
 	padding-top: 0;
 	padding-bottom: 3rem;
 
-	.chapter {
+	.chapter,
+	.name,
+	.tagline {
 		position: relative;
+	}
+
+	.chapter {
 		padding-top: 1rem;
 		padding-bottom: 0;
 		border-bottom: 2px solid $header-heading-color;
