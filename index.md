@@ -123,6 +123,10 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 {% include tile-list.html collection="tiles" %}
 
+### Load events from a public Google Calendar.
+
+{% include event-list.html %}
+
 ### Buttons are more prominent than links.
 
 {% include button.html text="I'm a new member" link="another-page" %}
