@@ -331,14 +331,17 @@ a {
 		}
 	}
 
-	.tile-list {
-		margin-right: -1rem;
+	.tile-list,
+	#event-list {
+		margin: 0 -1rem 0 0;
+		padding: 0;
 
 		.tile-container {
 			position: relative;
 			float: left;
 			width: 50%;
 			margin-bottom: 1rem;
+			list-style-type: none;
 
 			.column-fix,
 			.image,

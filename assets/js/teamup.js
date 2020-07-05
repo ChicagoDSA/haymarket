@@ -97,21 +97,49 @@ window.onload = function(){
 			var data = JSON.parse(xhr.responseText);
 			console.log("Successfully received events");
 
+			// Create clear floats
+			var clear = document.createElement("div");
+			clear.style.clear = "both";
+
 			for (var i = 0; i < data.events.length; i++) {
-			    var obj = data.events[i];
-		    	var title = document.createElement("p");
-		    	var titleLink = document.createElement("a");
+				var obj = data.events[i];
 
-		    	// Set link attributes
-		    	titleLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
-			    titleLink.innerHTML = obj.title;
+				// Create HTML elements
+				var event = document.createElement("li");
+				var columnFix = document.createElement("div");
+				var eventLink = document.createElement("a");
+				var noImage = document.createElement("div");
+				var title = document.createElement("div");
+				var titleText = document.createElement("h4");				
 
-			    // Add link to paragraph
-			    title.appendChild(titleLink);
+				// Set classes
+				event.className = "tile-container";
+				columnFix.className = "column-fix";
+				noImage.className = "no-image";
+				title.className = "title";
 
-			    // Add paragraph to list
-			    eventList.appendChild(title);
+				// Link to event
+				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
+
+				// Set title
+				titleText.innerText = obj.title;
+
+				// Add event to list
+				eventList.appendChild(event);
+
+				// Add elements to event
+				event.appendChild(columnFix);
+				columnFix.appendChild(eventLink);
+				eventLink.appendChild(noImage);
+				eventLink.appendChild(title);
+				title.appendChild(titleText);
+
+				// Clear floats
+				titleText.appendChild(clear);
 			};
+
+			// Clear floats
+			eventList.appendChild(clear);
 		},
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
