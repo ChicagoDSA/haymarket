@@ -410,19 +410,24 @@ a {
 				left: 0;
 				background-color: $dsa-purple;
 
-				h4 {
+				h4,
+				h5 {
 					margin: 0;
 					color: $header-heading-color;
 				}
 
-				i {
-					float: right;
-					line-height: 1.5;
+				i,
+				.timestamp {
 					opacity: .5;
 
 					/* IE fixes */
 					zoom: 1;
 					filter: alpha(opacity=50);
+				}
+
+				i {
+					float: right;
+					line-height: 1.5;
 				}
 			}
 
@@ -450,6 +455,12 @@ a {
 					width: 100%;
 				}
 			}
+		}
+	}
+
+	.event-list {
+		.title {
+			top: 0;
 		}
 	}
 
