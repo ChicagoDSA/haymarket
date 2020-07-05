@@ -21,7 +21,7 @@ function getFutureDate(date, months) {
 	return new Date(date.setMonth(date.getMonth() + months));      
 };
 
-function loadCalendar(calendar) {
+function loadCalendar(calendar, key) {
 	// Set up calendar
 	var today = new Date();
 	var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(today)+"&endDate="+formatDate(getFutureDate(today, 6));
@@ -31,7 +31,7 @@ function loadCalendar(calendar) {
 
 	// Creates a CORS request w/cross-browser support
 	function createCORSRequest(method, url) {
-		var apiKey = "cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a";
+		var apiKey = key;
 		var xhr = new XMLHttpRequest();
 		if ("withCredentials" in xhr) {
 			// XHR for Chrome/Firefox/Opera/Safari/IE10+
