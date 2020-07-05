@@ -118,16 +118,16 @@ function loadCalendar(calendar, key, limit) {
 				var columnFix = document.createElement("div");
 				var eventLink = document.createElement("a");
 				var title = document.createElement("div");
+				var icon = document.createElement("i");	
 				var titleText = document.createElement("h4");
-				var timeText = document.createElement("h5");
-				var icon = document.createElement("i");				
+				var timeText = document.createElement("h5");			
 
 				// Set classes
 				event.className = "event-container";
 				columnFix.className = "column-fix";
+				icon.className = "far fa-calendar-alt";
 				title.className = "title";
 				timeText.className = "timestamp";
-				icon.className = "far fa-calendar-alt";
 
 				// Link to event
 				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
