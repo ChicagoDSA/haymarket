@@ -117,17 +117,17 @@ function loadCalendar(calendar, key, limit) {
 				var event = document.createElement("li");
 				var columnFix = document.createElement("div");
 				var eventLink = document.createElement("a");
-				var colorBackground = document.createElement("div");
 				var title = document.createElement("div");
 				var titleText = document.createElement("h4");
-				var timeText = document.createElement("h5");				
+				var timeText = document.createElement("h5");
+				var icon = document.createElement("i");				
 
 				// Set classes
-				event.className = "tile-container-text";
+				event.className = "event-container";
 				columnFix.className = "column-fix";
-				colorBackground.className = "color-background";
 				title.className = "title";
 				timeText.className = "timestamp";
+				icon.className = "far fa-calendar-alt";
 
 				// Link to event
 				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
@@ -136,7 +136,7 @@ function loadCalendar(calendar, key, limit) {
 				var startDate = new Date(obj.start_dt);
 
 				// Set content
-				titleText.innerHTML = "<p>"+obj.title+"<i class='far fa-calendar-alt'></i></p>";
+				titleText.innerHTML = obj.title;
 				timeText.innerText = startDate.toLocaleString("en-US", options);
 
 				// Add event to list
@@ -145,10 +145,10 @@ function loadCalendar(calendar, key, limit) {
 				// Add elements to event
 				event.appendChild(columnFix);
 				columnFix.appendChild(eventLink);
-				eventLink.appendChild(colorBackground);
 				eventLink.appendChild(title);
+				title.appendChild(icon);	
 				title.appendChild(titleText);
-				title.appendChild(timeText);	
+				title.appendChild(timeText);
 			};
 			// Clear floats
 			parentElement.appendChild(clearFloats);
