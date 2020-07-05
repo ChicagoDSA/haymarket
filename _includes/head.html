@@ -17,7 +17,7 @@
 	{% seo %}
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
+	<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
 	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
 	<!-- FontAwesome styles -->
@@ -35,5 +35,5 @@
 	<link rel="preload" href="{{ '/assets/fonts/ManifoldDSA/ManifoldDSA-ExtraBoldItalic.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
 
 	<!-- Teamup calendar -->
-	<script src="assets/js/teamup.js"></script>
+	<script src="{{ 'assets/js/teamup.js' | relative_url }}"></script>
 </head>
