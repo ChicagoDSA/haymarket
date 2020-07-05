@@ -43,6 +43,16 @@ body {
 	color: $body-text-color;
 }
 
+::selection {
+	color: $highlight-text-color;
+	background-color: $highlight-background-color;
+}
+
+::-moz-selection {
+	color: $highlight-text-color;
+	background-color: $highlight-background-color;
+}
+
 a {
 	color: $body-link-color;
 	text-decoration: none;
