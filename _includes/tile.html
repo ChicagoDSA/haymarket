@@ -1,13 +1,26 @@
-<li class="tile-container">
+{% capture imageBackground %}
+	<div class="image" style="background-image: url('{{ include.image }}');">
+		<div class="overlay"></div>
+	</div>
+{% endcapture %}
+
+{% capture colorBackground %}
+	<div class="color-background"></div>
+{% endcapture %}
+
+{% if site.defaults[0].values.image != item.image %}
+	{% assign tileClass = "tile-container-image" %}
+	{% assign background = imageBackground %}
+
+{% else %}
+	{% assign tileClass = "tile-container-text" %}
+	{% assign background = colorBackground %}
+{% endif %}
+
+<li class="{{ tileClass }}">
 	<div class="column-fix">
 		<a href="{{ include.link }}">
-			{% if site.defaults[0].values.image != item.image %}
-				<div class="image" style="background-image: url('{{ include.image }}');">
-					<div class="overlay"></div>
-				</div>
-			{% else %}
-				<div class="no-image"></div>
-			{% endif %}
+			{{ background }}
 			<div class="title">
 				<h4>{{ include.title }}
 					<i class="fas fa-arrow-right"></i>
