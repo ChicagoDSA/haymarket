@@ -123,7 +123,7 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 {% include tile-list.html collection="tiles" %}
 
-### Load events from a public Google Calendar.
+### Load events from a public Teamup calendar.
 
 {% include event-list.html %}
 
