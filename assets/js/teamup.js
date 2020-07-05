@@ -14,22 +14,18 @@ function formatDate(date) {
 
 	date = yyyy+"-"+mm+"-"+dd;
 	return date;
-}
+};
 
 // Sets end date for query
 function getFutureDate(date, months) {
 	return new Date(date.setMonth(date.getMonth() + months));      
-}
+};
 
-// Set up calendar
-var today = new Date();
-var calendar = document.currentScript.getAttribute("calendar");
-var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(today)+"&endDate="+formatDate(getFutureDate(today, 6));
+function loadCalendar(calendar) {
+	// Set up calendar
+	var today = new Date();
+	var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(today)+"&endDate="+formatDate(getFutureDate(today, 6));
 
-// Get list element
-var eventList = document.getElementById("event-list");
-
-window.onload = function(){
 	// CORS logic taken from Teamup API docs
 	// https://apidocs.teamup.com/#querying-the-api-via-javascript-cors
 
@@ -47,21 +43,21 @@ window.onload = function(){
 			// XDomainRequest does not support querying HTTPS from HTTP pages
 			if (window.location.protocol === "http:") {
 				url = url.replace("https://", "http://");
-			}
+			};
 			if (-1 === ["GET", "POST"].indexOf(method)) {
 				console.log("XDomainRequest only supports GET and POST methods");
 				return;
-			}
+			};
 			if (-1 === url.indexOf("?")) {
 				url += "?_teamup_token=" + apiKey;
 			} else {
 				url += "&_teamup_token=" + apiKey;
-			}
+			};
 			xhr.open(method, url);
 		} else {
 			// CORS not supported
 			xhr = null;
-		}
+		};
 		return xhr;
 	}
 
@@ -71,7 +67,7 @@ window.onload = function(){
 		if (!xhr) {
 			console.log("CORS not supported");
 			return;
-		}
+		};
 
 		// Response handlers
 		xhr.onload = function (xhr) {
@@ -79,12 +75,12 @@ window.onload = function(){
 				if (successCallback) successCallback(xhr.target);
 			} else if (errorCallback) {
 				errorCallback(xhr.target);
-			}
+			};
 		};
 		xhr.onerror = function (xhr) {
 			if (errorCallback) {
 				errorCallback(xhr.target);
-			}
+			};
 		};
 
 		xhr.send();
@@ -97,49 +93,55 @@ window.onload = function(){
 			var data = JSON.parse(xhr.responseText);
 			console.log("Successfully received events");
 
-			// Create clear floats
-			var clear = document.createElement("div");
-			clear.style.clear = "both";
+			// Get event list
+			var eventList = document.getElementById(calendar);
 
-			for (var i = 0; i < data.events.length; i++) {
-				var obj = data.events[i];
+			if (eventList.querySelectorAll(".tile-container-text").length > 0) {
+				console.log("Events already exist on page")
+				return;
+			} else {
+				// Events don't exist on page, create them
 
-				// Create HTML elements
-				var event = document.createElement("li");
-				var columnFix = document.createElement("div");
-				var eventLink = document.createElement("a");
-				var noImage = document.createElement("div");
-				var title = document.createElement("div");
-				var titleText = document.createElement("h4");				
+				// Create clear floats
+				var clearFloats = document.createElement("div");
+				clearFloats.style.clear = "both";
 
-				// Set classes
-				event.className = "tile-container";
-				columnFix.className = "column-fix";
-				noImage.className = "no-image";
-				title.className = "title";
+				for (var i = 0; i < data.events.length; i++) {
+					var obj = data.events[i];
 
-				// Link to event
-				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
+					// Create HTML elements
+					var event = document.createElement("li");
+					var columnFix = document.createElement("div");
+					var eventLink = document.createElement("a");
+					var colorBackground = document.createElement("div");
+					var title = document.createElement("div");
+					var titleText = document.createElement("h4");				
 
-				// Set title
-				titleText.innerText = obj.title;
+					// Set classes
+					event.className = "tile-container-text";
+					columnFix.className = "column-fix";
+					colorBackground.className = "color-background";
+					title.className = "title";
 
-				// Add event to list
-				eventList.appendChild(event);
+					// Link to event
+					eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
 
-				// Add elements to event
-				event.appendChild(columnFix);
-				columnFix.appendChild(eventLink);
-				eventLink.appendChild(noImage);
-				eventLink.appendChild(title);
-				title.appendChild(titleText);
+					// Set title
+					titleText.innerText = obj.title;
 
+					// Add event to list
+					eventList.appendChild(event);
+
+					// Add elements to event
+					event.appendChild(columnFix);
+					columnFix.appendChild(eventLink);
+					eventLink.appendChild(colorBackground);
+					eventLink.appendChild(title);
+					title.appendChild(titleText);	
+				};
 				// Clear floats
-				titleText.appendChild(clear);
+				eventList.appendChild(clearFloats);
 			};
-
-			// Clear floats
-			eventList.appendChild(clear);
 		},
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
