@@ -31,7 +31,8 @@ chapter:
   instagram: # Instagram URL
   twitter: # Twitter URL
 custom-join: # Add custom join URL here
-google_analytics:
+google_analytics: # Tracking ID
+teamup: # Calendar API key
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
@@ -52,12 +53,11 @@ defaults:
 # https://jekyllrb.com/docs/collections/
 collections:
 ```
- 
+
 You need to set `title`, `description`, `name`, `location`, and `url`. 
-#### Optional values
+#### Other values
 - When a social media URL is added, the icon will appear in your header.
-- `google_analytics` takes your tracking ID.
-- Add banner `text` and `link` values to display it.
+- Set a custom join URL to override the default national page.
  
 ## Adding content
  
