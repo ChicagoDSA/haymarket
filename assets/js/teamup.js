@@ -93,55 +93,50 @@ function loadCalendar(calendar, key) {
 			var data = JSON.parse(xhr.responseText);
 			console.log("Successfully received events");
 
-			// Get event list
-			var eventList = document.getElementById(calendar);
+			// Get parent element of current script
+			var scripts = document.getElementsByTagName("script");
+			currentScript = scripts[scripts.length - 1];
+			var parentElement = currentScript.parentNode;
 
-			if (eventList.querySelectorAll(".tile-container-text").length > 0) {
-				console.log("Events already exist on page")
-				return;
-			} else {
-				// Events don't exist on page, create them
+			// Create clear floats
+			var clearFloats = document.createElement("div");
+			clearFloats.style.clear = "both";
 
-				// Create clear floats
-				var clearFloats = document.createElement("div");
-				clearFloats.style.clear = "both";
+			for (var i = 0; i < data.events.length; i++) {
+				var obj = data.events[i];
 
-				for (var i = 0; i < data.events.length; i++) {
-					var obj = data.events[i];
+				// Create HTML elements
+				var event = document.createElement("li");
+				var columnFix = document.createElement("div");
+				var eventLink = document.createElement("a");
+				var colorBackground = document.createElement("div");
+				var title = document.createElement("div");
+				var titleText = document.createElement("h4");				
 
-					// Create HTML elements
-					var event = document.createElement("li");
-					var columnFix = document.createElement("div");
-					var eventLink = document.createElement("a");
-					var colorBackground = document.createElement("div");
-					var title = document.createElement("div");
-					var titleText = document.createElement("h4");				
+				// Set classes
+				event.className = "tile-container-text";
+				columnFix.className = "column-fix";
+				colorBackground.className = "color-background";
+				title.className = "title";
 
-					// Set classes
-					event.className = "tile-container-text";
-					columnFix.className = "column-fix";
-					colorBackground.className = "color-background";
-					title.className = "title";
+				// Link to event
+				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
 
-					// Link to event
-					eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
+				// Set title
+				titleText.innerText = obj.title;
 
-					// Set title
-					titleText.innerText = obj.title;
+				// Add event to list
+				parentElement.appendChild(event);
 
-					// Add event to list
-					eventList.appendChild(event);
-
-					// Add elements to event
-					event.appendChild(columnFix);
-					columnFix.appendChild(eventLink);
-					eventLink.appendChild(colorBackground);
-					eventLink.appendChild(title);
-					title.appendChild(titleText);	
-				};
-				// Clear floats
-				eventList.appendChild(clearFloats);
+				// Add elements to event
+				event.appendChild(columnFix);
+				columnFix.appendChild(eventLink);
+				eventLink.appendChild(colorBackground);
+				eventLink.appendChild(title);
+				title.appendChild(titleText);	
 			};
+			// Clear floats
+			parentElement.appendChild(clearFloats);
 		},
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
