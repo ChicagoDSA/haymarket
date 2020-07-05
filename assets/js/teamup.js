@@ -30,12 +30,15 @@ var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(tod
 var eventList = document.getElementById("event-list");
 
 window.onload = function(){
-	// Creates a CORS request in a cross-browser manner
+	// CORS logic taken from Teamup API docs
+	// https://apidocs.teamup.com/#querying-the-api-via-javascript-cors
+
+	// Creates a CORS request w/cross-browser support
 	function createCORSRequest(method, url) {
 		var apiKey = "cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a";
 		var xhr = new XMLHttpRequest();
 		if ("withCredentials" in xhr) {
-			// XHR for Chrome/Firefox/Opera/Safari/IE10+.
+			// XHR for Chrome/Firefox/Opera/Safari/IE10+
 			xhr.open(method, url, true);
 			xhr.setRequestHeader("Teamup-Token", apiKey);
 		} else if (typeof XDomainRequest != "undefined") {
@@ -56,13 +59,13 @@ window.onload = function(){
 			}
 			xhr.open(method, url);
 		} else {
-			// CORS not supported.
+			// CORS not supported
 			xhr = null;
 		}
 		return xhr;
 	}
 
-	// Sends the actual CORS request.
+	// Send the request
 	function makeCorsRequest(url, successCallback, errorCallback) {
 		var xhr = createCORSRequest("GET", url);
 		if (!xhr) {
@@ -70,7 +73,7 @@ window.onload = function(){
 			return;
 		}
 
-		// Response handlers.
+		// Response handlers
 		xhr.onload = function (xhr) {
 			if (xhr.target.status < 400) {
 				if (successCallback) successCallback(xhr.target);
