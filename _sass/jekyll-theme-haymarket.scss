@@ -45,11 +45,13 @@ body {
 
 ::selection {
 	color: $highlight-text-color;
+	text-decoration-color: $highlight-text-color;
 	background-color: $highlight-background-color;
 }
 
 ::-moz-selection {
 	color: $highlight-text-color;
+	text-decoration-color: $highlight-text-color;
 	background-color: $highlight-background-color;
 }
 
