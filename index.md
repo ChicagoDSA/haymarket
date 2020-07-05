@@ -106,7 +106,7 @@ Use tiles to style your collections.
 
 ### Load events from a public Teamup calendar.
 
-{% include event-list.html calendar="ksc3uaa38o41o2vz8o" %}
+{% include event-list.html calendar="ksc3uaa38o41o2vz8o" limit=2 %}
 
 ### Buttons are more prominent than links.
 
