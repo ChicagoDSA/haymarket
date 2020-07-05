@@ -23,20 +23,9 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ### Header 3
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+Use tiles to style your collections.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+{% include tile-list.html collection="tiles" %}
 
 #### Header 4
 
@@ -114,14 +103,6 @@ end
 <dt>Color</dt>
 <dd>Red</dd>
 </dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-### Use tiles to style your collections.
-
-{% include tile-list.html collection="tiles" %}
 
 ### Load events from a public Teamup calendar.
 
