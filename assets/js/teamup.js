@@ -21,7 +21,7 @@ function getFutureDate(date, months) {
 	return new Date(date.setMonth(date.getMonth() + months));      
 };
 
-function loadCalendar(calendar, key) {
+function loadCalendar(calendar, key, limit) {
 	// Set up calendar
 	var today = new Date();
 	var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(today)+"&endDate="+formatDate(getFutureDate(today, 6));
@@ -92,6 +92,7 @@ function loadCalendar(calendar, key) {
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
 			console.log("Successfully received events");
+			console.log(data);
 
 			// Get parent element of current script
 			var scripts = document.getElementsByTagName("script");
@@ -102,7 +103,14 @@ function loadCalendar(calendar, key) {
 			var clearFloats = document.createElement("div");
 			clearFloats.style.clear = "both";
 
-			for (var i = 0; i < data.events.length; i++) {
+			// If limit is defined, shorten results
+			if (limit) {
+				var showLength = limit;
+			} else {
+				showLength = data.events.length;
+			};
+
+			for (var i = 0; i < showLength && i < data.events.length; i++) {
 				var obj = data.events[i];
 
 				// Create HTML elements
@@ -111,19 +119,25 @@ function loadCalendar(calendar, key) {
 				var eventLink = document.createElement("a");
 				var colorBackground = document.createElement("div");
 				var title = document.createElement("div");
-				var titleText = document.createElement("h4");				
+				var titleText = document.createElement("h4");
+				var timeText = document.createElement("h5");				
 
 				// Set classes
 				event.className = "tile-container-text";
 				columnFix.className = "column-fix";
 				colorBackground.className = "color-background";
 				title.className = "title";
+				timeText.className = "timestamp";
 
 				// Link to event
 				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
 
-				// Set title
-				titleText.innerText = obj.title;
+				var options = { weekday: "long", month: "short", day: "numeric", hour: "numeric"};
+				var startDate = new Date(obj.start_dt);
+
+				// Set content
+				titleText.innerHTML = "<p>"+obj.title+"<i class='far fa-calendar-alt'></i></p>";
+				timeText.innerText = startDate.toLocaleString("en-US", options);
 
 				// Add event to list
 				parentElement.appendChild(event);
@@ -133,7 +147,8 @@ function loadCalendar(calendar, key) {
 				columnFix.appendChild(eventLink);
 				eventLink.appendChild(colorBackground);
 				eventLink.appendChild(title);
-				title.appendChild(titleText);	
+				title.appendChild(titleText);
+				title.appendChild(timeText);	
 			};
 			// Clear floats
 			parentElement.appendChild(clearFloats);
