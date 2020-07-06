@@ -5,11 +5,10 @@
 		{% assign chapterURL = '/' | absolute_url }} %}
 	{% endif %}
 	
-	{% if site.chapter.location %}
-	<div class="credits">
-		This site was made by the <a href="{{ chapterURL }}">{{ site.chapter.location | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a> chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.
-	</div>
-	{% endif %}
+	
+
+	{% include nav.html %}
+
 	<div class="join">
 		<div class="btn-container">
 			{% if site.custom-join %}
@@ -20,5 +19,6 @@
 			<a href="{{ joinURL }}" class="btn">Join DSA</a>
 		</div>
 	</div>
+
 	<div style="clear: both;"></div> 
 </footer>

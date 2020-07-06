@@ -22,6 +22,11 @@ function getFutureDate(date, months) {
 };
 
 function loadCalendar(calendar, key, limit) {
+	// Get parent element of current script
+	var scripts = document.getElementsByTagName("script");
+	currentScript = scripts[scripts.length - 1];
+	var parentElement = currentScript.parentNode;
+
 	// Set up calendar
 	var today = new Date();
 	var url = "https://api.teamup.com/"+calendar+"/events?startDate="+formatDate(today)+"&endDate="+formatDate(getFutureDate(today, 6));
@@ -94,11 +99,6 @@ function loadCalendar(calendar, key, limit) {
 			console.log("Successfully received events");
 			console.log(data);
 
-			// Get parent element of current script
-			var scripts = document.getElementsByTagName("script");
-			currentScript = scripts[scripts.length - 1];
-			var parentElement = currentScript.parentNode;
-
 			// Create clear floats
 			var clearFloats = document.createElement("div");
 			clearFloats.style.clear = "both";
@@ -158,6 +158,10 @@ function loadCalendar(calendar, key, limit) {
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
 			console.log("Request failed with code "+xhr.status+": "+JSON.stringify(data));
+
+			var noEvents = document.createElement("p");
+			noEvents.innerText = "No events found."
+			parentElement.appendChild(noEvents);
 		}
 	);
 };
