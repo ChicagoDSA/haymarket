@@ -132,12 +132,14 @@ function loadCalendar(calendar, key, limit) {
 				// Link to event
 				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
 
-				var options = { weekday: "long", month: "short", day: "numeric", hour: "numeric"};
+				var locale = "en-US";
+				var dateOptions = { weekday: "long", month: "short", day: "numeric"};
+				var timeOptions = { hour: "numeric", minute: "2-digit"};
 				var startDate = new Date(obj.start_dt);
 
 				// Set content
 				titleText.innerHTML = obj.title;
-				timeText.innerText = startDate.toLocaleString("en-US", options);
+				timeText.innerText = startDate.toLocaleDateString(locale, dateOptions)+" - "+startDate.toLocaleTimeString(locale, timeOptions);
 
 				// Add event to list
 				parentElement.appendChild(event);
