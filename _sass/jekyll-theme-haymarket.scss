@@ -584,19 +584,21 @@ p {
 }
 
 .site-footer {
+	display: table;
+	width: 100%;
 	padding-top: 2rem;
 	margin-top: 2rem;
 	border-top: solid 1px $border-color;
 	font-size: 1rem;
 
 	#nav-container {
-		display: table;
-		float: left;
-		width: 80%;
+		display: table-cell;
 	}
 
 	.nav-group {
 		display: table-cell;
+		vertical-align: top;
+		padding-right: 4rem;
 
 		ul {
 			padding: 0;
@@ -616,8 +618,8 @@ p {
 	}
 
 	.join {
-		float: right;
-		width: 20%;
+		display: table-cell;
+		vertical-align: top;
 		color: $blockquote-text-color;
 
 		.btn-container {
@@ -637,20 +639,8 @@ p {
 	}
 
 	@include small {
-		#nav-container {
-			display: block;
-			float: left;
-			width: 60%;
-		}
-
 		.nav-group {
 			display: block;
-			float: none;
-			padding-right: 1rem;
-		}
-
-		.join {
-			width: 40%;
 		}
 	}
 }
