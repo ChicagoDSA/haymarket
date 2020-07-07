@@ -1,14 +1,5 @@
 <footer class="site-footer">
-	{% if site.chapter.url %}
-		{% assign chapterURL = site.chapter.url %}
-	{% else %}
-		{% assign chapterURL = '/' | absolute_url }} %}
-	{% endif %}
-	
-	
-
 	{% include nav.html %}
-
 	<div class="join">
 		<div class="btn-container">
 			{% if site.custom-join %}
@@ -19,6 +10,5 @@
 			<a href="{{ joinURL }}" class="btn">Join DSA</a>
 		</div>
 	</div>
-
 	<div style="clear: both;"></div> 
 </footer>
