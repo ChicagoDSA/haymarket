@@ -633,9 +633,31 @@ p {
 		}
 	}
 
+	.credits {
+		p {
+			float: left;
+			width: 50%;
+		}
+
+		.join {
+			float: right;
+		}
+	}
+
 	@include small {
 		.nav-group {
 			display: block;
+		}
+
+		.credits {
+			p,
+			.join {
+				float: none;
+			}
+
+			p {
+				width: 75%;
+			}
 		}
 	}
 }

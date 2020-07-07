@@ -1,3 +1,16 @@
+{% capture join %}
+<div class="join">
+	<div class="btn-container">
+		{% if site.custom-join %}
+			{% assign joinURL = site.custom-join | relative_url %}
+		{% else %}
+			{% assign joinURL = "https://www.dsausa.org/join" %}
+		{% endif %}
+		<a href="{{ joinURL }}" class="btn">Join DSA</a>
+	</div>
+</div>
+{% endcapture %}
+
 {% if site.data.nav %}
 	<div id="nav-container">
 		{% for group in site.data.nav.elements %}
@@ -11,5 +24,13 @@
 			</div>
 		{% endfor %}
 		<div style="clear: both;"></div> 
+	</div>
+	{{ join }}
+{% elsif site.chapter.name && site.chapter.url %}
+	<div id="nav-container">
+		<div class="credits">
+			<p>This site was made by <a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, a chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.</p>
+			{{ join }}
+		</div>
 	</div>
 {% endif %}

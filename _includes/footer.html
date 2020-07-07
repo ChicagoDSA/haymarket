@@ -1,14 +1,4 @@
 <footer class="site-footer">
 	{% include nav.html %}
-	<div class="join">
-		<div class="btn-container">
-			{% if site.custom-join %}
-				{% assign joinURL = site.custom-join | relative_url %}
-			{% else %}
-				{% assign joinURL = "https://www.dsausa.org/join" %}
-			{% endif %}
-			<a href="{{ joinURL }}" class="btn">Join DSA</a>
-		</div>
-	</div>
 	<div style="clear: both;"></div> 
 </footer>
