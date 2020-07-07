@@ -1,3 +1,3 @@
 <div class="btn-container">
-	<a href="{{ include.link }}" class="btn">{{ include.text }}</a>
+	<a href="{{ include.link }}" class="btn">{{ include.text | markdownify | remove: "<p>" | remove: "</p>" }}</a>
 </div>
