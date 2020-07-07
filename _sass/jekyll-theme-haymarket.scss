@@ -589,9 +589,14 @@ p {
 	border-top: solid 1px $border-color;
 	font-size: 1rem;
 
-	.nav-group {
+	#nav-container {
+		display: table;
 		float: left;
-		margin-right: 4rem;
+		width: 80%;
+	}
+
+	.nav-group {
+		display: table-cell;
 
 		ul {
 			padding: 0;
@@ -604,11 +609,20 @@ p {
 		h4 {
 			margin-bottom: 0;
 		}
+
+		a {
+			color: $blockquote-text-color;
+		}
 	}
 
 	.join {
 		float: right;
+		width: 20%;
 		color: $blockquote-text-color;
+
+		.btn-container {
+			float: right;
+		}
 
 		.btn {
 			margin-right: 0;
@@ -616,10 +630,27 @@ p {
 		}
 	}
 
+	@include medium {
+		.nav-group {
+			padding-right: 2rem;
+		}
+	}
+
 	@include small {
-		.nav-group,
-		.join {
+		#nav-container {
+			display: block;
+			float: left;
+			width: 60%;
+		}
+
+		.nav-group {
+			display: block;
 			float: none;
+			padding-right: 1rem;
+		}
+
+		.join {
+			width: 40%;
 		}
 	}
 }
