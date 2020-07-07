@@ -23,7 +23,7 @@
 			{{ background }}
 			<div class="title">
 				<i class="fas fa-arrow-right"></i>
-				<h4>{{ include.title }}
+				<h4>{{ include.title | markdownify | remove: "<p>" | remove: "</p>" }}
 					<div style="clear:both"></div>
 				</h4>
 			</div>

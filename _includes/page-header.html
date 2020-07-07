@@ -2,14 +2,14 @@
 	{% if site.banner.link %}
 		<a id="banner-link" href="{{ site.banner.link | relative_url }}">
 			<div id="banner">
-				<p id="banner-content">{{ site.banner.text | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+				<p id="banner-content">{{ site.banner.text | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 				<div style="clear:both"></div>
 			</div>
 		</a>
 	{% elsif site.banner.text %}
 		<div id="banner">
 			<p id="banner-content">
-				{{ site.banner.text | markdownify | remove: '<p>' | remove: '</p>' }}
+				{{ site.banner.text | markdownify | remove: "<p>" | remove: "</p>" }}
 			</p>
 			<div style="clear:both"></div>
 		</div>
@@ -21,9 +21,9 @@
 		<div class="chapter">
 			<h3>
 				{% if site.chapter.url %}
-					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" }}</a>
 				{% else %}
-					<a href="{{ '/' | absolute_url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' }}</a>
+					<a href="{{ '/' | absolute_url }}">{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" }}</a>
 				{% endif %}
 				{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 					<div id="social-container">
@@ -52,18 +52,18 @@
 		<h1 class="name">
 			<a href="{{ page.url | absolute_url }}">
 				{% if page.headline %}
-					{{ page.headline | markdownify | remove: '<p>' | remove: '</p>' }}
+					{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" }}
 				{% elsif page.title %}
-					{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}
+					{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
 				{% else %}
-					{{ site.title | default: page.github.repository_name | markdownify | remove: '<p>' | remove: '</p>' }}
+					{{ site.title | default: page.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
 				{% endif %}
 			</a>
 		</h1>
 		{% if page.subhead %}
-			<h2 class="tagline">{{ page.subhead | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% elsif page.description %}
-			<h2 class="tagline">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' }}</h2>
+			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% endif %}
 	</div>
 </header>
