@@ -1,13 +1,15 @@
-<div id="nav-container">
-	{% for group in site.data.nav.elements %}
-		<div class="nav-group">
-			<h4>{{ group.group | markdownify | remove: "<p>" | remove: "</p>" }}</h4>
-			<ul>
-				{% for item in group.items %}
-					<li><a href="{{  item.url | relative_url }}">{{ item.page | markdownify | remove: "<p>" | remove: "</p>" }}</a></li>
-				{% endfor %}
-			</ul>
-		</div>
-	{% endfor %}
-	<div style="clear: both;"></div> 
-</div>
+{% if site.data.nav %}
+	<div id="nav-container">
+		{% for group in site.data.nav.elements %}
+			<div class="nav-group">
+				<h4>{{ group.group | markdownify | remove: "<p>" | remove: "</p>" }}</h4>
+				<ul>
+					{% for item in group.items %}
+						<li><a href="{{  item.url | relative_url }}">{{ item.page | markdownify | remove: "<p>" | remove: "</p>" }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+		<div style="clear: both;"></div> 
+	</div>
+{% endif %}
