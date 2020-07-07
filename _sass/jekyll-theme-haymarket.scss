@@ -57,6 +57,60 @@ a {
 	}
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	color: $section-headings-color;
+
+	a {
+		color: $section-headings-color;
+	}
+}
+
+h5,
+h6 {
+	text-transform: uppercase;
+	letter-spacing: .125em;
+}
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.6875rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+h5 {
+	font-size: .9375rem;
+}
+
+h6 {
+	font-size: .75rem;
+}
+
+p {
+	margin-bottom: 1em;
+
+	img {
+		max-width: 100%;
+	}
+}
+
 .btn,
 .btn-container {
 	display: inline-block;
@@ -90,26 +144,16 @@ a {
 
 .page-header {
 	overflow: hidden;
-	color: $header-heading-color;
 	text-align: left;
 	background-color: $header-bg-color;
 
-	a {
+	h1, h2, h3, a {
 		color: $header-heading-color;
 	}
 
 	#banner-link {
 		&:hover p {
 			text-decoration: underline;
-		}
-	}
-
-	@include print {
-		color: $section-headings-color;
-		background: none;
-
-		a {
-			color: $section-headings-color;
 		}
 	}
 }
@@ -137,19 +181,20 @@ a {
 .main-content {
 	@include large {
 		max-width: 56rem;
-		padding-right: 6rem;
-		padding-left: 6rem;
+		padding: 0 6rem;
 		margin: 0 auto;
 	}
 
 	@include medium {
-		padding-right: 4rem;
-		padding-left: 4rem;
+		padding: 0 4rem;
 	}
 
 	@include small {
-		padding-right: 1rem;
-		padding-left: 1rem;
+		padding: 0 1rem;
+	}
+
+	@include print {
+		padding: 0 1rem;
 	}
 }
 
@@ -207,10 +252,6 @@ a {
 		#facebook:hover {
 			background-color: #4267b2;
 		}
-
-		@include print {
-			border-bottom: 2px solid $section-headings-color;
-		}
 	}
 
 	.name {
@@ -232,22 +273,19 @@ a {
 	.tagline {
 		max-width: 75%;
 		margin-bottom: 0;
+		font-size: 1.25rem;
 		font-weight: normal;
 
-		@include large {
-			font-size: 1.25rem;
+		@include medium{
+			font-size: 1.125rem;
 		}
 
-		@include medium {
-			font-size: 1.15rem;
+		@include small{
+			font-size: 1.125rem;
 		}
 
-		@include small {
-			font-size: 1.15rem;
-		}
-
-		@include print {
-			font-size: 1.15rem;
+		@include print{
+			font-size: 1.125rem;
 		}
 	}
 
@@ -283,12 +321,11 @@ a {
 		}
 
 		@include print {
-			display: none;
+			top: -10rem;
+			right: -17rem;
+			width: 35rem;
+			height: 35rem;
 		}
-	}
-
-	@include print {
-		padding-bottom: 2rem;
 	}
 }
 
@@ -301,31 +338,7 @@ a {
 		margin-top: 0;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-		font-weight: bold;
-		color: $section-headings-color;
-
-		a {
-			color: $section-headings-color;
-		}
-	}
-
-	h5,
-	h6 {
-		text-transform: uppercase;
-		letter-spacing: .125em;
-	}
-
 	p {
-		margin-bottom: 1em;
-
 		img {
 			max-width: 100%;
 		}
@@ -587,6 +600,10 @@ a {
 		li {
 			list-style-type: none;
 		}
+
+		h4 {
+			margin-bottom: 0;
+		}
 	}
 
 	.join {
@@ -597,9 +614,12 @@ a {
 			margin-right: 0;
 			background-color: $dsa-purple;
 		}
+	}
 
-		@include print {
-			display: none;
+	@include small {
+		.nav-group,
+		.join {
+			float: none;
 		}
 	}
 }
