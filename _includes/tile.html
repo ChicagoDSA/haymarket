@@ -1,5 +1,5 @@
 {% capture imageBackground %}
-	<div class="image" style="background-image: url('{{ include.image }}');">
+	<div class="image" style="background-image: url('{{ include.image }}');" role="text" aria-label="{{ include.image-description }}">
 		<div class="overlay"></div>
 	</div>
 {% endcapture %}
@@ -11,7 +11,6 @@
 {% if site.defaults[0].values.image != item.image %}
 	{% assign tileClass = "tile-container-image" %}
 	{% assign background = imageBackground %}
-
 {% else %}
 	{% assign tileClass = "tile-container-text" %}
 	{% assign background = colorBackground %}

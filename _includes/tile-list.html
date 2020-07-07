@@ -2,7 +2,8 @@
 	{% for item in site.[include.collection] %}
 		{% assign url = item.url | relative_url %}
 		{% assign image = item.image | relative_url %}
-		{% include tile.html title=item.title link=url image=image %}
+		{% assign image-description = item.image-description | markdownify | remove: "<p>" | remove: "</p>" %}
+		{% include tile.html title=item.title link=url image=image image-description=image-description %}
 	{% endfor %}
 	<div style="clear:both"></div>
 </ul>
