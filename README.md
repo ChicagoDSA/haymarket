@@ -25,7 +25,6 @@ title: My New Site
 description: A description of my new site.
 chapter:
   name: # Public name of your chapter
-  location: # Where your chapter is located
   url: # your-chapter-website.org
   facebook: # Facebook URL
   instagram: # Instagram URL
@@ -54,7 +53,7 @@ defaults:
 collections:
 ```
 
-You need to set `title`, `description`, `name`, `location`, and `url`. 
+You need to set `title`, `description`, `name`, and `url`. 
 #### Other values
 - When a social media URL is added, the icon will appear in your header.
 - Set a custom join URL to override the default national page.
