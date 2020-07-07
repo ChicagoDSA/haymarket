@@ -78,6 +78,27 @@ Hello, world!
 
 For more information on GitHub Pages content, check out the [documentation](https://help.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
 
+## Adding navigation
+
+1. In the root directory of `my-new-site`, create a folder called `_data`.
+2. Inside `_data`, create `nav.yml` and paste this code:
+
+```yaml
+elements:
+  - group: "Add navigation"
+    items:
+      - page: "Link to a page"
+        url: another-page
+      - page: "Another link"
+        url: another-page
+  - group: "Another group"
+    items:
+      - page: "Use Markdown *styling*"
+        url: another-page
+```
+
+3. Rebuild your site. You have a nav!
+
 ## Local development
 
 1. Open your terminal window and run `gem install github-pages`.
