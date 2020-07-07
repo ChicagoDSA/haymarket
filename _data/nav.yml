@@ -1,11 +1,11 @@
 elements:
-  - group: Add navigation
+  - group: "Add navigation"
     items:
-      - page: Link to a page
+      - page: "Link to a page"
         url: another-page
-      - page: Another link
+      - page: "Another link"
         url: another-page
-  - group: Another group
+  - group: "Another group"
     items:
-      - page: Use Markdown styling
+      - page: "Use Markdown styling"
         url: another-page
