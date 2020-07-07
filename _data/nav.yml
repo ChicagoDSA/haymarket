@@ -1,22 +1,12 @@
 elements:
-  - group: "Our work"
+  - group: "Add navigation"
     items:
-      - page: "Campaigns"
+      - page: "Link to a page"
         url: another-page
-      - page: "Working Groups"
+      - page: "Another link"
         url: another-page
-      - page: "Midwest Socialist"
-        url: another-page
-  - group: "Member resources"
+  - group: "Another group"
     items:
-      - page: "Branches"
+      - page: "Use Markdown *styling*"
         url: another-page
-      - page: "New Members"
-        url: another-page
-  - group: "Contact us"
-    items:
-      - page: "Email"
-        url: mailto:info@chicagodsa.org
-      - page: "Phone"
-        url: mailto:info@chicagodsa.org
         
