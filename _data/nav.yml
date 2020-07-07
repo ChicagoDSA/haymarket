@@ -7,6 +7,6 @@ elements:
         url: another-page
   - group: "Another group"
     items:
-      - page: "Use Markdown styling"
+      - page: "Use Markdown *styling*"
         url: another-page
         
