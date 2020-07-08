@@ -32,3 +32,8 @@ defaults:
 collections:
   tiles:
     output: true
+    order:
+      - defund-cpd.md
+      - lift-the-ban.md
+      - democratize-comed.md
+      - no-image.md
