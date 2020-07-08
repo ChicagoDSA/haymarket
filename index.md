@@ -23,9 +23,9 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 ### Header 3
 
-Use tiles to style your collections.
+Use tiles to style your collections. Add an optional limit.
 
-{% include tile-list.html collection="tiles" %}
+{% include tile-list.html collection="tiles" limit=4 %}
 
 #### Header 4
 

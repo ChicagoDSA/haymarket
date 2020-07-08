@@ -1,6 +1,7 @@
 <ul class="tile-list">
 	{% assign sortedCollection = site.[include.collection] | sort: "order" %}
-	{% for item in sortedCollection %}
+	{% assign limit = include.limit %}
+	{% for item in sortedCollection limit:limit %}
 		{% assign url = item.url | relative_url %}
 		{% assign image = item.image | relative_url %}
 		{% assign image-description = item.image-description | markdownify | remove: "<p>" | remove: "</p>" %}
