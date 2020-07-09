@@ -97,7 +97,6 @@ function loadCalendar(calendar, key, limit) {
 		function(xhr) {
 			var data = JSON.parse(xhr.responseText);
 			console.log("Successfully received events");
-			console.log(data);
 
 			// Create clear floats
 			var clearFloats = document.createElement("div");
