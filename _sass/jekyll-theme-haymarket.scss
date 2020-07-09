@@ -178,6 +178,7 @@ p {
 
 #banner-content,
 .project-area,
+#headline-image-container,
 .main-content {
 	@include large {
 		max-width: 56rem;
@@ -189,11 +190,15 @@ p {
 		padding: 0 4rem;
 	}
 
-	@include small {
+	@include print {
 		padding: 0 1rem;
 	}
+}
 
-	@include print {
+#banner-content,
+.project-area,
+.main-content {
+	@include small {
 		padding: 0 1rem;
 	}
 }
@@ -329,6 +334,40 @@ p {
 	}
 }
 
+.cover-background {
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+#headline-image-container {
+	margin: 0 auto;
+
+	#headline-image {
+		height: 20rem;
+		border-left: 1rem solid $dsa-red;
+	}
+
+	#headline-caption {
+		font-size: 1rem;
+		color: $blockquote-text-color;
+
+		p {
+			margin: 0;
+			padding: .5rem 0; 
+		}
+	}
+
+	@include small {
+		width: 100%;
+
+		.caption p {
+			padding: .5rem 1rem; 
+		}
+	}
+}
+
 .main-content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -342,6 +381,67 @@ p {
 		img {
 			max-width: 100%;
 		}
+	}
+
+	ul,
+	ol {
+		margin-top: 0;
+	}
+
+	blockquote {
+		padding: 0 1rem;
+		margin-left: 0;
+		color: $blockquote-text-color;
+		border-left: .3rem solid $border-color;
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	table {
+		display: block;
+		width: 100%;
+		overflow: auto;
+		word-break: normal;
+		word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+		-webkit-overflow-scrolling: touch;
+
+		th {
+			font-weight: bold;
+		}
+
+		th,
+		td {
+			padding: .5rem 1rem;
+			border: 1px solid $border-color;
+		}
+	}
+
+	dl {
+		padding: 0;
+
+		dt {
+			padding: 0;
+			margin-top: 1rem;
+			font-size: 1rem;
+			font-weight: bold;
+		}
+
+		dd {
+			padding: 0;
+			margin-bottom: 1rem;
+		}
+	}
+
+	hr {
+		border-width: 2px;
+		border-style: solid;
+		border-color: $border-color;
 	}
 
 	.tile-list,
@@ -413,23 +513,16 @@ p {
 	}
 
 	.tile-container-image {
-		.image {
-			overflow: hidden;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: 50% 50%;
+		.image .overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			opacity: 0;
 
-			.overlay {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				background-color: #000;
-				opacity: 0;
-
-				/* IE fixes */
-				zoom: 1;
-				filter: alpha(opacity=0);
-			}
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=0);
 		}
 
 		&:hover {
@@ -519,67 +612,6 @@ p {
 				margin-right: 0;
 			}
 		}
-	}
-
-	ul,
-	ol {
-		margin-top: 0;
-	}
-
-	blockquote {
-		padding: 0 1rem;
-		margin-left: 0;
-		color: $blockquote-text-color;
-		border-left: .3rem solid $border-color;
-
-		> :first-child {
-			margin-top: 0;
-		}
-
-		> :last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	table {
-		display: block;
-		width: 100%;
-		overflow: auto;
-		word-break: normal;
-		word-break: keep-all; // For Firefox to horizontally scroll wider tables.
-		-webkit-overflow-scrolling: touch;
-
-		th {
-			font-weight: bold;
-		}
-
-		th,
-		td {
-			padding: .5rem 1rem;
-			border: 1px solid $border-color;
-		}
-	}
-
-	dl {
-		padding: 0;
-
-		dt {
-			padding: 0;
-			margin-top: 1rem;
-			font-size: 1rem;
-			font-weight: bold;
-		}
-
-		dd {
-			padding: 0;
-			margin-bottom: 1rem;
-		}
-	}
-
-	hr {
-		border-width: 2px;
-		border-style: solid;
-		border-color: $border-color;
 	}
 }
 

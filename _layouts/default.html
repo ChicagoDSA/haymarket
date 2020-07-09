@@ -6,6 +6,13 @@
 	<body>
 		
 		{% include page-header.html %}
+
+		{% if page.image != site.defaults[0].values.image %}
+			<div id="headline-image-container">
+				<div id="headline-image" class="cover-background" style="background-image: url('{{ page.image | relative_url }}');" role="text" aria-labelledby="headline-caption"></div>
+				<div id="headline-caption">{{ page.image-description | markdownify }}</div>
+			</div>
+		{% endif %}
 		
 		<main id="content" class="main-content" role="main">
 			
