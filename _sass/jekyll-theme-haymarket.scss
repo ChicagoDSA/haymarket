@@ -362,7 +362,7 @@ p {
 	@include small {
 		width: 100%;
 
-		.caption p {
+		#headline-caption p {
 			padding: .5rem 1rem; 
 		}
 	}
