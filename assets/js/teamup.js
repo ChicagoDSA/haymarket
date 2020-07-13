@@ -146,7 +146,7 @@ function loadCalendar(calendar, key, limit) {
 				// Add elements to event
 				event.appendChild(columnFix);
 				columnFix.appendChild(eventLink);
-				eventLink.appendChild(title);
+				columnFix.appendChild(title);
 				title.appendChild(icon);	
 				title.appendChild(titleText);
 				title.appendChild(timeText);

@@ -150,12 +150,6 @@ p {
 	h1, h2, h3, a {
 		color: $header-heading-color;
 	}
-
-	#banner-link {
-		&:hover p {
-			text-decoration: underline;
-		}
-	}
 }
 
 #banner {
@@ -163,16 +157,33 @@ p {
 	z-index: 1;
 	width: 100%;
 	padding: 1rem 0;
-	color: $body-text-color;
 	background-color: $dsa-yellow;
 }
 
 #banner-content {
-	margin: 0;
+	p,
+	#banner-link {
+		display: inline-block;
+	}
+
+	p,
+	i {
+		color: $body-text-color;
+	}
+
+	p {
+		margin: 0;
+	}
 
 	i {
 		margin-left: .5rem;
 		line-height: 1.5;
+	}
+
+	#banner-link {
+		&:hover p {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -458,6 +469,13 @@ p {
 		width: 50%;
 		margin-bottom: 1rem;
 		list-style-type: none;
+
+		a {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
 
 		h4,
 		h5 {
