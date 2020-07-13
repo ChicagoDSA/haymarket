@@ -53,7 +53,7 @@ a {
 
 	&:focus {
 		outline: 2px dashed $body-link-color;
-		outline-offset: 2px;
+		outline-offset: 0;
 	}
 }
 
