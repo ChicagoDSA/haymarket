@@ -13,6 +13,9 @@
 <!-- Set title based on conditionals -->
 <meta property="og:title" content="{{ title | strip_newlines }}" />
 
+<!-- Locale -->
+<meta property="og:locale" content="en_US" />
+
 {% if page.description %}
 	{%- capture description -%}
 		{{ page.description | markdownify }}
