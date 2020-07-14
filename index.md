@@ -86,10 +86,9 @@ Use tiles to style your collections. Add an optional limit.
 
 ![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
 
-### Large image
+### Large image with a caption
 
-![Flyer preceding Haymarket affair](assets/images/theme-Haymarket-flyer.png)
-
+{% include full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="Flyer preceding Haymarket affair" %}
 
 ### Definition lists can be used with HTML syntax.
 
