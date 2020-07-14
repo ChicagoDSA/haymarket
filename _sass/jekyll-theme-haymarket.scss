@@ -189,7 +189,7 @@ p {
 
 #banner-content,
 .project-area,
-#headline-image-container,
+.headline-image-container,
 .main-content {
 	@include large {
 		max-width: 56rem;
@@ -352,36 +352,46 @@ p {
 	background-position: 50% 50%;
 }
 
-.image-caption {
-	font-size: 1rem;
-	color: $blockquote-text-color;
-
-	p {
-		margin: 0;
-		padding: .5rem 0; 
-
-		@include small {
-			padding: .5rem 1rem; 
-		}
-	}
-}
-
-.image-credit {
-	font-size: .75rem;
-	font-weight: bold;
-}
-
-#headline-image-container {
+.headline-image-container {
 	margin: 0 auto;
 
-	#headline-image {
+	.headline-image {
 		height: 20rem;
 		border-left: 1rem solid $dsa-red;
 	}
 
 	@include small {
 		width: 100%;
+
+		.image-caption {
+			padding: .5rem 1rem; 
+		}
 	}
+}
+
+.full-width-image-container {
+	margin: 0;
+
+	.full-width-image {
+		display: block;
+		width: 100%;
+	}
+}
+
+.image-caption {
+	padding: .5rem 0; 
+	font-size: 1rem;
+	color: $blockquote-text-color;
+
+	p {	
+		display: inline;
+		margin: 0;
+	}
+}
+
+.image-credit {
+	font-size: .75rem;
+	font-weight: bold;
 }
 
 .main-content {
