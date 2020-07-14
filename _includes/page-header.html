@@ -66,8 +66,6 @@
 			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% elsif page.description %}
 			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
-		{% else %}
-			<h2 class="tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% endif %}
 	</div>
 </header>
