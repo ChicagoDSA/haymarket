@@ -1,0 +1,10 @@
+<div class="image-caption">
+	{% if include.description %}
+		{{ include.description | markdownify }}
+	{% endif %}
+	{% if include.credit %}
+		<p class="image-credit">
+			Photo: {{ include.credit | markdownify | remove: "<p>" | remove: "</p>" }}
+		</p>
+	{% endif %}
+</div>
