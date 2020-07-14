@@ -44,5 +44,5 @@
 	{%- endcapture -%}
 {% endif %}
 
-<meta property="og:site_name" content="{{ siteName }}}" />
+<meta property="og:site_name" content="{{ siteName | strip_newlines }}" />
 <meta property="og:image" content="{{ page.image | absolute_url }}" />
