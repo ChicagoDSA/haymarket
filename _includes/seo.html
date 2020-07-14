@@ -1,0 +1,45 @@
+{% if page.title %}
+	{%- capture title -%}
+		{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
+	{%- endcapture -%}
+	<title>{{ title | strip_newlines }}</title>
+{% else %}
+	{%- capture title -%}
+		{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
+	{%- endcapture -%}
+	<title>{{ title | strip_newlines }}</title>
+{% endif %}
+
+<!-- Set title based on conditionals -->
+<meta property="og:title" content="{{ title | strip_newlines }}" />
+
+{% if page.description %}
+	{%- capture description -%}
+		{{ page.description | markdownify }}
+	{%- endcapture -%}
+{% else %}
+	{%- capture description -%}
+		{{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
+	{%- endcapture -%}
+{% endif %}
+
+<!-- Set descriptions based on conditionals -->
+<meta name="description" content="{{ description | strip_newlines }}" />
+<meta property="og:description" content="{{ description | strip_newlines }}" />
+
+<!-- URLs -->
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+
+{% if site.title %}
+	{%- capture siteName -%}
+		{{ site.title | markdownify }}
+	{%- endcapture -%}
+{% else %}
+	{%- capture siteName -%}
+		{{ site.title | default: site.github.repository_name | markdownify }}
+	{%- endcapture -%}
+{% endif %}
+
+<meta property="og:site_name" content="{{ siteName }}}" />
+<meta property="og:image" content="{{ page.image | absolute_url }}" />

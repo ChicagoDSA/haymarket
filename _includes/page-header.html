@@ -58,7 +58,7 @@
 				{% elsif page.title %}
 					{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
 				{% else %}
-					{{ site.title | default: page.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
+					{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
 				{% endif %}
 			</a>
 		</h1>
@@ -66,6 +66,8 @@
 			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% elsif page.description %}
 			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+		{% else %}
+			<h2 class="tagline">{{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
 		{% endif %}
 	</div>
 </header>
