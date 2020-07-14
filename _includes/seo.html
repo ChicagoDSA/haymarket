@@ -36,11 +36,11 @@
 
 {% if site.title %}
 	{%- capture siteName -%}
-		{{ site.title | markdownify }}
+		{{ site.title | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% else %}
 	{%- capture siteName -%}
-		{{ site.title | default: site.github.repository_name | markdownify }}
+		{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% endif %}
 
