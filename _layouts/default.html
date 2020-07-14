@@ -10,7 +10,14 @@
 		{% if page.image != site.defaults[0].values.image %}
 			<div id="headline-image-container">
 				<div id="headline-image" class="cover-background" style="background-image: url('{{ page.image | relative_url }}');" role="text" aria-labelledby="headline-caption"></div>
-				<div id="headline-caption">{{ page.image-description | markdownify }}</div>
+				<div class="image-caption">
+					<p>
+						{{ page.image-description | markdownify | remove: "<p>" | remove: "</p>" }}
+						{% if page.image-credit %}
+							<span class="image-credit">Photo: {{ page.image-credit }}</span>
+						{% endif %}
+					</p>
+				</div>
 			</div>
 		{% endif %}
 		
