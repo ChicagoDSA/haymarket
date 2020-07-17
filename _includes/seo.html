@@ -18,7 +18,7 @@
 
 {% if page.description %}
 	{%- capture description -%}
-		{{ page.description | markdownify }}
+		{{ page.description | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% else %}
 	{%- capture description -%}
