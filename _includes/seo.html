@@ -47,5 +47,10 @@
 <meta property="og:site_name" content="{{ siteName | strip_newlines }}" />
 <meta property="og:image" content="{{ page.image | absolute_url }}" />
 
-<!-- Enables Twitter support -->
-<meta name="twitter:card" content="summary_large_image">
+{% if page.image == "assets/images/og-image.png" %}
+	<!-- Small Twitter preview for default logo -->
+	<meta name="twitter:card" content="summary">
+{% else %}
+	<!-- Large Twitter preview for custom images -->
+	<meta name="twitter:card" content="summary_large_image">
+{% endif %}
