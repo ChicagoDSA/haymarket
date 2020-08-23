@@ -12,11 +12,12 @@ teamup: "cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a"
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
-# Leave empty to disable
+# Add content here to enable a site-wide, top banner
 banner:
   text: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
   link: another-page
 
+# Set default front matter for Markdown files
 defaults:
   -
     scope:
@@ -25,7 +26,7 @@ defaults:
       layout: default
       image: "assets/images/og-image.png"
 
-# Add collections here
+# Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
   tiles:
