@@ -190,10 +190,11 @@ p {
 .project-area,
 .headline-image-container,
 .main-content {
+	margin: 0 auto;
+
 	@include large {
 		max-width: 56rem;
 		padding: 0 6rem;
-		margin: 0 auto;
 	}
 
 	@include medium {
