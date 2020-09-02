@@ -65,6 +65,12 @@ h6 {
 	margin-top: 2rem;
 	margin-bottom: 1rem;
 	font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4 {
 	color: $section-headings-color;
 
 	a {
@@ -77,6 +83,10 @@ h6 {
 	color: $secondary-text-color;
 	text-transform: uppercase;
 	letter-spacing: .125em;
+
+	a {
+		color: $secondary-text-color;
+	}
 }
 
 h1 {
