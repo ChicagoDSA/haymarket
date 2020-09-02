@@ -74,6 +74,7 @@ h6 {
 
 h5,
 h6 {
+	color: $secondary-text-color;
 	text-transform: uppercase;
 	letter-spacing: .125em;
 }
@@ -381,7 +382,7 @@ p {
 .image-caption {
 	padding: .5rem 0; 
 	font-size: 1rem;
-	color: $blockquote-text-color;
+	color: $secondary-text-color;
 
 	p {	
 		display: inline;
@@ -417,7 +418,7 @@ p {
 	blockquote {
 		margin-left: 0;
 		padding: 0 1rem;
-		color: $blockquote-text-color;
+		color: $secondary-text-color;
 		border-left: .3rem solid $border-color;
 
 		> :first-child {
@@ -470,6 +471,7 @@ p {
 		border-width: 2px;
 		border-style: solid;
 		border-color: $border-color;
+		background-color: $border-color;
 	}
 
 	.tile-list,
@@ -678,14 +680,14 @@ p {
 		}
 
 		a {
-			color: $blockquote-text-color;
+			color: $secondary-text-color;
 		}
 	}
 
 	.join {
 		display: table-cell;
 		vertical-align: top;
-		color: $blockquote-text-color;
+		color: $secondary-text-color;
 
 		.btn-container {
 			float: right;
