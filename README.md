@@ -29,6 +29,13 @@ chapter:
   facebook: # Facebook URL
   instagram: # Instagram URL
   twitter: # Twitter URL
+  # Override DSA national logos
+  header-logo-svg:
+  header-logo-png-fallback: # 360px square recommended
+  background-logo-svg:
+  background-logo-png-fallback: # 1440px square recommended
+  # Alt text for screen readers
+  logo-description: A CTA train and the Sears Tower are in front of a rose.
 custom-join: # Add custom join URL here
 google_analytics: # Tracking ID
 teamup: # Calendar API key
