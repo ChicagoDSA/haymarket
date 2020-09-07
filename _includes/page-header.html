@@ -21,37 +21,49 @@
 			{% include DSA-logo.html %}
 		</div>
 		<div class="chapter">
-			<h3>
-				{% if site.chapter.url %}
-					<a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-				{% else %}
-					<a href="{{ '/' | absolute_url }}">{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-				{% endif %}
-				{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
-					<div id="social-container">
-						{% if site.chapter.twitter %}
-							<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
-								<i class="fab fa-twitter"></i>
-							</a>
-						{% endif %}
+			{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
+				<div id="social-container">
+					{% if site.chapter.twitter %}
+						<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
+							<i class="fab fa-twitter"></i>
+						</a>
+					{% endif %}
 
-						{% if site.chapter.instagram %}
-							<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
-								<i class="fab fa-instagram"></i>
-							</a>
-						{% endif %}
+					{% if site.chapter.instagram %}
+						<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
+							<i class="fab fa-instagram"></i>
+						</a>
+					{% endif %}
 
-						{% if site.chapter.facebook %}
-							<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						{% endif %}
-					</div>
+					{% if site.chapter.facebook %}
+						<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					{% endif %}
 					<div style="clear: both;"></div> 
-				{% endif %}
-			</h3>
+				</div>
+			{% endif %}
+
+			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
+				{%- capture logo -%}
+					<div id="logo">
+						<img src="{{ site.chapter.header-logo-svg | relative_url }}" onerror="this.src='{{ site.chapter.header-logo-png-fallback | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ site.chapter.logo-description | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">
+					</div>
+				{%- endcapture -%}
+			{% endif %}
+
+			<div id="name">
+				<h3>
+					{% if site.chapter.url %}
+						<a href="{{ site.chapter.url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
+					{% else %}
+						<a href="{{ '/' | absolute_url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
+					{% endif %}
+				</h3>
+			</div>
+			<div style="clear: both;"></div> 
 		</div>
-		<h1 class="name">
+		<h1 class="page-title">
 			<a href="{{ page.url | absolute_url }}">
 				{% if page.headline %}
 					{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" }}
