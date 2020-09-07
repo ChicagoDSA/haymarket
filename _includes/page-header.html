@@ -2,7 +2,7 @@
 	{% if site.banner.link %}
 		<div id="banner">
 			<div id="banner-content">
-				<a id="banner-link" href="{{ site.banner.link | relative_url }}" tabindex="1">
+				<a id="banner-link" href="{{ site.banner.link | relative_url }}">
 					<p>{{ site.banner.text | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 				</a>
 			</div>
@@ -24,19 +24,19 @@
 			{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 				<div id="social-container">
 					{% if site.chapter.twitter %}
-						<a id="twitter" class="social" href="{{ site.chapter.twitter }}" tabindex="3">
+						<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
 							<i class="fab fa-twitter"></i>
 						</a>
 					{% endif %}
 
 					{% if site.chapter.instagram %}
-						<a id="instagram" class="social" href="{{ site.chapter.instagram }}" tabindex="4">
+						<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
 							<i class="fab fa-instagram"></i>
 						</a>
 					{% endif %}
 
 					{% if site.chapter.facebook %}
-						<a id="facebook" class="social" href="{{ site.chapter.facebook }}" tabindex="5">
+						<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
 							<i class="fab fa-facebook-f"></i>
 						</a>
 					{% endif %}
@@ -61,9 +61,9 @@
 			<div id="name">
 				<h3>
 					{% if site.chapter.url %}
-						<a href="{{ site.chapter.url }}" tabindex="2">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
+						<a href="{{ site.chapter.url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
 					{% else %}
-						<a href="{{ '/' | absolute_url }}" tabindex="2">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
+						<a href="{{ '/' | absolute_url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
 					{% endif %}
 				</h3>
 			</div>
