@@ -21,29 +21,6 @@
 			{% include DSA-logo.html %}
 		</div>
 		<div class="chapter">
-			{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
-				<div id="social-container">
-					{% if site.chapter.twitter %}
-						<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
-							<i class="fab fa-twitter"></i>
-						</a>
-					{% endif %}
-
-					{% if site.chapter.instagram %}
-						<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
-							<i class="fab fa-instagram"></i>
-						</a>
-					{% endif %}
-
-					{% if site.chapter.facebook %}
-						<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-					{% endif %}
-					<div style="clear: both;"></div> 
-				</div>
-			{% endif %}
-
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
 				{%- capture logo -%}
 					<div id="logo">
@@ -58,32 +35,38 @@
 				{%- endcapture -%}
 			{% endif %}
 
-			<div id="name">
-				<h3>
-					{% if site.chapter.url %}
-						<a href="{{ site.chapter.url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
-					{% else %}
-						<a href="{{ '/' | absolute_url }}">{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div></a>
-					{% endif %}
-				</h3>
-			</div>
+			{% if site.chapter.url %}
+				<div id="name" href="{{ site.chapter.url }}">
+					<h3>
+						<a href="{{ site.chapter.url }}">
+						{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
+						</a>
+					</h3>
+				</div>
+			{% else %}
+				<div id="name" href="{{ '/' | absolute_url }}">
+					<h3>
+						<a href="{{ '/' | absolute_url }}">
+						{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
+						</a>
+					</h3>
+				</div>
+			{% endif %}
 			<div style="clear: both;"></div> 
 		</div>
 		<h1 class="page-title">
-			<a href="{{ page.url | absolute_url }}">
-				{% if page.headline %}
-					{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" }}
-				{% elsif page.title %}
-					{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-				{% else %}
-					{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
-				{% endif %}
-			</a>
+			{%- if page.headline -%}
+				{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
+			{%- elsif page.title -%}
+				{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
+			{%- else -%}
+				{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
+			{%- endif -%}
 		</h1>
 		{% if page.subhead %}
-			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% elsif page.description %}
-			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% endif %}
 	</div>
 </header>

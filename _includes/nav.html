@@ -11,6 +11,31 @@
 </div>
 {% endcapture %}
 
+{% capture social %}
+	{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
+		<div id="social-container">
+			{% if site.chapter.twitter %}
+				<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
+					<i class="fab fa-twitter"></i>
+				</a>
+			{% endif %}
+
+			{% if site.chapter.instagram %}
+				<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
+					<i class="fab fa-instagram"></i>
+				</a>
+			{% endif %}
+
+			{% if site.chapter.facebook %}
+				<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+			{% endif %}
+			<div style="clear: both;"></div> 
+		</div>
+	{% endif %}
+{% endcapture %}
+
 {% if site.data.nav %}
 	<div id="nav-container">
 		{% for group in site.data.nav.elements %}
@@ -23,13 +48,14 @@
 				</ul>
 			</div>
 		{% endfor %}
+		{{ social }}
 		<div style="clear: both;"></div> 
 	</div>
 	{{ join }}
 {% elsif site.chapter.name && site.chapter.url %}
 	<div id="nav-container">
 		<div class="credits">
-			<p>This site was made by <a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, a chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.</p>
+			<p>This site was made by <a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, a chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.{{ social }}</p>
 			{{ join }}
 		</div>
 	</div>
