@@ -6,6 +6,13 @@ chapter:
   facebook: "?"
   instagram: "?"
   twitter: "?"
+  # Override DSA national logos
+  header-logo-svg:
+  header-logo-png-fallback: # 360px square recommended
+  background-logo-svg:
+  background-logo-png-fallback: # 1440px square recommended
+  # Alt text for screen readers
+  logo-description: A CTA train and the Sears Tower are in front of a rose.
 custom-join: # Add custom join URL here
 google_analytics:
 teamup: "cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a"
