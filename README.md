@@ -58,6 +58,10 @@ defaults:
 # Add collections here
 # https://jekyllrb.com/docs/collections/
 collections:
+  # Add single pages in the _pages folder
+  pages:
+    output: true
+    permalink: /:path/ # These page URLs start at site root
 ```
 
 You need to set `title`, `description`, `name`, and `url`. 

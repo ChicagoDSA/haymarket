@@ -35,8 +35,9 @@ defaults:
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
+  # Add single pages in the _pages folder
   pages:
     output: true
-    permalink: /:path/
+    permalink: /:path/ # These page URLs start at site root
   tiles:
     output: true
