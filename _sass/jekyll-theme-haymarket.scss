@@ -20,6 +20,12 @@
 	}
 }
 
+@mixin extra-small {
+	@media screen and (max-width: #{$small-breakpoint}) {
+		@content;
+	}
+}
+
 @mixin print {
 	@media print {
 		@content;
@@ -649,7 +655,7 @@ p {
 	}
 }
 
-.site-footer {
+#site-footer {
 	display: table;
 	width: 100%;
 	margin: 2rem 0;
@@ -710,7 +716,13 @@ p {
 		}
 	}
 
-	.join {
+	.credits {
+		#join {
+			float: right;
+		}
+	}
+
+	#join {
 		display: table-cell;
 		vertical-align: top;
 		color: $secondary-text-color;
@@ -725,31 +737,36 @@ p {
 		}
 	}
 
-	.credits {
-		p {
-			float: left;
-			width: 50%;
-		}
+	#left-column {
+		float: left;
+		width: 50%;
 
-		.join {
-			float: right;
+		p {
+			max-width: 24rem;
 		}
 	}
 
-	@include small {
+	@include extra-small {
+		display: block;
+
+		#nav-container, 
 		.nav-group {
 			display: block;
 		}
 
 		.credits {
-			p,
-			.join {
-				float: none;
+			#join {
+				float: left;
 			}
+		}
 
-			p {
-				width: 75%;
-			}
+		#join {
+			float: left;
+			margin-top: 1.5rem;
+		}
+
+		#left-column {
+			width: 100%;
 		}
 	}
 }
