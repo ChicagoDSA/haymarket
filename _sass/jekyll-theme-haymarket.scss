@@ -746,12 +746,13 @@ p {
 		}
 	}
 
-	@include extra-small {
-		display: block;
-
-		#nav-container, 
-		.nav-group {
+	@include small {
+		#nav-container {
 			display: block;
+		}
+
+		#left-column {
+			width: 100%;
 		}
 
 		.credits {
@@ -764,9 +765,13 @@ p {
 			float: left;
 			margin-top: 1.5rem;
 		}
+	}
 
-		#left-column {
-			width: 100%;
+	@include extra-small {
+		display: block;
+
+		.nav-group {
+			display: block;
 		}
 	}
 }
