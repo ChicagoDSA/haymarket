@@ -50,6 +50,12 @@
 						<img src="{{ site.chapter.header-logo-svg | relative_url }}" onerror="this.src='{{ site.chapter.header-logo-png-fallback | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ site.chapter.logo-description | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">
 					</div>
 				{%- endcapture -%}
+			{% else %}
+				{%- capture logo -%}
+					<div id="logo">
+						<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="Two hands holding each other. A rose is behind them.">
+					</div>
+				{%- endcapture -%}
 			{% endif %}
 
 			<div id="name">
