@@ -1,4 +1,4 @@
-# Haymarket
+# Haymarket theme
 
 [![Latest release](https://img.shields.io/github/v/release/ChicagoDSA/haymarket)](https://github.com/ChicagoDSA/haymarket/releases/latest)
 
