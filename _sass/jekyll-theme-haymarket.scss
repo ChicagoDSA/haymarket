@@ -20,6 +20,12 @@
 	}
 }
 
+@mixin extra-small {
+	@media screen and (max-width: #{$small-breakpoint}) {
+		@content;
+	}
+}
+
 @mixin print {
 	@media print {
 		@content;
@@ -231,7 +237,7 @@ p {
 	padding-bottom: 3rem;
 
 	.chapter,
-	.name,
+	.page-title,
 	.tagline {
 		position: relative;
 	}
@@ -246,21 +252,27 @@ p {
 			margin-bottom: 1rem;
 		}
 
+		#logo,
+		.social {
+			float: left;
+			background-color: $header-heading-color;
+			border-radius: .5rem;
+		}
+
 		#social-container {
 			float: right;
-			margin-bottom: -1rem;
+			padding-top: .5rem;
+			padding-bottom: -1rem;
 		}
 
 		.social {
-			float: left;
-			width: 2rem;
-			height: 2rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			margin-bottom: .5rem;
 			margin-left: .5rem;
 			text-align: center;
+			font-size: 1rem;
 			color: $dsa-red;
-			background-color: $header-heading-color;
-			border-radius: .5rem;
 
 			&:hover {
 				color: $header-heading-color;
@@ -279,9 +291,38 @@ p {
 		#facebook:hover {
 			background-color: #4267b2;
 		}
+
+		#logo {
+			width: 2rem;
+			height: 2rem;
+			margin-right: .5rem;
+			background-color: $header-heading-color;
+			border-radius: .5rem;
+		}
+
+		#name {
+			float: left;
+		}
+
+		@include extra-small {
+			#social-container,
+			#name {
+				width: 100%;
+			}
+
+			#social-container {
+				float: left;
+				padding-bottom: 1rem;
+			}
+
+			.social {
+				margin-right: .5rem;
+				margin-left: 0;
+			}
+		}
 	}
 
-	.name {
+	.page-title {
 		margin: 2rem 0 0 0;
 
 		@include large {
@@ -327,31 +368,31 @@ p {
 		pointer-events: none;
 
 		@include large {
-			top: -16rem;
-			right: -20rem;
-			width: 50rem;
-			height: 50rem;
+			top: -6rem;
+			right: -5rem;
+			width: 30rem;
+			height: 30rem;
 		}
 
 		@include medium {
-			top: -14rem;
-			right: -19rem;
-			width: 45rem;
-			height: 45rem;
+			top: -4rem;
+			right: -4rem;
+			width: 26rem;
+			height: 26rem;
 		}
 
 		@include small {
-			top: -12rem;
-			right: -18rem;
-			width: 40rem;
-			height: 40rem;
+			top: -2rem;
+			right: -5rem;
+			width: 22rem;
+			height: 22rem;
 		}
 
 		@include print {
-			top: -10rem;
-			right: -17rem;
-			width: 35rem;
-			height: 35rem;
+			top: 0;
+			right: -5rem;
+			width: 18rem;
+			height: 18rem;
 		}
 	}
 }
