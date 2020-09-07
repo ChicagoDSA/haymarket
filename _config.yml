@@ -35,5 +35,8 @@ defaults:
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   tiles:
     output: true
