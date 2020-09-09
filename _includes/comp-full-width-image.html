@@ -1,6 +1,6 @@
 <div class="full-width-image-container">
 	<img class= "full-width-image" src="{{ include.image | relative_url }}" />
 	{% if include.description or include.credit %}
-		{% include image-caption.html description=include.description credit=include.credit %}
+		{% include comp-image-caption.html description=include.description credit=include.credit %}
 	{% endif %}
 </div>

@@ -5,7 +5,7 @@
 		{% assign url = item.url | relative_url %}
 		{% assign image = item.image | relative_url %}
 		{% assign image-description = item.image-description | markdownify | remove: "<p>" | remove: "</p>" %}
-		{% include tile.html title=item.title link=url image=image image-description=image-description %}
+		{% include list-tiles-item.html title=item.title link=url image=image image-description=image-description %}
 	{% endfor %}
 	<div style="clear:both"></div>
 </ul>

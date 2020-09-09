@@ -25,7 +25,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 Use tiles to style your collections. Add an optional limit.
 
-{% include tile-list.html collection="tiles" limit=4 %}
+{% include list-tiles.html collection="tiles" limit=4 %}
 
 #### Header 4
 
@@ -88,7 +88,7 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Large image with a caption
 
-{% include full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="A flyer announces the Haymarket rally." %}
+{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="A flyer announces the Haymarket rally." %}
 
 ### Definition lists can be used with HTML syntax.
 
@@ -105,10 +105,10 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Load events from a public Teamup calendar.
 
-{% include event-list.html calendar="ksc3uaa38o41o2vz8o" limit=2 %}
+{% include list-events.html calendar="ksc3uaa38o41o2vz8o" limit=2 %}
 
 ### Buttons are more prominent than links.
 
-{% include button.html text="I'm a new member" link="another-page" %}
-{% include button.html text="I want to contact the EC" link="another-page" %}
-{% include button.html text="I'm at a protest and I need help" link="another-page" %}
+{% include comp-button.html text="I'm a new member" link="another-page" %}
+{% include comp-button.html text="I want to contact the EC" link="another-page" %}
+{% include comp-button.html text="I'm at a protest and I need help" link="another-page" %}
