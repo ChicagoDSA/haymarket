@@ -35,6 +35,10 @@ defaults:
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
+  # Translated folders
+  translations:
+    output: true
+    permalink: /:path/ # These page URLs start at site root
   # Add single pages in the _pages folder
   pages:
     output: true
