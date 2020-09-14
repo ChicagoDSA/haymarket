@@ -665,58 +665,65 @@ p {
 
 	#nav-container {
 		display: table-cell;
-	}
 
-	.nav-group {
-		display: table-cell;
-		vertical-align: top;
-		padding-right: 4rem;
+		.nav-group {
+			display: table-cell;
+			vertical-align: top;
+			padding-right: 4rem;
 
-		ul {
-			padding: 0;
+			ul {
+				padding: 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			h4 {
+				margin-bottom: 0;
+			}
+
+			a {
+				color: $secondary-text-color;
+			}
 		}
 
-		li {
-			list-style-type: none;
-		}
+		#social-container {
+			padding-top: .5rem;
 
-		h4 {
-			margin-bottom: 0;
-		}
+			.social {
+				float: left;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-right: .5rem;
+				text-align: center;
+				font-size: 1rem;
+				color: $header-heading-color;
+				border-radius: .5rem;
+			}
 
-		a {
-			color: $secondary-text-color;
-		}
-	}
+			#twitter {
+				background-color: #1da1f2;
+			}
 
-	#social-container {
-		padding-top: .5rem;
+			#instagram {
+				background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+			}
 
-		.social {
-			float: left;
-			width: 1.5rem;
-			height: 1.5rem;
-			margin-right: .5rem;
-			text-align: center;
-			font-size: 1rem;
-			color: $header-heading-color;
-			border-radius: .5rem;
-		}
-
-		#twitter {
-			background-color: #1da1f2;
-		}
-
-		#instagram {
-			background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-		}
-
-		#facebook {
-			background-color: #4267b2;
+			#facebook {
+				background-color: #4267b2;
+			}
 		}
 	}
 
 	.credits {
+		float: left;
+		width: 60%;
+
+		p {
+			max-width: 24rem;
+		}
+
 		#join {
 			float: right;
 		}
@@ -737,25 +744,16 @@ p {
 		}
 	}
 
-	#left-column {
-		float: left;
-		width: 50%;
-
-		p {
-			max-width: 24rem;
-		}
-	}
-
 	@include small {
+		display: block;
+
 		#nav-container {
 			display: block;
 		}
 
-		#left-column {
-			width: 100%;
-		}
-
 		.credits {
+			width: 100%;
+
 			#join {
 				float: left;
 			}
@@ -768,10 +766,8 @@ p {
 	}
 
 	@include extra-small {
-		display: block;
-
-		.nav-group {
-			display: block;
-		}
+		#nav-container .nav-group {
+			display: block;	
+		}	
 	}
 }

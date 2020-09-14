@@ -54,10 +54,8 @@
 	{{ join }}
 {% elsif site.chapter.name && site.chapter.url %}
 	<div id="nav-container" class="credits">
-		<div id="left-column">
-			<p>This site was made by <a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, a chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.</p>
-			{{ social }}	
-		</div>
-		{{ join }}
+		<p>This site was made by <a href="{{ site.chapter.url }}">{{ site.chapter.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, a chapter of the <a href="https://www.dsausa.org/">Democratic Socialists of America</a>.</p>
+		{{ social }}	
 	</div>
+	{{ join }}
 {% endif %}
