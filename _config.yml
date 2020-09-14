@@ -31,14 +31,37 @@ defaults:
     values:
       layout: default
       image: "assets/images/og-image.png"
+  -
+    scope:
+      path: "_homepage/en.md" # English homepage
+    values:
+      permalink: "/" # Set English as index
+      lang: en
+  -
+    scope:
+      path: "_homepage/es.md" # Spanish homepage
+    values:
+      permalink: "/es"
+      lang: es
+  -
+    scope:
+      path: "_tiles/en" # English collection
+    values:
+      permalink: "tiles/:title"
+      lang: en
+  -
+    scope:
+      path: "_tiles/es" # Spanish collection
+    values:
+      permalink: "es/azulejos/:title"
+      lang: es
 
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
-  # Translated folders
-  translations:
+  # Homepage translations
+  homepage:
     output: true
-    permalink: /:path/ # These page URLs start at site root
   # Add single pages in the _pages folder
   pages:
     output: true

@@ -1,5 +1,5 @@
 <ul class="tile-list">
-	{% assign sortedCollection = site.[include.collection] | sort: "order" %}
+	{% assign sortedCollection = site.[include.collection] | where: "lang", page.lang | sort: "order" %}
 	{% assign limit = include.limit %}
 	{% for item in sortedCollection limit:limit %}
 		{% assign url = item.url | relative_url %}
