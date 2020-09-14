@@ -6,4 +6,4 @@ image-description: La policía de Chicago está alineada frente al circo Ringlin
 image-credit: ¡Dale crédito a tu fotógrafo!
 ---
 
-Esta página está en español.
+Esta página es parte de una colección.

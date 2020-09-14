@@ -29,15 +29,15 @@ Use tiles to style your collections. Add an optional limit.
 
 #### Header 4
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+* This is an unordered list following a header.
+* This is an unordered list following a header.
+* This is an unordered list following a header.
 
 ##### Header 5
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+1. This is an ordered list following a header.
+2. This is an ordered list following a header.
+3. This is an ordered list following a header.
 
 ###### Header 6
 
@@ -54,37 +54,37 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Here is an unordered list:
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+* Item foo
+* Item bar
+* Item baz
+* Item zip
 
 ### And an ordered list:
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+1. Item one
+2. Item two
+3. Item three
+4. Item four
 
 ### And a nested list:
 
 - level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
+	- level 2 item
+	- level 2 item
+		- level 3 item
+		- level 3 item
 - level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
+	- level 2 item
+	- level 2 item
+	- level 2 item
 - level 1 item
-  - level 2 item
-  - level 2 item
+	- level 2 item
+	- level 2 item
 - level 1 item
 
 ### Small image
 
-![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
+![Side profile of W.E.B. DuBois](/assets/images/theme-WEB-DuBois.png)
 
 ### Large image with a caption
 
