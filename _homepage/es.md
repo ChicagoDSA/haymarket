@@ -1,4 +1,5 @@
 ---
+lang-ref: homepage
 title: Sitio web de ejemplo
 subhead: Agrega un subtítulo personalizado.
 ---

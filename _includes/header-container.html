@@ -16,11 +16,20 @@
 			<div style="clear:both"></div>
 		</div>
 	{% endif %}
-	<div class="project-area">
-		<div class="background-logo">
+	<div id="project-area">
+		<div id="background-logo">
 			{% include header-DSA-logo.html %}
 		</div>
-		<div class="chapter">
+		<ul id="languages">
+			<li><a href="{{ '/' | absolute_url }}">English</a></li>
+
+			<!--
+			{% for item in site.translations %}
+				<li>/ <a href="{{ item.url | absolute_url }}">{{ item.language-name }}</a></li>
+			{% endfor %}
+		-->
+		</ul>
+		<div id="chapter">
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
 				{%- capture logo -%}
 					<div id="logo">

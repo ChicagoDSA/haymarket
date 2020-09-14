@@ -1,5 +1,6 @@
 ---
 order: 2
+lang-ref: lift-the-ban
 title: Levantar la Prohibición
 image: assets/images/theme-protest.png
 image-description: Los manifestantes marchan por una de las principales calles de Chicago. Un letrero dice "Marcha del hambre.""

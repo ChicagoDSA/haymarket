@@ -1,4 +1,5 @@
 ---
+lang-ref: homepage
 title: Sample site
 subhead: Add a custom subhead.
 ---
