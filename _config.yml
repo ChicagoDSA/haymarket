@@ -30,16 +30,18 @@ defaults:
       path: "" # All files
     values:
       layout: default
-      image: "assets/images/og-image.png"
+      image: "assets/images/og-image.png" # Social media preview
+  
+  # Set URLs and language code for collections  
   -
     scope:
-      path: "_homepage/en.md" # English homepage
+      path: "_homepage/en.md"
     values:
       permalink: "/" # Set English as index
       lang: en
   -
     scope:
-      path: "_homepage/es.md" # Spanish homepage
+      path: "_homepage/es.md"
     values:
       permalink: "/es"
       lang: es
