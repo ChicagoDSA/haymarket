@@ -1,11 +1,9 @@
 {% if site.chapter.background-logo-svg && site.chapter.background-logo-png-fallback && site.chapter.logo-description %}
 	{% assign svgURL = site.chapter.background-logo-svg %}
 	{% assign pngURL = site.chapter.background-logo-png %}
-	{% assign altText = site.chapter.logo-description %}
 {% else %}
 	{% assign svgURL = "/assets/images/DSA-logo-reverse.svg" %}
 	{% assign pngURL = "assets/images/DSA-logo-reverse.png" %}
-	{% assign altText = "Two hands holding each other. A rose is behind them." %}
 {% endif %}
 
-<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ altText | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">
+<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ site.data.translations.logo-description.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">

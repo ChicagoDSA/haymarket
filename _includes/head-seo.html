@@ -1,11 +1,11 @@
 {% if page.title %}
 	{%- capture title -%}
-		{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
+		{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 	<title>{{ title | strip_newlines }}</title>
 {% else %}
 	{%- capture title -%}
-		{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
+		{{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }} | {{ site.data.translations.description.[page.lang] | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 	<title>{{ title | strip_newlines }}</title>
 {% endif %}
@@ -14,7 +14,7 @@
 <meta property="og:title" content="{{ title | strip_newlines }}" />
 
 <!-- Locale -->
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content="{{ page.lang }}" />
 
 {% if page.description %}
 	{%- capture description -%}
@@ -22,7 +22,7 @@
 	{%- endcapture -%}
 {% else %}
 	{%- capture description -%}
-		{{ site.description | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
+		{{ site.data.translations.description.[page.lang] | default: site.github.project_tagline | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% endif %}
 
@@ -34,13 +34,13 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
 
-{% if site.title %}
+{% if site.data.translations.title.[page.lang] %}
 	{%- capture siteName -%}
-		{{ site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+		{{ site.data.translations.title.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% else %}
 	{%- capture siteName -%}
-		{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
+		{{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" }}
 	{%- endcapture -%}
 {% endif %}
 

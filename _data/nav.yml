@@ -1,27 +1,27 @@
 elements:
   - group: 
-    en: "Add navigation"
-    es: "Agregar navegación"
+    en: Add navigation
+    es: Agregar navegación
     items:
       - page:
-          en: "Link to a page"
-          es: "Enlace a una página"
+          en: Link to a page
+          es: Enlace a una página
           url: 
             en: another-page
             es: es/otra-pagina
       - page:
-          en: "Another link"
-          es: "Otro enlace"
+          en: Another link
+          es: Otro enlace
           url:
             en: another-page
             es: es/otra-pagina
   - group:
-    en: "Another group"
-    es: "Otro grupo"
+    en: Another group
+    es: Otro grupo
     items:
       - page:
-          en: "Use Markdown *styling*"
-          es: "Utilice Markdown *estilo*"
+          en: Use Markdown *styling*
+          es: Utilice Markdown *estilo*
           url:
             en: another-page
             es: es/otra-pagina

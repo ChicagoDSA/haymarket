@@ -1,7 +1,4 @@
-title: Haymarket theme
-description: A GitHub Pages theme to easily launch Chicago DSA websites.
 chapter:
-  name: Your DSA Chapter
   url:
   facebook: "?"
   instagram: "?"
@@ -11,17 +8,10 @@ chapter:
   header-logo-png-fallback: # 360px square recommended
   background-logo-svg:
   background-logo-png-fallback: # 1440px square recommended
-  # Alt text for screen readers
-  logo-description: A CTA train and the Sears Tower are in front of a rose.
 custom-join: # Add custom join URL here
 google_analytics:
-teamup: "cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a"
+teamup: cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a
 permalink: pretty
-
-# Add content here to enable a site-wide, top banner
-banner:
-  text: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
-  link: another-page
 
 # Set default front matter for Markdown files
 defaults:
@@ -30,44 +20,44 @@ defaults:
       path: "" # All files
     values:
       layout: default
-      image: "assets/images/og-image.png" # Social media preview
+      image: assets/images/og-image.png # Social media preview
       lang: en
   
   # Set URLs and language code for collections
   # English   
   -
     scope:
-      path: "_homepage/en.md"
+      path: _homepage/en.md
     values:
-      permalink: "/" # Set as index
+      permalink: / # Set as index
   -
     scope:
-      path: "_pages/en"
+      path: _pages/en
     values:
-      permalink: "/:title"
+      permalink: /:title
   -
     scope:
-      path: "_tiles/en"
+      path: _tiles/en
     values:
-      permalink: "tiles/:title"
+      permalink: tiles/:title
   # Spanish
   -
     scope:
-      path: "_homepage/es.md"
+      path: _homepage/es.md
     values:
-      permalink: "/es"
+      permalink: /es
       lang: es
   -
     scope:
-      path: "_pages/es"
+      path: _pages/es
     values:
-      permalink: "es/:title" # language-specific folder
+      permalink: es/:title # language-specific folder
       lang: es
   -
     scope:
-      path: "_tiles/es"
+      path: _tiles/es
     values:
-      permalink: "es/azulejos/:title" # language-specific folder
+      permalink: es/azulejos/:title # language-specific folder
       lang: es
 
 # Manage lists of content with collections

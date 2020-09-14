@@ -1,17 +1,17 @@
 <header class="page-header" role="banner">
-	{% if site.banner.link %}
+	{% if site.data.banner.link.[page.lang] %}
 		<div id="banner">
 			<div id="banner-content">
-				<a id="banner-link" href="{{ site.banner.link | relative_url }}">
-					<p>{{ site.banner.text | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+				<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | relative_url }}">
+					<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 				</a>
 			</div>
 			<div style="clear:both"></div>
 		</div>
-	{% elsif site.banner.text %}
+	{% elsif site.data.banner.text.[page.lang] %}
 		<div id="banner">
 			<p id="banner-content">
-				{{ site.banner.text | markdownify | remove: "<p>" | remove: "</p>" }}
+				{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
 			</p>
 			<div style="clear:both"></div>
 		</div>
@@ -30,28 +30,28 @@
 			{% else %}
 				{%- capture logo -%}
 					<div id="logo">
-						<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="Two hands holding each other. A rose is behind them.">
+						<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ site.data.translations.logo-description.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">
 					</div>
 				{%- endcapture -%}
 			{% endif %}
 
 			{% if site.chapter.url %}
-				<div id="name" href="{{ site.chapter.url }}">
-					<h3>
-						<a href="{{ site.chapter.url }}">
-						{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
-						</a>
-					</h3>
-				</div>
+				{% assign chapterURL = site.chapter.url %}
+			{% elsif page.lang == "en" %}
+				{% assign chapterURL = "/" %}
 			{% else %}
-				<div id="name" href="{{ '/' | absolute_url }}">
-					<h3>
-						<a href="{{ '/' | absolute_url }}">
-						{{ logo }}{{ site.chapter.name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
-						</a>
-					</h3>
-				</div>
+				{% capture chapterURL %}
+					/{{ page.lang }}
+				{% endcapture %}
 			{% endif %}
+
+			<div id="name" href="{{ chapterURL }}">
+				<h3>
+					<a href="{{ chapterURL }}">
+					{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
+					</a>
+				</h3>
+			</div>
 			<div style="clear: both;"></div> 
 		</div>
 		<h1 class="page-title">
@@ -60,7 +60,7 @@
 			{%- elsif page.title -%}
 				{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
 			{%- else -%}
-				{{ site.title | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
+				{{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
 			{%- endif -%}
 		</h1>
 		{% if page.subhead %}
