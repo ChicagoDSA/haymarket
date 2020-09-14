@@ -40,10 +40,10 @@
 	<div id="nav-container">
 		{% for group in site.data.nav.elements %}
 			<div class="nav-group">
-				<h4>{{ group.group | markdownify | remove: "<p>" | remove: "</p>" }}</h4>
+				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}</h4>
 				<ul>
 					{% for item in group.items %}
-						<li><a href="{{  item.url | relative_url }}">{{ item.page | markdownify | remove: "<p>" | remove: "</p>" }}</a></li>
+						<li><a href="{{ item.page.url.[page.lang] | relative_url }}">{{ item.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>

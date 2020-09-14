@@ -31,14 +31,26 @@ defaults:
     values:
       layout: default
       image: "assets/images/og-image.png" # Social media preview
+      lang: en
   
-  # Set URLs and language code for collections  
+  # Set URLs and language code for collections
+  # English   
   -
     scope:
       path: "_homepage/en.md"
     values:
-      permalink: "/" # Set English as index
-      lang: en
+      permalink: "/" # Set as index
+  -
+    scope:
+      path: "_pages/en"
+    values:
+      permalink: "/:title"
+  -
+    scope:
+      path: "_tiles/en"
+    values:
+      permalink: "tiles/:title"
+  # Spanish
   -
     scope:
       path: "_homepage/es.md"
@@ -47,15 +59,15 @@ defaults:
       lang: es
   -
     scope:
-      path: "_tiles/en" # English collection
+      path: "_pages/es"
     values:
-      permalink: "tiles/:title"
-      lang: en
+      permalink: "es/:title" # language-specific folder
+      lang: es
   -
     scope:
-      path: "_tiles/es" # Spanish collection
+      path: "_tiles/es"
     values:
-      permalink: "es/azulejos/:title"
+      permalink: "es/azulejos/:title" # language-specific folder
       lang: es
 
 # Manage lists of content with collections
@@ -67,6 +79,5 @@ collections:
   # Add single pages in the _pages folder
   pages:
     output: true
-    permalink: /:path/ # These page URLs start at site root
   tiles:
     output: true
