@@ -26,9 +26,9 @@
 				{% assign languages = site.[name] | where: "lang-ref", page.lang-ref | sort: "lang" %}
 				{% for item in languages %}
 					{% if item.lang == page.lang %}
-						<li><a href="{{ site.base-url }}{{ item.url }}"><b>{{ site.data.translations.[item.lang] }}</b></a></li>
+						<li><a href="{{ item.url | relative_url }}"><b>{{ site.data.translations.[item.lang] }}</b></a></li>
 					{% else %}
-						<li><a href="{{ site.base-url }}{{ item.url }}">{{ site.data.translations.[item.lang] }}</a></li>
+						<li><a href="{{ item.url | relative_url }}">{{ site.data.translations.[item.lang] }}</a></li>
 					{% endif %}
 				{% endfor %}
 			{% endfor %}
