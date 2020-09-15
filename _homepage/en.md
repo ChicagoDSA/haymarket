@@ -85,7 +85,7 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Small image
 
-![Side profile of W.E.B. DuBois](/assets/images/theme-WEB-DuBois.png)
+![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
 
 ### Large image with a caption
 
