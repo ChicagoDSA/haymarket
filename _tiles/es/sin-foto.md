@@ -1,7 +1,7 @@
 ---
 order: 4
 lang-ref: no-image
-title: No image? No problem!
+title: ¿Sin imágen? ¡No hay problema!
 ---
 
-This page is part of a collection.
+Esta página es parte de una colección.
