@@ -51,13 +51,9 @@
 			{% if site.chapter.url %}
 				{% assign chapterURL = site.chapter.url %}
 			{% elsif page.lang == "en" %}
-				{% capture chapterURL %}
-					{{ "/" | relative_url }}
-				{% endcapture %}
+				{% assign chapterURL = "/" | relative_url %}
 			{% else %}
-				{% capture chapterURL %}
-					{{ page.lang | relative_url }} 
-				{% endcapture %}
+				{% assign chapterURL = page.lang | relative_url %}
 			{% endif %}
 			
 			<div id="name" href="{{ chapterURL }}">
