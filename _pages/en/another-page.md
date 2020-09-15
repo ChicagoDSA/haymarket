@@ -8,4 +8,4 @@ description: This is just another page.
 
 _comrade_
 
-![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
+![Side profile of W.E.B. DuBois](/assets/images/theme-WEB-DuBois.png)
