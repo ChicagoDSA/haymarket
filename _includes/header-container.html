@@ -51,7 +51,7 @@
 			{% if site.chapter.url %}
 				{% assign chapterURL = site.chapter.url %}
 			{% elsif page.lang == "en" %}
-				{% assign chapterURL = "/" %}
+				{% assign chapterURL = "/" | relative_url %}
 			{% else %}
 				{% capture chapterURL %}
 					/{{ page.lang }}
