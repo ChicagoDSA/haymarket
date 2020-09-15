@@ -85,7 +85,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 
 ### Foto pequeña
 
-![Perfil lateral de W.E.B. DuBois](/assets/images/theme-WEB-DuBois.png)
+![Perfil lateral de W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
 
 ### Foto grande con pie de foto
 
