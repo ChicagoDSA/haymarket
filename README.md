@@ -99,21 +99,16 @@ photo:
 credits: 
   this-site-was-made-by:
     en: This site was made by
-    es: Este sitio fue creado por
   a-chapter-of-the:
     en: a chapter of the
-    es: un capítulo de los
   DSA:
     en: Democratic Socialists of America
-    es: Socialistas Democráticos de América
 
 join:
   text:
     en: Join DSA
-    es: Únase a DSA
   link: # Override DSA national link
     en:
-    es:
 ```
 
 ### Add a homepage
