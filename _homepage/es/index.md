@@ -6,7 +6,7 @@ subhead: Agrega un subtítulo personalizado.
 
 El texto puede estar **en negrita**, _italico_ o ~~tachado~~.
 
-[Enlace a otra página](es/otra-pagina).
+[Enlace a otra página](otra-pagina).
 
 Debe haber espacios en blanco entre los párrafos.
 
@@ -85,7 +85,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 
 ### Foto pequeña
 
-![Perfil lateral de W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
+![Perfil lateral de W.E.B. DuBois](../assets/images/theme-WEB-DuBois.png)
 
 ### Foto grande con pie de foto
 
