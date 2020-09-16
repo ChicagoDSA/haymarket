@@ -1,3 +1,4 @@
+baseurl: /haymarket
 chapter:
   url:
   facebook: "?"
@@ -45,7 +46,7 @@ defaults:
     scope:
       path: _homepage/es.md
     values:
-      permalink: /es
+      permalink: /es/
       lang: es
   -
     scope:
