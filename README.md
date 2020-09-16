@@ -10,11 +10,12 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 1. Create your new repository, `my-new-site`.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
-3. Under **Source**, select `master`. Under **Theme Chooser**, select any theme.
-4. Go to the root directory of `my-new-site` and open `_config.yml`. Clear it out and add `remote-theme: ChicagoDSA/haymarket`.
+3. Under **Source**, select your default branch.
+4. Go to the root directory of `my-new-site`. Click on the **Create new file** button and create a file named `_config.yml`.
+5. Open it and add the line: `remote-theme: ChicagoDSA/haymarket`.
     - Optional: You can specify a specific release to use by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
-5. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
-6. Woohoo, your theme is working!
+6. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
+7. Woohoo, your theme is working!
 
 ## Configuration
 
@@ -69,8 +70,8 @@ collections:
 
 ## Set default text values
 
-1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
-2. Set your file's name as `_data/translations.yml` and add the following content:
+1. Go to the root directory of `my-new-site`. Create a new file named `_data/translations.yml`.
+2. Add the following content:
 
 ```yaml
 en: English
