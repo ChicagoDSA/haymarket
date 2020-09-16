@@ -6,25 +6,21 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 [Cayman](https://github.com/pages-themes/cayman) provided the source templates, and David Darnes wrote an immensely helpful [tutorial on setting up your own Jekyll themes](https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/). Color palettes and typography are from the [DSA National Design Committee](https://design.dsausa.org/).
 
-## Getting started
+## Get started
 
 1. Create your new repository, `my-new-site`.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
-3. Under **Source**, select `master`. Under **Theme Chooser**, select any theme.
-4. Go to the root directory of `my-new-site` and open `_config.yml`. Clear it out and add `remote-theme: ChicagoDSA/haymarket`.
+3. Under **Source**, select your default branch.
+4. Go to the root directory of `my-new-site`. Click on the **Create new file** button and create a file named `_config.yml`.
+5. Open it and add the line: `remote-theme: ChicagoDSA/haymarket`.
     - Optional: You can specify a specific release to use by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
-5. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
-6. Woohoo, your theme is working!
 
-## Configuration
+### Configuration
 
-In order to fully use your site, open `_config.yml` again. Replace your content with:
+In order to use your site, open `_config.yml` again. Replace your content with:
 
 ```yaml
-title: My New Site
-description: A description of my new site.
 chapter:
-  name: # Public name of your chapter
   url: # your-chapter-website.org
   facebook: # Facebook URL
   instagram: # Instagram URL
@@ -34,49 +30,77 @@ chapter:
   header-logo-png-fallback: # 360px square recommended
   background-logo-svg:
   background-logo-png-fallback: # 1440px square recommended
-  # Alt text for screen readers
-  logo-description: A CTA train and the Sears Tower are in front of a rose.
 custom-join: # Add custom join URL here
 google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
-# Leave empty to disable
-banner:
-  text: "Banner text"
-  link: linked-page
-  
+# Set default front matter for Markdown files
 defaults:
   -
     scope:
       path: "" # All files
     values:
       layout: default
-      image: "assets/images/og-image.png"
+      image: assets/images/og-image.png # Social media preview
+      lang: en
   
-# Add collections here
+  # Set URLs and language code for collections
+  # English   
+  -
+    scope:
+      path: _homepage/en/index.md
+    values:
+      permalink: / # Set as index
+  -
+    scope:
+      path: _pages/en
+    values:
+      permalink: /:title
+
+# Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
+  # Homepage translations
+  homepage:
+    output: true
   # Add single pages in the _pages folder
   pages:
     output: true
-    permalink: /:path/ # These page URLs start at site root
 ```
 
-You need to set `title`, `description`, `name`, and `url`. 
-#### Other values
+#### Custom values
+
 - When a social media URL is added, the icon will appear in your header.
 - Set a custom join URL to override the default national page.
- 
-## Adding content
- 
-1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
-2. Set your file's name as `index.md` and add the following content:
+
+### Set default text values
+
+1. Go to the root directory of `my-new-site`. Create a new file named `_data/translations.yml`.
+2. Add the following content:
+
+```yaml
+en: English
+title:
+  en: Haymarket theme
+description:
+  en: A GitHub Pages theme to easily launch Chicago DSA websites.
+chapter-name:
+  en: Your DSA Chapter
+logo-description: # Alt text for screen readers
+  en: Two hands holding each other. A rose is behind them.
+join:
+  en: Join DSA
+```
+
+### Add a homepage
+
+1. Go to the root directory of `my-new-site` and create a file named `_homepage/en/index.md`. Add this to it:
 
 ```markdown
 ---
-layout: default
+lang-ref: homepage
 title: <!-- optional metadata -->
 description: <!-- optional metadata -->
 headline: <!-- optional display text -->
@@ -85,30 +109,77 @@ subhead: <!-- optional display text -->
 
 Hello, world!
 ```
-3. Commit your change. You now have a new homepage!
 
-For more information on GitHub Pages content, check out the [documentation](https://help.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
+2. Commit your change.
+3. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
 
-## Adding navigation
+_Woohoo, your theme is working!_ 🎉
 
-1. In the root directory of `my-new-site`, create a folder called `_data`.
-2. Inside `_data`, create `nav.yml` and paste this code:
+## Advanced features
+
+### Add more content
+
+1. To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
+2. Add this to it:
+
+```markdown
+---
+lang-ref: another-page
+title: <!-- optional metadata -->
+description: <!-- optional metadata -->
+headline: <!-- optional display text -->
+subhead: <!-- optional display text -->
+---
+
+This is another page.
+```
+
+### Add navigation
+
+1. In the root directory of `my-new-site`, create a file named `_data/nav.yml`.
+2. Inside this new file, paste the following:
 
 ```yaml
 elements:
-  - group: "Add navigation"
+  - group: 
+    en: Add navigation
     items:
-      - page: "Link to a page"
-        url: another-page
-      - page: "Another link"
-        url: another-page
-  - group: "Another group"
+      - page:
+          en: Link to a page
+          url: 
+            en: another-page
+      - page:
+          en: Another link
+          url:
+            en: another-page
+  - group:
+    en: Another group
     items:
-      - page: "Use Markdown *styling*"
-        url: another-page
+      - page:
+          en: Use Markdown *styling*
+          url:
+            en: another-page
 ```
 
 3. Rebuild your site. You have a nav!
+
+### Use collections to manage related content
+
+- In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. 
+- This repository's example website has a collection called `tiles`.
+
+### Display a site-wide banner
+
+- Duplicate `banner.yml` from this repository's `_data` folder.
+- If it's present (and complete) in your `_data` folder, it will be shown. 
+
+### Translate your content into other languages
+
+The example site also has a complete Spanish translation. For everything to work:
+
+1. Add another `defaults` entry in `_config.yml`.
+2. `nav.yml` and `translations.yml` have line items for English (`en`). Add additional ones for your language.
+3. Within `_homepage`, `_pages`, and any collection directories, create an additional language folder. Put your translated Markdown files there.
 
 ## Local development
 
@@ -118,18 +189,19 @@ elements:
 
 ```ruby
 source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages"
 ```
 
 4. Run `bundle exec jekyll serve --watch` and open your local URL!
 
 #### Keep your repository tidy
-Building your site locally will add a lot of files. Don't commit them. 
 
-Create a `.gitignore` file in your root directory and add this:
+- Building your site locally will add a lot of files. Don't commit them. 
+- Create a `.gitignore` file in your root directory and add this:
 
 ```
 _site
+.jekyll-cache
+.sass-cache
 Gemfile.lock
 ```
