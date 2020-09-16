@@ -10,10 +10,10 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 1. Create your new repository, `my-new-site`.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
-3. Under **Source**, select your default branch.
+3. Under **Source**, select your default branch, and click **Save**.
 4. Go to the root directory of `my-new-site`. Click on the **Create new file** button and create a file named `_config.yml`.
 5. Open it and add the line: `remote-theme: ChicagoDSA/haymarket`.
-    - Optional: You can specify a specific release to use by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
+    - Optional: You can use a specific release by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
 
 ### Configuration
 
@@ -72,7 +72,7 @@ collections:
 
 #### Custom values
 
-- When a social media URL is added, the icon will appear in your header.
+- When a social media URL is added, the icon will appear in your footer.
 - Set a custom join URL to override the default national page.
 
 ### Set default text values
@@ -113,7 +113,7 @@ Hello, world!
 2. Commit your change.
 3. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
 
-_Woohoo, your theme is working!_ 🎉
+_Woohoo, your website is working!_ 🎉
 
 ## Advanced features
 
@@ -133,6 +133,8 @@ subhead: <!-- optional display text -->
 
 This is another page.
 ```
+
+3. Commit your change, and your page will be published at `my-username.github.io/my-new-site/another-page`. Even though this page lives inside `_pages/en`, the `defaults` settings in `_config.yml` moved it to the site's root.  
 
 ### Add navigation
 
@@ -171,13 +173,13 @@ elements:
 ### Display a site-wide banner
 
 - Duplicate `banner.yml` from this repository's `_data` folder.
-- If it's present (and complete) in your `_data` folder, it will be shown. 
+- If `_data` contains `banner.yml`, and `banner.yml` contains values for the page's language, the banner will be visible. 
 
 ### Translate your content into other languages
 
 The example site also has a complete Spanish translation. For everything to work:
 
-1. Add another `defaults` entry in `_config.yml`.
+1. Go to `_config.yml`. Duplicate the `# English` section of `defaults`, and customize it for your language.
 2. `nav.yml` and `translations.yml` have line items for English (`en`). Add additional ones for your language.
 3. Within `_homepage`, `_pages`, and any collection directories, create an additional language folder. Put your translated Markdown files there.
 
@@ -192,7 +194,7 @@ source "https://rubygems.org"
 gem "github-pages"
 ```
 
-4. Run `bundle exec jekyll serve --watch` and open your local URL!
+4. Run `bundle exec jekyll serve --watch` and open `http://127.0.0.1:4000` in your browser!
 
 #### Keep your repository tidy
 
