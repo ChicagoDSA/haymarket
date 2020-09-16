@@ -8,4 +8,4 @@ description: Esta es solo otra página.
 
 _camarada_
 
-![Side profile of W.E.B. DuBois](/assets/images/theme-WEB-DuBois.png)
+![Side profile of W.E.B. DuBois](../assets/images/theme-WEB-DuBois.png)
