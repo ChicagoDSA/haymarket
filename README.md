@@ -107,7 +107,7 @@ Hello, world!
 ## Adding more content
 
 1. To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
-2. The content we added before is called Front Matter. Add it to this page, too:
+2. Add this to it:
 
 ```markdown
 ---
@@ -149,6 +149,22 @@ elements:
 ```
 
 3. Rebuild your site. You have a nav!
+
+## Use collections to manage related content
+
+In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. This repository's example website has a collection called `tiles`.
+
+## Display a site-wide banner
+
+Duplicate `banner.yml` from this repository's `_data` folder. If it's present (and complete) in your `_data` folder, it will be shown. 
+
+## Translate your content into other languages
+
+The example site also has a complete Spanish translation. For everything to work:
+
+1. Add another `defaults` entry in `_config.yml`.
+2. `nav.yml` and `translations.yml` have line items for English (`en`). Add additional ones for your language.
+3. Within `_homepage`, `_pages`, and any collection directories, create an additional language folder. Put your translated Markdown files there.
 
 ## Local development
 
