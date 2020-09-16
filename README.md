@@ -114,7 +114,9 @@ Hello, world!
 
 _Woohoo, your theme is working!_ 🎉
 
-## Add more content
+## Advanced features
+
+### Add more content
 
 1. To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
 2. Add this to it:
@@ -131,7 +133,7 @@ subhead: <!-- optional display text -->
 This is another page.
 ```
 
-## Add navigation
+### Add navigation
 
 1. In the root directory of `my-new-site`, create a file named `_data/nav.yml`.
 2. Inside this new file, paste the following:
@@ -160,15 +162,15 @@ elements:
 
 3. Rebuild your site. You have a nav!
 
-## Use collections to manage related content
+### Use collections to manage related content
 
 In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. This repository's example website has a collection called `tiles`.
 
-## Display a site-wide banner
+### Display a site-wide banner
 
 Duplicate `banner.yml` from this repository's `_data` folder. If it's present (and complete) in your `_data` folder, it will be shown. 
 
-## Translate your content into other languages
+### Translate your content into other languages
 
 The example site also has a complete Spanish translation. For everything to work:
 
