@@ -167,7 +167,7 @@ elements:
 
 ### Use collections to manage related content
 
-- In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. 
+- In order to use the `list-tiles` component, you need to create a collection folder. Reference and enable it in `_config.yml`. 
 - This repository's example website has a collection called `tiles`.
 
 ### Display a site-wide banner
