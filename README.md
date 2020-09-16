@@ -60,6 +60,9 @@ collections:
   # Homepage translations
   homepage:
     output: true
+  # Add single pages in the _pages folder
+  pages:
+    output: true
 ```
 
 #### Custom values
