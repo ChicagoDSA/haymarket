@@ -54,7 +54,15 @@
 	{{ join }}
 {% elsif site.data.translations.chapter-name.[page.lang] && site.chapter.url %}
 	<div id="nav-container" class="credits">
-		<p>{{ site.data.nav.credits.this-site-was-made-by.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="{{ site.chapter.url }}">{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, {{ site.data.nav.credits.a-chapter-of-the.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="https://www.dsausa.org/">{{ site.data.nav.credits.DSA.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>.</p>
+		{% if site.chapter.url %}
+			{% assign chapterURL = site.chapter.url %}
+		{% elsif page.lang == "en" %}
+			{% assign chapterURL = "/" | relative_url %}
+		{% else %}
+			{% assign chapterURL = page.lang | relative_url %}
+		{% endif %}
+
+		<p>{{ site.data.nav.credits.this-site-was-made-by.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="{{ chapterURL }}">{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, {{ site.data.nav.credits.a-chapter-of-the.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="https://www.dsausa.org/">{{ site.data.nav.credits.DSA.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>.</p>
 		{{ social }}	
 	</div>
 	{{ join }}
