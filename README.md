@@ -30,7 +30,6 @@ chapter:
   header-logo-png-fallback: # 360px square recommended
   background-logo-svg:
   background-logo-png-fallback: # 1440px square recommended
-custom-join: # Add custom join URL here
 google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
@@ -73,7 +72,6 @@ collections:
 #### Custom values
 
 - When a social media URL is added, the icon will appear in your footer.
-- Set a custom join URL to override the default national page.
 
 ### Set default text values
 
@@ -90,8 +88,8 @@ chapter-name:
   en: Your DSA Chapter
 logo-description: # Alt text for screen readers
   en: Two hands holding each other. A rose is behind them.
-join:
-  en: Join DSA
+photo:
+  en: Photo
 ```
 
 ### Add a homepage
@@ -161,6 +159,12 @@ elements:
           en: Use Markdown *styling*
           url:
             en: another-page
+
+join:
+  text:
+    en: Join DSA
+  link: # Override DSA national link
+    en:
 ```
 
 3. Rebuild your site. You have a nav!
