@@ -25,4 +25,12 @@ elements:
           url:
             en: another-page
             es: es/otra-pagina
+
+join:
+  text:
+    en: Join DSA
+    es: Únase a DSA
+  link: # Add custom join URLs here
+    en: another-page
+    es: es/otra-pagina
         

@@ -1,12 +1,12 @@
 {% capture join %}
 <div id="join">
 	<div class="btn-container">
-		{% if site.custom-join %}
-			{% assign joinURL = site.custom-join | relative_url %}
+		{% if site.data.nav.join.link.[page.lang] %}
+			{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
 		{% else %}
 			{% assign joinURL = "https://www.dsausa.org/join" %}
 		{% endif %}
-		<a href="{{ joinURL }}" class="btn">{{ site.data.translations.join.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+		<a href="{{ joinURL }}" class="btn">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 	</div>
 </div>
 {% endcapture %}
