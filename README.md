@@ -53,6 +53,11 @@ defaults:
       path: _homepage/en/index.md
     values:
       permalink: / # Set as index
+  -
+    scope:
+      path: _pages/en
+    values:
+      permalink: /:title
 
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
