@@ -4,7 +4,7 @@
 	{% endif %}
 	{% if include.credit %}
 		<p class="image-credit">
-			Photo: {{ include.credit | markdownify | remove: "<p>" | remove: "</p>" }}
+			{{- site.data.translations.photo.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}: {{ include.credit | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines -}}
 		</p>
 	{% endif %}
 </div>
