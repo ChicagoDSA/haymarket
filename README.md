@@ -92,6 +92,30 @@ photo:
   en: Photo
 ```
 
+3. In your root directory, create another file named `_data/nav.yml`.
+4. Add these two groups:
+
+```yaml
+credits: 
+  this-site-was-made-by:
+    en: This site was made by
+    es: Este sitio fue creado por
+  a-chapter-of-the:
+    en: a chapter of the
+    es: un capítulo de los
+  DSA:
+    en: Democratic Socialists of America
+    es: Socialistas Democráticos de América
+
+join:
+  text:
+    en: Join DSA
+    es: Únase a DSA
+  link: # Override DSA national link
+    en:
+    es:
+```
+
 ### Add a homepage
 
 1. Go to the root directory of `my-new-site` and create a file named `_homepage/en/index.md`. Add this to it:
@@ -134,10 +158,9 @@ This is another page.
 
 3. Commit your change, and your page will be published at `my-username.github.io/my-new-site/another-page`. Even though this page lives inside `_pages/en`, the `defaults` settings in `_config.yml` moved it to the site's root.  
 
-### Add navigation
+### Add custom navigation
 
-1. In the root directory of `my-new-site`, create a file named `_data/nav.yml`.
-2. Inside this new file, paste the following:
+1. At the top of `_data/nav.yml`, paste the following:
 
 ```yaml
 elements:
@@ -159,15 +182,9 @@ elements:
           en: Use Markdown *styling*
           url:
             en: another-page
-
-join:
-  text:
-    en: Join DSA
-  link: # Override DSA national link
-    en:
 ```
 
-3. Rebuild your site. You have a nav!
+2. Rebuild your site. You have a nav!
 
 ### Use collections to manage related content
 
