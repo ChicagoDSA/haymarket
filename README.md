@@ -165,15 +165,13 @@ elements:
 
 ### Use collections to manage related content
 
-In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. 
-
-This repository's example website has a collection called `tiles`.
+- In order to use the `list-tiles` component, you need to create a collection. Add these to `_config.yml`. 
+- This repository's example website has a collection called `tiles`.
 
 ### Display a site-wide banner
 
-Duplicate `banner.yml` from this repository's `_data` folder.
-
-If it's present (and complete) in your `_data` folder, it will be shown. 
+- Duplicate `banner.yml` from this repository's `_data` folder.
+- If it's present (and complete) in your `_data` folder, it will be shown. 
 
 ### Translate your content into other languages
 
@@ -198,9 +196,8 @@ gem "github-pages"
 
 #### Keep your repository tidy
 
-Building your site locally will add a lot of files. Don't commit them. 
-
-Create a `.gitignore` file in your root directory and add this:
+- Building your site locally will add a lot of files. Don't commit them. 
+- Create a `.gitignore` file in your root directory and add this:
 
 ```
 _site
