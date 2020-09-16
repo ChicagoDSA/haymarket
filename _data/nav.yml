@@ -30,7 +30,7 @@ join:
   text:
     en: Join DSA
     es: Únase a DSA
-  link: # Add custom join URLs here
-    en: another-page
-    es: es/otra-pagina
+  link: # Override DSA national link
+    en:
+    es:
         
