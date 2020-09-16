@@ -66,11 +66,29 @@ collections:
 #### Custom values
 - When a social media URL is added, the icon will appear in your header.
 - Set a custom join URL to override the default national page.
- 
-## Adding a homepage
+
+## Set default text values
 
 1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
-2. Set your file's name as `_homepage/en/index.md` and add the following content:
+2. Set your file's name as `_data/translations.yml` and add the following content:
+
+```yaml
+en: English
+title:
+  en: Haymarket theme
+description:
+  en: A GitHub Pages theme to easily launch Chicago DSA websites.
+chapter-name:
+  en: Your DSA Chapter
+logo-description: # Alt text for screen readers
+  en: Two hands holding each other. A rose is behind them.
+join:
+  en: Join DSA
+```
+
+## Adding a homepage
+
+1. Go to the root directory of `my-new-site` and create a file named `_homepage/en/index.md`. Add this to it:
 
 ```markdown
 ---
@@ -83,13 +101,13 @@ subhead: <!-- optional display text -->
 
 Hello, world!
 ```
-3. Commit your change. You now have a new homepage!
+
+2. Commit your change. You now have a new homepage!
 
 ## Adding more content
 
-To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
-
-The content we added before is called Front Matter. Add it to this page, too:
+1. To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
+2. The content we added before is called Front Matter. Add it to this page, too:
 
 ```markdown
 ---
@@ -103,24 +121,31 @@ subhead: <!-- optional display text -->
 This is another page.
 ```
 
-
 ## Adding navigation
 
-1. In the root directory of `my-new-site`, create a folder called `_data`.
-2. Inside `_data`, create `nav.yml` and paste this code:
+1. In the root directory of `my-new-site`, create a file named `_data/nav.yml`.
+2. Inside this new file, paste the following:
 
 ```yaml
 elements:
-  - group: "Add navigation"
+  - group: 
+    en: Add navigation
     items:
-      - page: "Link to a page"
-        url: another-page
-      - page: "Another link"
-        url: another-page
-  - group: "Another group"
+      - page:
+          en: Link to a page
+          url: 
+            en: another-page
+      - page:
+          en: Another link
+          url:
+            en: another-page
+  - group:
+    en: Another group
     items:
-      - page: "Use Markdown *styling*"
-        url: another-page
+      - page:
+          en: Use Markdown *styling*
+          url:
+            en: another-page
 ```
 
 3. Rebuild your site. You have a nav!
@@ -133,8 +158,7 @@ elements:
 
 ```ruby
 source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages"
 ```
 
 4. Run `bundle exec jekyll serve --watch` and open your local URL!
@@ -146,5 +170,7 @@ Create a `.gitignore` file in your root directory and add this:
 
 ```
 _site
+.jekyll-cache
+.sass-cache
 Gemfile.lock
 ```
