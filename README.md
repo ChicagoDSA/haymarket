@@ -21,10 +21,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 In order to fully use your site, open `_config.yml` again. Replace your content with:
 
 ```yaml
-title: My New Site
-description: A description of my new site.
 chapter:
-  name: # Public name of your chapter
   url: # your-chapter-website.org
   facebook: # Facebook URL
   instagram: # Instagram URL
@@ -34,49 +31,50 @@ chapter:
   header-logo-png-fallback: # 360px square recommended
   background-logo-svg:
   background-logo-png-fallback: # 1440px square recommended
-  # Alt text for screen readers
-  logo-description: A CTA train and the Sears Tower are in front of a rose.
 custom-join: # Add custom join URL here
 google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket
 
-# Leave empty to disable
-banner:
-  text: "Banner text"
-  link: linked-page
-  
+# Set default front matter for Markdown files
 defaults:
   -
     scope:
       path: "" # All files
     values:
       layout: default
-      image: "assets/images/og-image.png"
+      image: assets/images/og-image.png # Social media preview
+      lang: en
   
-# Add collections here
+  # Set URLs and language code for collections
+  # English   
+  -
+    scope:
+      path: _homepage/en/index.md
+    values:
+      permalink: / # Set as index
+
+# Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
-  # Add single pages in the _pages folder
-  pages:
+  # Homepage translations
+  homepage:
     output: true
-    permalink: /:path/ # These page URLs start at site root
 ```
 
-You need to set `title`, `description`, `name`, and `url`. 
-#### Other values
+#### Custom values
 - When a social media URL is added, the icon will appear in your header.
 - Set a custom join URL to override the default national page.
  
-## Adding content
- 
+## Adding a homepage
+
 1. Go to the root directory of `my-new-site`. Click on the **Create new file** button.
-2. Set your file's name as `index.md` and add the following content:
+2. Set your file's name as `_homepage/en/index.md` and add the following content:
 
 ```markdown
 ---
-layout: default
+lang-ref: homepage
 title: <!-- optional metadata -->
 description: <!-- optional metadata -->
 headline: <!-- optional display text -->
@@ -87,7 +85,24 @@ Hello, world!
 ```
 3. Commit your change. You now have a new homepage!
 
-For more information on GitHub Pages content, check out the [documentation](https://help.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
+## Adding more content
+
+To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
+
+The content we added before is called Front Matter. Add it to this page, too:
+
+```markdown
+---
+lang-ref: another-page
+title: <!-- optional metadata -->
+description: <!-- optional metadata -->
+headline: <!-- optional display text -->
+subhead: <!-- optional display text -->
+---
+
+This is another page.
+```
+
 
 ## Adding navigation
 
