@@ -1,4 +1,3 @@
-baseurl: /haymarket
 chapter:
   url:
   facebook: "?"
@@ -28,7 +27,7 @@ defaults:
   # English   
   -
     scope:
-      path: _homepage/en.md
+      path: _homepage/en/index.md
     values:
       permalink: / # Set as index
   -
@@ -44,7 +43,7 @@ defaults:
   # Spanish
   -
     scope:
-      path: _homepage/es.md
+      path: _homepage/es/index.md
     values:
       permalink: /es/
       lang: es
