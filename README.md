@@ -6,7 +6,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 
 [Cayman](https://github.com/pages-themes/cayman) provided the source templates, and David Darnes wrote an immensely helpful [tutorial on setting up your own Jekyll themes](https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/). Color palettes and typography are from the [DSA National Design Committee](https://design.dsausa.org/).
 
-## Getting started
+## Get started
 
 1. Create your new repository, `my-new-site`.
 2. Navigate to the **Settings** tab of `my-new-site` and scroll down to **GitHub Pages**.
@@ -14,12 +14,10 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 4. Go to the root directory of `my-new-site`. Click on the **Create new file** button and create a file named `_config.yml`.
 5. Open it and add the line: `remote-theme: ChicagoDSA/haymarket`.
     - Optional: You can specify a specific release to use by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
-6. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
-7. Woohoo, your theme is working!
 
-## Configuration
+### Configuration
 
-In order to fully use your site, open `_config.yml` again. Replace your content with:
+In order to use your site, open `_config.yml` again. Replace your content with:
 
 ```yaml
 chapter:
@@ -68,7 +66,7 @@ collections:
 - When a social media URL is added, the icon will appear in your header.
 - Set a custom join URL to override the default national page.
 
-## Set default text values
+### Set default text values
 
 1. Go to the root directory of `my-new-site`. Create a new file named `_data/translations.yml`.
 2. Add the following content:
@@ -87,7 +85,7 @@ join:
   en: Join DSA
 ```
 
-## Adding a homepage
+### Add a homepage
 
 1. Go to the root directory of `my-new-site` and create a file named `_homepage/en/index.md`. Add this to it:
 
@@ -103,9 +101,12 @@ subhead: <!-- optional display text -->
 Hello, world!
 ```
 
-2. Commit your change. You now have a new homepage!
+2. Commit your change.
+3. Give it a few moments to build and refresh `my-username.github.io/my-new-site/`.
 
-## Adding more content
+_Woohoo, your theme is working!_ 🎉
+
+## Add more content
 
 1. To add a single page, go to the root directory of `my-new-site` and create a file named `_pages/en/another-page.md`.
 2. Add this to it:
@@ -122,7 +123,7 @@ subhead: <!-- optional display text -->
 This is another page.
 ```
 
-## Adding navigation
+## Add navigation
 
 1. In the root directory of `my-new-site`, create a file named `_data/nav.yml`.
 2. Inside this new file, paste the following:
