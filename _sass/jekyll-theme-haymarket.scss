@@ -175,31 +175,31 @@ p {
 	width: 100%;
 	padding: 1rem 0;
 	background-color: $dsa-yellow;
-}
 
-#banner-content {
-	p,
-	#banner-link {
-		display: inline-block;
-	}
+	#banner-content {
+		p,
+		#banner-link {
+			display: inline-block;
+		}
 
-	p,
-	i {
-		color: $body-text-color;
-	}
+		p,
+		i {
+			color: $body-text-color;
+		}
 
-	p {
-		margin: 0;
-	}
+		p {
+			margin: 0;
+		}
 
-	i {
-		margin-left: .5rem;
-		line-height: 1.5;
-	}
+		i {
+			margin-left: .5rem;
+			line-height: 1.5;
+		}
 
-	#banner-link {
-		&:hover p {
-			text-decoration: underline;
+		#banner-link {
+			&:hover p {
+				text-decoration: underline;
+			}
 		}
 	}
 }
@@ -638,17 +638,17 @@ p {
 				top: 0;
 				width: 100%;
 				white-space: nowrap;
-  				overflow: hidden;
-  				text-overflow: ellipsis;
+				overflow: hidden;
+				text-overflow: ellipsis;
 
-  				h4,
-  				h5 {
-  					white-space: nowrap;
-  					overflow: hidden;
-  					text-overflow: ellipsis;
-  				}
+				h4,
+				h5 {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
 
-  				h4 {
+				h4 {
 					margin: 0 2rem .5rem 0;
 				}
 
