@@ -188,8 +188,18 @@ elements:
 
 ### Display a site-wide banner
 
-- Duplicate `banner.yml` from this repository's `_data` folder.
-- If `_data` contains `banner.yml`, and `banner.yml` contains values for the page's language, the banner will be visible. 
+- Create a filed named `_data/banner.yml`. Add this to it:
+
+```yaml
+# Add content here to enable a site-wide, top banner
+text:
+  en: # Style your text with Markdown
+  es: # Add translations
+link: # Declare a link on this line to apply it to all languages
+  en: # Or add language-specific links
+``` 
+
+- If `_data` contains `banner.yml`, and `banner.yml` contains these values, the banner will be visible.
 
 ### Translate your content into other languages
 
