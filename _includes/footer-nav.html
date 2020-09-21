@@ -1,14 +1,14 @@
 {% capture join %}
-<div id="join">
-	<div class="btn-container">
-		{% if site.data.nav.join.link.[page.lang] %}
-			{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
-		{% else %}
-			{% assign joinURL = "https://www.dsausa.org/join" %}
-		{% endif %}
-		<a href="{{ joinURL }}" class="btn">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+	<div id="join">
+		<div class="btn-container">
+			{% if site.data.nav.join.link.[page.lang] %}
+				{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
+			{% else %}
+				{% assign joinURL = "https://www.dsausa.org/join" %}
+			{% endif %}
+			<a href="{{ joinURL }}" class="btn">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+		</div>
 	</div>
-</div>
 {% endcapture %}
 
 {% capture social %}
@@ -53,7 +53,7 @@
 	</div>
 	{{ join }}
 {% elsif site.data.translations.chapter-name.[page.lang] && site.chapter.url %}
-	<div id="nav-container" class="credits">
+	<div id="nav-container" class="no-nav">
 		{% if site.chapter.url %}
 			{% assign chapterURL = site.chapter.url %}
 		{% elsif page.lang == "en" %}
