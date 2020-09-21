@@ -1,8 +1,8 @@
 <header class="page-header" role="banner">
-	{% if site.data.banner.link.[page.lang] %}
+	{% if site.data.banner.link.[page.lang] or site.data.banner.link %}
 		<div id="banner">
 			<div id="banner-content">
-				<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | relative_url }}">
+				<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | default: site.data.banner.link | relative_url }}">
 					<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 				</a>
 			</div>
