@@ -68,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 	margin-bottom: 1rem;
 	font-weight: bold;
 }
@@ -154,8 +154,7 @@ p {
 }
 
 .btn {
-	margin-right: 1rem;
-	margin-bottom: 1rem;
+	margin: .25rem 1rem 1rem 0;
 	background-color: $dsa-red;
 }
 
@@ -411,13 +410,9 @@ p {
 }
 
 .main-content {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	word-wrap: break-word;
-
-	:first-child {
-		margin-top: 0;
-	}
 
 	p {
 		img {
@@ -501,6 +496,7 @@ p {
 		position: relative;
 		float: left;
 		width: 50%;
+		margin-top: .25rem;
 		margin-bottom: 1rem;
 		list-style-type: none;
 
@@ -690,6 +686,7 @@ p {
 			}
 
 			h4 {
+				margin-top: 0;
 				margin-bottom: 0;
 			}
 
@@ -732,6 +729,7 @@ p {
 
 		p {
 			max-width: 24rem;
+			margin-top: 0;
 		}
 
 		#join {
