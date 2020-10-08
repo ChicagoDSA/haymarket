@@ -390,11 +390,13 @@ p {
 	.full-width-image {
 		display: block;
 		width: 100%;
+		margin-top: .25rem;
+		margin-bottom: .5rem;
 	}
 }
 
 .image-caption {
-	padding: .5rem 0; 
+	padding-bottom: .5rem; 
 	font-size: 1rem;
 	color: $secondary-text-color;
 
