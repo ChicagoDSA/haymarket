@@ -410,9 +410,13 @@ p {
 }
 
 .main-content {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	word-wrap: break-word;
+
+	> :first-child {
+		margin-top: 0rem;
+	}
 
 	p {
 		img {
@@ -747,6 +751,7 @@ p {
 		}
 
 		.btn {
+			margin-top: 0;
 			margin-right: 0;
 			background-color: $dsa-purple;
 		}
