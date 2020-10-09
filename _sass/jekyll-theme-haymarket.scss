@@ -154,14 +154,14 @@ p {
 }
 
 .btn {
-	margin: .25rem 1rem 1rem 0;
+	margin: .5rem 1rem 1rem 0;
 	background-color: $dsa-red;
 }
 
 .note {
 	display: inline-block;
 	width: 100%;
-	margin: .25rem 0 1rem 0;
+	margin: .5rem 0 1rem 0;
 	padding: 1rem;
 	border: 2px solid $border-color;
 	background-image: linear-gradient(-180deg, $border-color, $white 60%);
@@ -406,9 +406,9 @@ p {
 	margin: 0;
 
 	.full-width-image {
-		display: block;
+		display: inline-block;
 		width: 100%;
-		margin-top: .25rem;
+		margin-top: .5rem;
 		margin-bottom: .5rem;
 	}
 }
@@ -520,7 +520,7 @@ p {
 		position: relative;
 		float: left;
 		width: 50%;
-		margin-top: .25rem;
+		margin-top: .5rem;
 		margin-bottom: 1rem;
 		list-style-type: none;
 
