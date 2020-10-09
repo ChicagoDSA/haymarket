@@ -2,6 +2,7 @@
 $dsa-red: #ec1f27;
 $dsa-purple: #3b2462;
 $dsa-yellow: #fad434;
+$white: #fff;
 
 // Breakpoints
 $large-breakpoint: 64em !default;
@@ -9,7 +10,7 @@ $medium-breakpoint: 42em !default;
 $small-breakpoint: 24em !default;
 
 // Headers
-$header-heading-color: #fff !default;
+$header-heading-color: $white !default;
 $header-bg-color: $dsa-red !default;
 
 // Text
