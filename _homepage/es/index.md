@@ -113,3 +113,14 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 {% include comp-button.html text="Soy un miembro nuevo" link="otra-pagina" %}
 {% include comp-button.html text="Quiero contactar con la CE" link="otra-pagina" %}
 {% include comp-button.html text="Estoy en una protesta y necesito ayuda" link="otra-pagina" %}
+
+### Use una nota para resaltar información secundaria.
+
+{% capture note %}
+#### Una nota especial:
+
+Inserte aquí cualquier contenido de Markdown.
+
+[¡Se admiten todos los tipos, incluidos los enlaces!](otra-pagina)
+{% endcapture %}
+{% include comp-note.html content=note %}
