@@ -69,7 +69,6 @@ h4,
 h5,
 h6 {
 	margin-top: 1.5rem;
-	margin-bottom: 1rem;
 	font-weight: bold;
 }
 
@@ -122,10 +121,6 @@ h6 {
 
 p {
 	margin-bottom: 1em;
-
-	img {
-		max-width: 100%;
-	}
 }
 
 .btn,
@@ -446,6 +441,7 @@ p {
 
 	p {
 		img {
+			display: block;
 			max-width: 100%;
 		}
 	}
