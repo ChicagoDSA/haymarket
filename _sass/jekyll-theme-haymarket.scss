@@ -223,7 +223,8 @@ p {
 #banner-content,
 #project-area,
 .headline-image-container,
-.main-content {
+.main-content,
+#site-footer {
 	margin: 0 auto;
 
 	@include large {
@@ -242,7 +243,8 @@ p {
 
 #banner-content,
 #project-area,
-.main-content {
+.main-content,
+#site-footer {
 	@include small {
 		padding: 0 1rem;
 	}
@@ -403,13 +405,13 @@ p {
 }
 
 .full-width-image-container {
+	display: inline-block;
 	margin: 0;
 
 	.full-width-image {
-		display: inline-block;
+		display: block;
 		width: 100%;
-		margin-top: .5rem;
-		margin-bottom: .5rem;
+		margin: .5rem 0;
 	}
 }
 
@@ -436,6 +438,10 @@ p {
 
 	> :first-child {
 		margin-top: 0rem;
+	}
+
+	> :last-child {
+		margin-bottom: 0rem;
 	}
 
 	p {
@@ -685,11 +691,11 @@ p {
 	}
 }
 
-#site-footer {
+#footer-columns {
 	display: table;
 	width: 100%;
-	margin: 2rem 0;
 	padding-top: 2rem;
+	padding-bottom: 4rem;
 	font-size: 1rem;
 	border-top: solid 1px $border-color;
 
@@ -702,6 +708,7 @@ p {
 			padding-right: 4rem;
 
 			ul {
+				margin-top: 0;
 				padding: 0;
 			}
 
