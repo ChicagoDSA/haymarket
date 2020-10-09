@@ -522,6 +522,12 @@ p {
 		li:nth-of-type(n+3) {
 			margin-top: 1rem;
 		}
+
+		@include small {
+			li:nth-of-type(n+2) {
+				margin-top: 1rem;
+			}
+		}
 	}
 
 	.tile-container-image,
