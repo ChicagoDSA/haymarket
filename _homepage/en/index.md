@@ -112,10 +112,8 @@ Use tiles to style your collections. Add an optional limit.
 
 {% include comp-button.html text="I want to contact the EC" link="another-page" %}
 
-### Use a note to highlight supporting information.
-
 {% capture note %}
-#### A special note:
+#### Use a note to highlight supporting information.
 
 Add any Markdown content here.
 
