@@ -428,14 +428,6 @@ p {
 	padding-bottom: 2rem;
 	word-wrap: break-word;
 
-	> :first-child {
-		margin-top: 0rem;
-	}
-
-	> :last-child {
-		margin-bottom: 0rem;
-	}
-
 	p {
 		img {
 			display: block;
@@ -689,6 +681,14 @@ p {
 				margin-right: 0;
 			}
 		}
+	}
+
+	> :first-child {
+		margin-top: 0rem;
+	}
+
+	> :last-child {
+		margin-bottom: 0rem;
 	}
 }
 
