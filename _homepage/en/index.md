@@ -110,9 +110,7 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Buttons are more prominent than links.
 
-{% include comp-button.html text="I'm a new member" link="another-page" %}
 {% include comp-button.html text="I want to contact the EC" link="another-page" %}
-{% include comp-button.html text="I'm at a protest and I need help" link="another-page" %}
 
 ### Use a note to highlight supporting information.
 

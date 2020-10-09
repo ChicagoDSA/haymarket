@@ -110,9 +110,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 
 ### Los botones son más prominentes que los enlaces.
 
-{% include comp-button.html text="Soy un miembro nuevo" link="otra-pagina" %}
 {% include comp-button.html text="Quiero contactar con la CE" link="otra-pagina" %}
-{% include comp-button.html text="Estoy en una protesta y necesito ayuda" link="otra-pagina" %}
 
 ### Use una nota para resaltar información secundaria.
 
