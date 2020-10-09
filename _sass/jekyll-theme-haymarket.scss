@@ -384,7 +384,6 @@ p {
 
 	.headline-image {
 		height: 20rem;
-		margin-bottom: .5rem;
 		border-left: 1rem solid $dsa-red;
 	}
 
@@ -398,17 +397,16 @@ p {
 }
 
 .full-width-image-container {
-	margin: 0;
+	margin: .5rem 0;
 
 	.full-width-image {
 		display: block;
 		width: 100%;
-		margin: .5rem 0;
 	}
 }
 
 .image-caption {
-	padding-bottom: .5rem; 
+	margin-top: .5rem;
 	font-size: 1rem;
 	color: $secondary-text-color;
 
