@@ -516,8 +516,12 @@ p {
 
 	.tile-list,
 	.event-list {
-		margin: 0 -1rem 0 0;
+		margin: .5rem -1rem 1rem 0;
 		padding: 0;
+
+		li:nth-of-type(n+3) {
+			margin-top: 1rem;
+		}
 	}
 
 	.tile-container-image,
@@ -526,8 +530,6 @@ p {
 		position: relative;
 		float: left;
 		width: 50%;
-		margin-top: .5rem;
-		margin-bottom: 1rem;
 		list-style-type: none;
 
 		a {
