@@ -21,7 +21,7 @@ function getFutureDate(date, months) {
 	return new Date(date.setMonth(date.getMonth() + months));      
 };
 
-function loadCalendar(calendar, key, limit) {
+function loadCalendar(calendar, key, limit, lang) {
 	// Get parent element of current script
 	var scripts = document.getElementsByTagName("script");
 	currentScript = scripts[scripts.length - 1];
@@ -131,7 +131,7 @@ function loadCalendar(calendar, key, limit) {
 				// Link to event
 				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
 
-				var locale = "en-US";
+				var locale = lang;
 				var dateOptions = { weekday: "long", month: "short", day: "numeric"};
 				var timeOptions = { hour: "numeric", minute: "2-digit"};
 				var startDate = new Date(obj.start_dt);
