@@ -115,7 +115,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 {% capture note %}
 #### Use una nota para resaltar información secundaria.
 
-Inserte aquí cualquier contenido de Markdown.
+Inserte el contenido de Markdown aquí.
 
 [¡Se admiten todos los tipos, incluidos los enlaces!](otra-pagina)
 {% endcapture %}

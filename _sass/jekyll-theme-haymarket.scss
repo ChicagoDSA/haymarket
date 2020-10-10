@@ -270,12 +270,13 @@ p {
 
 		h3 {
 			margin-top: 0;
+			line-height: 2.25rem;
 		}
 
 		#logo {
 			float: left;
-			width: 2rem;
-			height: 2rem;
+			width: 2.25rem;
+			height: 2.25rem;
 			margin-right: .5rem;
 			border-radius: .5rem;
 			background-color: $header-heading-color;
@@ -731,11 +732,12 @@ p {
 
 			.social {
 				float: left;
-				width: 1.5rem;
-				height: 1.5rem;
+				width: 1.75rem;
+				height: 1.75rem;
 				margin-right: .5rem;
 				text-align: center;
-				font-size: 1rem;
+				font-size: 1.125rem;
+				line-height: 1.75rem;
 				color: $header-heading-color;
 				border-radius: .5rem;
 			}
@@ -800,7 +802,7 @@ p {
 
 		#join {
 			float: left;
-			margin-top: 1.5rem;
+			margin-top: 2rem;
 		}
 	}
 

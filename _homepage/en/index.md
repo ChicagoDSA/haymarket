@@ -115,7 +115,7 @@ Use tiles to style your collections. Add an optional limit.
 {% capture note %}
 #### Use a note to highlight supporting information.
 
-Add any Markdown content here.
+Add Markdown content here.
 
 [All types, including links, are supported!](another-page)
 {% endcapture %}
