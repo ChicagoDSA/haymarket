@@ -406,6 +406,13 @@ p {
 				height: 22rem;
 			}
 
+			@include extra-small {
+				top: 0;
+				right: -6rem;
+				width: 18rem;
+				height: 18rem;
+			}
+
 			@include print {
 				top: 0;
 				right: -5rem;
