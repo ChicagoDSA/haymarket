@@ -58,19 +58,6 @@ body {
 	color: $body-text-color;
 }
 
-a {
-	color: $body-link-color;
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-
-	&:focus {
-		outline: 2px dashed $body-link-color;
-	}
-}
-
 h1,
 h2,
 h3,
@@ -130,6 +117,19 @@ h6 {
 
 p {
 	margin-bottom: 1em;
+}
+
+a {
+	color: $body-link-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: 2px dashed $body-link-color;
+	}
 }
 
 /* Global components */
@@ -192,6 +192,10 @@ p {
 	p {	
 		display: inline;
 		margin: 0;
+	}
+
+	a {
+		color: $secondary-text-color;
 	}
 }
 
@@ -537,16 +541,16 @@ p {
 		width: 50%;
 		list-style-type: none;
 
+		h4,
+		h5 {
+			color: $header-heading-color;
+		}
+
 		a {
 			display: block;
 			position: relative;
 			width: 100%;
 			height: 100%;
-		}
-
-		h4,
-		h5 {
-			color: $header-heading-color;
 		}
 
 		i,
