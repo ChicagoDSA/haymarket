@@ -132,6 +132,8 @@ p {
 	margin-bottom: 1em;
 }
 
+/* Components */
+
 .btn,
 .column-fix {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
@@ -161,66 +163,7 @@ p {
 	background-color: $dsa-red;
 }
 
-.note {
-	width: 100%;
-	margin: 2rem 0 1rem 0;
-	padding: 1rem;
-	border: 2px solid $border-color;
-	background-image: linear-gradient(-180deg, $border-color, $white 60%);
-
-	> :first-child {
-		margin-top: 0;
-	}
-
-	> :last-child {
-		margin-bottom: 0;
-	}
-}
-
-.page-header {
-	overflow: hidden;
-	text-align: left;
-	background-color: $header-bg-color;
-
-	h1, h2, h3, a {
-		color: $header-heading-color;
-	}
-}
-
-#banner {
-	position: relative;
-	z-index: 1;
-	width: 100%;
-	padding: 1rem 0;
-	background-color: $dsa-yellow;
-
-	#banner-content {
-		p,
-		#banner-link {
-			display: inline-block;
-		}
-
-		p,
-		i {
-			color: $body-text-color;
-		}
-
-		p {
-			margin: 0;
-		}
-
-		i {
-			margin-left: .5rem;
-			line-height: 1.5;
-		}
-
-		#banner-link {
-			&:hover p {
-				text-decoration: underline;
-			}
-		}
-	}
-}
+/* Layout */
 
 #banner-content,
 #project-area,
@@ -252,132 +195,177 @@ p {
 	}
 }
 
-#project-area {
-	position: relative;
-	padding-top: 0;
-	padding-bottom: 3rem;
+#page-header {
+	overflow: hidden;
+	text-align: left;
+	background-color: $header-bg-color;
 
-	#chapter,
-	.page-title,
-	.tagline {
+	h1, h2, h3, a {
+		color: $header-heading-color;
+	}
+
+	#banner {
 		position: relative;
-	}
+		z-index: 1;
+		width: 100%;
+		padding: 1rem 0;
+		background-color: $dsa-yellow;
 
-	#languages {
-		margin: .5rem 0 0 0;
-		padding-left: 0;
-
-		li {
-			display: inline-block;
-		}
-	}
-
-	#chapter {
-		padding-top: 1rem;
-		padding-bottom: 0;
-		border-bottom: 2px solid $header-heading-color;
-
-		h3 {
-			margin-top: 0;
-			line-height: 2.25rem;
-		}
-
-		#logo {
-			float: left;
-			width: 2.25rem;
-			height: 2.25rem;
-			margin-right: .5rem;
-			border-radius: .5rem;
-			background-color: $header-heading-color;
-		}
-
-		#name {
-			display: inline-block;
-
-			a {
-				display: block;
-				position: relative;
-				width: 100%;
-				height: 100%;
+		#banner-content {
+			p,
+			#banner-link {
+				display: inline-block;
 			}
 
-			a:hover {
-				text-decoration: none;
+			p,
+			i {
+				color: $body-text-color;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			i {
+				margin-left: .5rem;
+				line-height: 1.5;
+			}
+
+			#banner-link {
+				&:hover p {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
 
-	.page-title {
-		margin: 2rem 0 0 0;
+	#project-area {
+		position: relative;
+		padding-top: 0;
+		padding-bottom: 3rem;
 
-		@include large {
-			font-size: 3.25rem;
+		#chapter,
+		.page-title,
+		.tagline {
+			position: relative;
 		}
 
-		@include medium {
-			font-size: 2.25rem;
+		#languages {
+			margin: .5rem 0 0 0;
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+			}
 		}
 
-		@include small {
-			font-size: 2.25rem;
-		}
-	}
+		#chapter {
+			padding-top: 1rem;
+			padding-bottom: 0;
+			border-bottom: 2px solid $header-heading-color;
 
-	.tagline {
-		max-width: 75%;
-		margin-bottom: 0;
-		font-size: 1.25rem;
-		font-weight: normal;
+			h3 {
+				margin-top: 0;
+				line-height: 2.25rem;
+			}
 
-		@include medium{
-			font-size: 1.125rem;
-		}
+			#logo {
+				float: left;
+				width: 2.25rem;
+				height: 2.25rem;
+				margin-right: .5rem;
+				border-radius: .5rem;
+				background-color: $header-heading-color;
+			}
 
-		@include small{
-			font-size: 1.125rem;
-		}
+			#name {
+				display: inline-block;
 
-		@include print{
-			font-size: 1.125rem;
-		}
-	}
+				a {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 100%;
+				}
 
-	#background-logo img {
-		position: absolute;
-		opacity: .2;
-		
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=20);
-
-		pointer-events: none;
-
-		@include large {
-			top: -6rem;
-			right: -5rem;
-			width: 30rem;
-			height: 30rem;
+				a:hover {
+					text-decoration: none;
+				}
+			}
 		}
 
-		@include medium {
-			top: -4rem;
-			right: -4rem;
-			width: 26rem;
-			height: 26rem;
+		.page-title {
+			margin: 2rem 0 0 0;
+
+			@include large {
+				font-size: 3.25rem;
+			}
+
+			@include medium {
+				font-size: 2.25rem;
+			}
+
+			@include small {
+				font-size: 2.25rem;
+			}
 		}
 
-		@include small {
-			top: -2rem;
-			right: -5rem;
-			width: 22rem;
-			height: 22rem;
+		.tagline {
+			max-width: 75%;
+			margin-bottom: 0;
+			font-size: 1.25rem;
+			font-weight: normal;
+
+			@include medium{
+				font-size: 1.125rem;
+			}
+
+			@include small{
+				font-size: 1.125rem;
+			}
+
+			@include print{
+				font-size: 1.125rem;
+			}
 		}
 
-		@include print {
-			top: 0;
-			right: -5rem;
-			width: 18rem;
-			height: 18rem;
+		#background-logo img {
+			position: absolute;
+			opacity: .2;
+			
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=20);
+
+			pointer-events: none;
+
+			@include large {
+				top: -6rem;
+				right: -5rem;
+				width: 30rem;
+				height: 30rem;
+			}
+
+			@include medium {
+				top: -4rem;
+				right: -4rem;
+				width: 26rem;
+				height: 26rem;
+			}
+
+			@include small {
+				top: -2rem;
+				right: -5rem;
+				width: 22rem;
+				height: 22rem;
+			}
+
+			@include print {
+				top: 0;
+				right: -5rem;
+				width: 18rem;
+				height: 18rem;
+			}
 		}
 	}
 }
@@ -689,6 +677,22 @@ p {
 				width: 100%;
 				margin-right: 0;
 			}
+		}
+	}
+
+	.note {
+		width: 100%;
+		margin: 2rem 0 1rem 0;
+		padding: 1rem;
+		border: 2px solid $border-color;
+		background-image: linear-gradient(-180deg, $border-color, $white 60%);
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
 		}
 	}
 
