@@ -163,6 +163,15 @@ p {
 	background-color: $dsa-red;
 }
 
+/* Global styles */
+
+.cover-background {
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
 /* Layout */
 
 #banner-content,
@@ -368,13 +377,6 @@ p {
 			}
 		}
 	}
-}
-
-.cover-background {
-	overflow: hidden;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
 .headline-image-container {
