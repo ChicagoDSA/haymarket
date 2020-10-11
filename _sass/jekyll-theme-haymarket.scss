@@ -132,7 +132,9 @@ p {
 	margin-bottom: 1em;
 }
 
-/* Components */
+/* Global components */
+
+/* Buttons appear in .main-content and #site-footer */
 
 .btn,
 .column-fix {
@@ -379,48 +381,6 @@ p {
 	}
 }
 
-.headline-image-container {
-	margin: 0 auto;
-
-	.headline-image {
-		height: 20rem;
-		border-left: 1rem solid $dsa-red;
-	}
-
-	@include small {
-		width: 100%;
-
-		.image-caption {
-			padding: 0 1rem;
-		}
-	}
-}
-
-.full-width-image-container {
-	margin: .5rem 0 1rem 0;
-
-	.full-width-image {
-		display: block;
-		width: 100%;
-	}
-}
-
-.image-caption {
-	margin-top: .5rem;
-	font-size: 1rem;
-	color: $secondary-text-color;
-
-	p {	
-		display: inline;
-		margin: 0;
-	}
-}
-
-.image-credit {
-	font-size: .75rem;
-	font-weight: bold;
-}
-
 .main-content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -497,6 +457,52 @@ p {
 		border-color: $border-color;
 		background-color: $border-color;
 	}
+
+	/* Images */
+
+	.headline-image-container {
+		margin: 0 auto;
+
+		.headline-image {
+			height: 20rem;
+			border-left: 1rem solid $dsa-red;
+		}
+
+		@include small {
+			width: 100%;
+
+			.image-caption {
+				padding: 0 1rem;
+			}
+		}
+	}
+
+	.full-width-image-container {
+		margin: .5rem 0 1rem 0;
+
+		.full-width-image {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.image-caption {
+		margin-top: .5rem;
+		font-size: 1rem;
+		color: $secondary-text-color;
+
+		p {	
+			display: inline;
+			margin: 0;
+		}
+	}
+
+	.image-credit {
+		font-size: .75rem;
+		font-weight: bold;
+	}
+
+	/* Tiles */
 
 	.tile-list,
 	.event-list {
@@ -697,6 +703,8 @@ p {
 			margin-bottom: 0;
 		}
 	}
+
+	/* Layout fixes */
 
 	> :first-child {
 		margin-top: 0rem;
