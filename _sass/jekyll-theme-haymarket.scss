@@ -165,6 +165,41 @@ p {
 	background-color: $dsa-red;
 }
 
+/* Images appear in body and .main-content */
+
+.headline-image-container {
+	margin: 0 auto;
+
+	.headline-image {
+		height: 20rem;
+		border-left: 1rem solid $dsa-red;
+	}
+
+	@include small {
+		width: 100%;
+
+		.image-caption {
+			padding: 0 1rem;
+		}
+	}
+}
+
+.image-caption {
+	margin-top: .5rem;
+	font-size: 1rem;
+	color: $secondary-text-color;
+
+	p {	
+		display: inline;
+		margin: 0;
+	}
+}
+
+.image-credit {
+	font-size: .75rem;
+	font-weight: bold;
+}
+
 /* Global styles */
 
 .cover-background {
@@ -386,13 +421,6 @@ p {
 	padding-bottom: 2rem;
 	word-wrap: break-word;
 
-	p {
-		img {
-			display: block;
-			max-width: 100%;
-		}
-	}
-
 	ul,
 	ol {
 		margin-top: 0;
@@ -458,22 +486,12 @@ p {
 		background-color: $border-color;
 	}
 
-	/* Images */
+	/* Inline images */
 
-	.headline-image-container {
-		margin: 0 auto;
-
-		.headline-image {
-			height: 20rem;
-			border-left: 1rem solid $dsa-red;
-		}
-
-		@include small {
-			width: 100%;
-
-			.image-caption {
-				padding: 0 1rem;
-			}
+	p {
+		img {
+			display: block;
+			max-width: 100%;
 		}
 	}
 
@@ -484,22 +502,6 @@ p {
 			display: block;
 			width: 100%;
 		}
-	}
-
-	.image-caption {
-		margin-top: .5rem;
-		font-size: 1rem;
-		color: $secondary-text-color;
-
-		p {	
-			display: inline;
-			margin: 0;
-		}
-	}
-
-	.image-credit {
-		font-size: .75rem;
-		font-weight: bold;
 	}
 
 	/* Tiles */
