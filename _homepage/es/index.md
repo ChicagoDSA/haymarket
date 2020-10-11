@@ -89,7 +89,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 
 ### Foto grande con pie de foto
 
-{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="Un anuncio para el rally de Haymarket." credit="¡Dale crédito a tu fuente!" %}
+{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="Un anuncio para el rally de Haymarket." credit="[¡Dale crédito a tu fuente y conéctate a su sitio web!](otra-pagina)" %}
 
 ### Las listas de definiciones se pueden utilizar con sintaxis HTML.
 

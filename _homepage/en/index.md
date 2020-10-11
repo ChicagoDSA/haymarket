@@ -89,7 +89,7 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Large image with a caption
 
-{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="A flyer announces the Haymarket rally." credit="Credit your source!" %}
+{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="A flyer announces the Haymarket rally." credit="[Credit your source and link to their website!](another-page)" %}
 
 ### Definition lists can be used with HTML syntax.
 
