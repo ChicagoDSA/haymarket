@@ -775,9 +775,13 @@ a {
 				margin-right: .5rem;
 				text-align: center;
 				font-size: 1.125rem;
-				line-height: 1.75rem;
 				color: $header-heading-color;
 				border-radius: .5rem;
+
+				.fab {
+					display: block;
+					line-height: 0;
+				}
 			}
 
 			#twitter {
