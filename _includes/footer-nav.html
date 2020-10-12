@@ -43,7 +43,7 @@
 				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
 				<ul>
 					{% for item in group.items %}
-						<li><a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a></li>
+						<li><a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>
