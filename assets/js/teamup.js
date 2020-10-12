@@ -129,7 +129,7 @@ function loadCalendar(calendar, key, limit, lang) {
 				timeText.className = "timestamp";
 
 				// Link to event
-				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id;
+				eventLink.href = "https://teamup.com/"+calendar+"/events/"+obj.id+"?view=a&showHeader=0&lang="+lang;
 
 				var locale = lang;
 				var dateOptions = { weekday: "long", month: "short", day: "numeric"};
