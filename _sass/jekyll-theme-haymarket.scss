@@ -730,8 +730,7 @@ a {
 	}
 }
 
-#footer-columns {
-	display: table;
+#footer-rows {
 	width: 100%;
 	padding-top: 2rem;
 	padding-bottom: 4rem;
@@ -739,8 +738,6 @@ a {
 	border-top: solid 1px $border-color;
 
 	#nav-container {
-		display: table-cell;
-
 		.nav-group {
 			display: table-cell;
 			vertical-align: top;
@@ -799,26 +796,18 @@ a {
 	}
 
 	.no-nav {
-		float: left;
-		width: 60%;
-
 		p {
 			max-width: 24rem;
 			margin-top: 0;
 		}
-
-		#join {
-			float: right;
-		}
 	}
 
 	#join {
-		display: table-cell;
+		margin-top: 2rem;
 		vertical-align: top;
 		color: $secondary-text-color;
 
 		.btn-container {
-			float: right;
 			margin: 0;
 		}
 
@@ -828,27 +817,6 @@ a {
 	}
 
 	@include small {
-		display: block;
-
-		#nav-container {
-			display: block;
-		}
-
-		.no-nav {
-			width: 100%;
-
-			#join {
-				float: left;
-			}
-		}
-
-		#join {
-			float: left;
-			margin-top: 2rem;
-		}
-	}
-
-	@include extra-small {
 		#nav-container .nav-group {
 			display: block;	
 		}	
