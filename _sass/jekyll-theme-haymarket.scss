@@ -432,6 +432,13 @@ a {
 	padding-bottom: 2rem;
 	word-wrap: break-word;
 
+	table,
+	th,
+	td,
+	.note {
+		border: 2px solid $border-color;
+	}
+
 	ul,
 	ol {
 		margin-top: 0;
@@ -454,8 +461,6 @@ a {
 	}
 
 	table {
-		display: block;
-		width: 100%;
 		margin-top: 1rem;
 		margin-bottom: 2rem;
 		overflow: auto;
@@ -463,15 +468,19 @@ a {
 		word-break: keep-all; // For Firefox to horizontally scroll wider tables.
 		-webkit-overflow-scrolling: touch;
 
-		th {
-			font-weight: bold;
-			background-color: $border-color;
-		}
-
 		th,
 		td {
 			padding: .5rem 1rem;
-			border: 1px solid $border-color;
+		}
+
+		th {
+			font-weight: bold;
+			background-image: linear-gradient(-180deg, $border-color, $white 100%);
+			border-bottom: 0;
+		}
+
+		tr:first-child td {
+			border-top: 0;
 		}
 	}
 
@@ -708,7 +717,6 @@ a {
 		width: 100%;
 		margin: 2rem 0 1rem 0;
 		padding: 1rem;
-		border: 2px solid $border-color;
 		background-image: linear-gradient(-180deg, $border-color, $white 60%);
 
 		> :first-child {
