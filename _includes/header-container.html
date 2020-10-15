@@ -45,6 +45,11 @@
 			<div style="clear: both;"></div> 
 		</ul>
 		<div id="chapter">
+			{% if site.data.nav.elements %}
+				<div id="menu">
+					<i class="fas fa-bars"></i>
+				</div>
+			{% endif %}
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
 				{%- capture logo -%}
 					<div id="logo">
