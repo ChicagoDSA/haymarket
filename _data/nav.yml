@@ -1,3 +1,18 @@
+top-elements:
+    items:
+      - page:
+          en: Link to a page
+          es: Enlace a una página
+          url: 
+            en: another-page
+            es: es/otra-pagina
+      - page:
+          en: Another link
+          es: Otro enlace
+          url:
+            en: another-page
+            es: es/otra-pagina
+
 bottom-elements:
   - group: 
     en: Add navigation

@@ -34,6 +34,7 @@
 					{%- endfor -%}
 				{%- endif -%}
 			{% endfor %}
+			<div style="clear: both;"></div> 
 		</ul>
 		<div id="chapter">
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
@@ -66,6 +67,13 @@
 				</h3>
 			</div>
 			<div style="clear: both;"></div> 
+
+			<ul id="top-nav">
+				{% for item in site.data.nav.top-elements.items %}
+					<li><a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a></li>
+				{% endfor %}
+				<div style="clear: both;"></div> 
+			</ul>
 		</div>
 		<h1 class="page-title">
 			{%- if page.headline -%}
