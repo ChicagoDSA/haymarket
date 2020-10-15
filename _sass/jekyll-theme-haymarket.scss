@@ -777,7 +777,6 @@ a {
 		.nav-group {
 			display: table-cell;
 			vertical-align: top;
-			padding-right: 4rem;
 
 			ul {
 				margin-top: 0;
@@ -796,6 +795,10 @@ a {
 			a {
 				color: $secondary-text-color;
 			}
+		}
+
+		.nav-group:nth-child(n+2) {
+			padding-left: 4rem;
 		}
 
 		#social-container {
@@ -839,8 +842,14 @@ a {
 	}
 
 	@include small {
-		#nav-container .nav-group {
-			display: block;	
+		#nav-container {
+			.nav-group {
+				display: block;
+			}
+
+			.nav-group:nth-child(n+2) {
+				padding-left: 0;
+			}
 		}	
 	}
 }
