@@ -107,8 +107,7 @@ h4 {
 }
 
 h5,
-#languages li,
-#top-nav li {
+#top-buttons li {
 	font-size: .9375rem;
 }
 
@@ -301,27 +300,7 @@ a {
 			position: relative;
 		}
 
-		#languages,
-		#top-nav {
-			margin: .5rem 0 0 0;
-			padding-left: 0;
-
-			li {
-				list-style-type: none;
-			}
-		}
-
-		#languages {
-			margin-top: .75rem;
-
-			li {
-				float: left;
-				margin-right: .25rem;
-			}
-		}
-
 		#chapter {
-			padding-top: 1rem;
 			padding-bottom: 0;
 
 			h3 {
@@ -354,13 +333,14 @@ a {
 			}
 		}
 
-		#top-nav {
-			display: table;
+		#top-buttons {
+			margin: 0 0 2rem 0;
+			padding-left: 0;
 
 			li {
-				display: table-cell;
-				margin-right: .25rem;
+				float: left;
 				padding: .125rem .5rem;
+				list-style-type: none;
 				background-color: $white;
 
 				a {
@@ -369,11 +349,23 @@ a {
 			}
 
 			li:first-child {
-				border-radius: .25rem 0 0 .25rem;
+				border-radius: 0 0 0 .25rem;
+			}
+
+			li:nth-child(n+2) {
+				padding-left: 0;
 			}
 
 			li:nth-last-child(2) {
-				border-radius: 0 .25rem .25rem 0;
+				border-radius: 0 0 .25rem 0;
+			}
+
+			li:first-child:nth-last-child(2) {
+				border-radius: 0 0 .25rem .25rem;
+			}
+
+			#join {
+				padding-left: .5rem;
 				background-color: $dsa-purple;
 
 				a {
@@ -382,8 +374,8 @@ a {
 			}
 		}
 
-		.page-title {
-			margin: 2rem 0 0 0;
+		#page-title {
+			margin: 0;
 
 			@include large {
 				font-size: 3.25rem;
@@ -398,7 +390,7 @@ a {
 			}
 		}
 
-		.tagline {
+		#tagline {
 			max-width: 75%;
 			margin-bottom: 0;
 			font-size: 1.25rem;
@@ -784,8 +776,8 @@ a {
 	font-size: 1rem;
 	border-top: solid 1px $border-color;
 
-	#bottom-nav-container {
-		.bottom-nav-group {
+	#nav-container {
+		.nav-group {
 			display: table-cell;
 			vertical-align: top;
 			padding-right: 4rem;
@@ -846,20 +838,6 @@ a {
 		p {
 			max-width: 24rem;
 			margin-top: 0;
-		}
-	}
-
-	#join {
-		margin-top: 2rem;
-		vertical-align: top;
-		color: $secondary-text-color;
-
-		.btn-container {
-			margin: 0;
-		}
-
-		.btn {
-			background-color: $dsa-purple;
 		}
 	}
 

@@ -20,7 +20,7 @@
 		<div id="background-logo">
 			{% include header-DSA-logo.html %}
 		</div>
-		<ul id="languages">
+		<ul id="top-buttons">
 			{% for collection in site.collections %}
 				{%- assign name = collection.label -%}
 				{%- assign languages = site.[name] | where: "lang-ref", page.lang-ref | sort: "lang" -%}
@@ -34,6 +34,14 @@
 					{%- endfor -%}
 				{%- endif -%}
 			{% endfor %}
+			<li id="join">
+				{% if site.data.nav.join.link.[page.lang] %}
+					{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
+				{% else %}
+					{% assign joinURL = "https://www.dsausa.org/join" %}
+				{% endif %}
+				<a href="{{ joinURL }}">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+			</li>
 			<div style="clear: both;"></div> 
 		</ul>
 		<div id="chapter">
@@ -67,15 +75,8 @@
 				</h3>
 			</div>
 			<div style="clear: both;"></div> 
-
-			<ul id="top-nav">
-				{% for item in site.data.nav.top-elements.items %}
-					<li><a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a></li>
-				{% endfor %}
-				<div style="clear: both;"></div> 
-			</ul>
 		</div>
-		<h1 class="page-title">
+		<h1 id="page-title">
 			{%- if page.headline -%}
 				{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
 			{%- elsif page.title -%}
@@ -85,9 +86,9 @@
 			{%- endif -%}
 		</h1>
 		{% if page.subhead %}
-			<h2 class="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
+			<h2 id="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% elsif page.description %}
-			<h2 class="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
+			<h2 id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% endif %}
 	</div>
 </header>

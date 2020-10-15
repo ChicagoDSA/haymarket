@@ -1,16 +1,3 @@
-{% capture join %}
-	<div id="join">
-		<div class="btn-container">
-			{% if site.data.nav.join.link.[page.lang] %}
-				{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
-			{% else %}
-				{% assign joinURL = "https://www.dsausa.org/join" %}
-			{% endif %}
-			<a href="{{ joinURL }}" class="btn">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
-		</div>
-	</div>
-{% endcapture %}
-
 {% capture social %}
 	{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 		<div id="social-container">
@@ -36,10 +23,10 @@
 	{% endif %}
 {% endcapture %}
 
-{% if site.data.nav.bottom-elements %}
-	<div id="bottom-nav-container">
-		{% for group in site.data.nav.bottom-elements %}
-			<div class="bottom-nav-group">
+{% if site.data.nav.elements %}
+	<div id="nav-container">
+		{% for group in site.data.nav.elements %}
+			<div class="nav-group">
 				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
 				<ul>
 					{% for item in group.items %}
@@ -51,9 +38,8 @@
 		{{ social }}
 		<div style="clear: both;"></div> 
 	</div>
-	{{ join }}
 {% elsif site.data.translations.chapter-name.[page.lang] && site.chapter.url %}
-	<div id="bottom-nav-container" class="no-nav">
+	<div id="nav-container" class="no-nav">
 		{% if site.chapter.url %}
 			{% assign chapterURL = site.chapter.url %}
 		{% elsif page.lang == "en" %}
@@ -65,5 +51,4 @@
 		<p>{{ site.data.nav.credits.this-site-was-made-by.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="{{ chapterURL }}">{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>, {{ site.data.nav.credits.a-chapter-of-the.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }} <a href="https://www.dsausa.org/">{{ site.data.nav.credits.DSA.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</a>.</p>
 		{{ social }}	
 	</div>
-	{{ join }}
 {% endif %}
