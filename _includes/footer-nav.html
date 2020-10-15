@@ -36,10 +36,10 @@
 	{% endif %}
 {% endcapture %}
 
-{% if site.data.nav.elements %}
-	<div id="nav-container">
-		{% for group in site.data.nav.elements %}
-			<div class="nav-group">
+{% if site.data.nav.bottom-elements %}
+	<div id="bottom-nav-container">
+		{% for group in site.data.nav.bottom-elements %}
+			<div class="bottom-nav-group">
 				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
 				<ul>
 					{% for item in group.items %}
@@ -53,7 +53,7 @@
 	</div>
 	{{ join }}
 {% elsif site.data.translations.chapter-name.[page.lang] && site.chapter.url %}
-	<div id="nav-container" class="no-nav">
+	<div id="bottom-nav-container" class="no-nav">
 		{% if site.chapter.url %}
 			{% assign chapterURL = site.chapter.url %}
 		{% elsif page.lang == "en" %}
