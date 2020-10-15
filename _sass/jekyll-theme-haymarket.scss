@@ -294,39 +294,11 @@ a {
 		padding-top: 0;
 		padding-bottom: 3rem;
 
+		#top-buttons,
 		#chapter,
 		#page-title,
 		#tagline {
 			position: relative;
-		}
-
-		#chapter {
-			padding-bottom: 0;
-
-			h3 {
-				margin-top: 0;
-				line-height: 2.25rem;
-			}
-
-			#logo {
-				float: left;
-				width: 2.25rem;
-				height: 2.25rem;
-				margin-right: .5rem;
-				border-radius: .5rem;
-				background-color: $white;
-			}
-
-			#name {
-				display: inline-block;
-
-				a {
-					display: block;
-					position: relative;
-					width: 100%;
-					height: 100%;
-				}
-			}
 		}
 
 		#top-buttons {
@@ -366,6 +338,35 @@ a {
 
 				a {
 					color: $white;
+				}
+			}
+		}
+
+		#chapter {
+			padding-bottom: 0;
+
+			h3 {
+				margin-top: 0;
+				line-height: 2.25rem;
+			}
+
+			#logo {
+				float: left;
+				width: 2.25rem;
+				height: 2.25rem;
+				margin-right: .5rem;
+				border-radius: .5rem;
+				background-color: $white;
+			}
+
+			#name {
+				display: inline-block;
+
+				a {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 100%;
 				}
 			}
 		}
