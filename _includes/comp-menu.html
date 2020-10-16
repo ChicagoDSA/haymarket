@@ -23,11 +23,11 @@
 	var nameLink = document.getElementById("name-link");
 
 	function showMenu() {
-  		menuContent.style.display = "block";
+  		menuContent.classList.add("visible-menu");
 	};
 
 	function hideMenu() {
-  		menuContent.style.display = "none";
+  		menuContent.classList.remove("visible-menu");
 	};
 
 	// Set mouseover flags
@@ -41,9 +41,9 @@
 	// When the mouse moves
 	window.onmousemove = function () {
 		// If it's outside the visible menu
-		if (menuContent.style.display == "block" && mouseOver == false) {
+		if (menuContent.classList.contains("visible-menu") && mouseOver == false) {
 			// Hide the menu
-			menuContent.style.display = "none";
+			menuContent.classList.remove("visible-menu");
 		}
 	};
 </script>
