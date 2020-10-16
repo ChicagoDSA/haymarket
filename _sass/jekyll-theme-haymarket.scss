@@ -390,8 +390,10 @@ a {
 		}
 
 		#menu {
-			float: left;
-			margin: .125rem 1.5rem 1rem 0;
+			display: table-cell;
+			padding-right: 1.5rem;
+			vertical-align: middle;
+			text-align: center;
 			color: $white;
 
 			i {
@@ -399,16 +401,22 @@ a {
 				font-size: 2rem;
 			}
 
-			i:hover {
-					cursor: pointer;
-				}
+			p {
+				margin: 0;
+				font-size: .75rem;
+			}
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		#chapter {
-			padding-bottom: 0;
+			display: table-cell;
+			vertical-align: middle;
 
 			h3 {
-				margin-top: 0;
+				margin: 0;
 				line-height: 2.25rem;
 			}
 
@@ -434,7 +442,7 @@ a {
 		}
 
 		#page-title {
-			margin: 0;
+			margin-top: 2rem;
 
 			@include large {
 				font-size: 3.25rem;
