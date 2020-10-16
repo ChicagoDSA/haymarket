@@ -45,24 +45,7 @@
 			<div style="clear: both;"></div> 
 		</ul>
 		{% if site.data.nav.elements %}
-			<div id="menu">
-				<div id="menu-icon">
-					<i class="fas fa-bars"></i>
-					<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
-				</div>
-				<div id="menu-content">
-					{% for group in site.data.nav.elements %}
-						<div class="nav-group">
-							<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
-							<ul>
-								{% for item in group.items %}
-									<li><a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
+			{% include comp-menu.html %}
 		{% endif %}
 		<div id="chapter">
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
@@ -89,7 +72,7 @@
 			
 			<div id="name" href="{{ chapterURL }}">
 				<h3>
-					<a href="{{ chapterURL }}">
+					<a id="name-link" href="{{ chapterURL }}" onfocus="hideMenu()">
 					{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
 					</a>
 				</h3>

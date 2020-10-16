@@ -126,10 +126,6 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
-
-	&:focus {
-		outline: 2px dashed $body-link-color;
-	}
 }
 
 /* Global components */
@@ -233,6 +229,13 @@ a {
 .column-fix,
 #menu-content {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+a,
+#menu-icon {
+	&:focus {
+		outline: 2px dashed $body-link-color;
+	}
 }
 
 .cover-background {
@@ -455,6 +458,10 @@ a {
 
 				&:hover {
 					cursor: pointer;
+				}
+
+				&:hover #menu-content {
+					display: block;
 				}
 			}
 		}
