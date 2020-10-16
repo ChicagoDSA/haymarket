@@ -158,6 +158,9 @@ This is another page.
 1. At the top of `_data/nav.yml`, paste the following:
 
 ```yaml
+menu:
+  en: Menu
+
 elements:
   - group: 
     en: Add navigation
