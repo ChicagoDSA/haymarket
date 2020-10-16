@@ -1,8 +1,8 @@
 chapter:
   url:
-  facebook: "?"
-  instagram: "?"
-  twitter: "?"
+  facebook: "#"
+  instagram: "#"
+  twitter: "#"
   # Override DSA national logos
   header-logo-svg:
   header-logo-png-fallback: # 360px square recommended
