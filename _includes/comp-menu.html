@@ -1,5 +1,5 @@
 <div id="menu">
-	<div id="menu-icon" tabindex="0" onfocus="showMenu()">
+	<div id="menu-icon" tabindex="0">
 		<i class="fas fa-bars"></i>
 		<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 	</div>
@@ -16,34 +16,3 @@
 		{% endfor %}
 	</div>
 </div>
-
-<script>
-	var mouseOver = false;
-	var menuContent = document.getElementById("menu-content");
-	var nameLink = document.getElementById("name-link");
-
-	function showMenu() {
-  		menuContent.classList.add("visible-menu");
-	};
-
-	function hideMenu() {
-  		menuContent.classList.remove("visible-menu");
-	};
-
-	// Set mouseover flags
-	menuContent.onmouseover = function () {
-		mouseOver = true;
-	};
-	menuContent.onmouseout = function () {
-		mouseOver = false;
-	};
-
-	// When the mouse moves
-	window.onmousemove = function () {
-		// If it's outside the visible menu
-		if (menuContent.classList.contains("visible-menu") && mouseOver == false) {
-			// Hide the menu
-			menuContent.classList.remove("visible-menu");
-		}
-	};
-</script>
