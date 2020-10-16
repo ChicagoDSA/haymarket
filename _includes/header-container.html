@@ -70,7 +70,7 @@
 				{% assign chapterURL = page.lang | relative_url %}
 			{% endif %}
 			
-			<div id="name" href="{{ chapterURL }}">
+			<div id="name">
 				<h3>
 					<a id="name-link" href="{{ chapterURL }}">
 					{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>

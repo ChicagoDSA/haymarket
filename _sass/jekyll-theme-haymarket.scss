@@ -495,7 +495,6 @@ a,
 
 			h3 {
 				margin: 0;
-				white-space: nowrap;
 				line-height: 2.25rem;
 			}
 
@@ -557,6 +556,7 @@ a,
 .main-content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	overflow: hidden;
 	word-wrap: break-word;
 
 	table,
