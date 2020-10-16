@@ -775,8 +775,10 @@ a {
 
 	#nav-container {
 		.nav-group {
-			display: table-cell;
+			display: inline-block;
 			vertical-align: top;
+			width: 30%;
+			padding-right: 4rem;
 
 			ul {
 				margin-top: 0;
@@ -795,10 +797,10 @@ a {
 			a {
 				color: $secondary-text-color;
 			}
-		}
 
-		.nav-group:nth-child(n+2) {
-			padding-left: 4rem;
+			@include medium {
+				width: 40%;
+			}
 		}
 
 		#social-container {
