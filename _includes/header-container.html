@@ -1,25 +1,25 @@
-<header id="page-header" role="banner">
-	{% if site.data.banner.link.[page.lang] or site.data.banner.link %}
-		<div id="banner">
-			<div id="banner-content">
-				<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | default: site.data.banner.link | relative_url }}">
-					<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
-				</a>
-			</div>
-			<div style="clear:both"></div>
+{% if site.data.banner.link.[page.lang] or site.data.banner.link %}
+	<div id="banner">
+		<div id="banner-content">
+			<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | default: site.data.banner.link | relative_url }}">
+				<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+			</a>
 		</div>
-	{% elsif site.data.banner.text.[page.lang] %}
-		<div id="banner">
-			<p id="banner-content">
-				{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
-			</p>
-			<div style="clear:both"></div>
-		</div>
-	{% endif %}
+		<div style="clear:both"></div>
+	</div>
+{% elsif site.data.banner.text.[page.lang] %}
+	<div id="banner">
+		<p id="banner-content">
+			{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
+		</p>
+		<div style="clear:both"></div>
+	</div>
+{% endif %}
+<div id="page-header">
+	<div id="background-logo">
+		{% include header-DSA-logo.html %}
+	</div>
 	<div id="project-area">
-		<div id="background-logo">
-			{% include header-DSA-logo.html %}
-		</div>
 		<ul id="top-buttons">
 			{% for collection in site.collections %}
 				{%- assign name = collection.label -%}
@@ -111,4 +111,4 @@
 			<h2 id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% endif %}
 	</div>
-</header>
+</div>

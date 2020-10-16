@@ -274,41 +274,97 @@ a {
 	}
 }
 
+#banner {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	padding: 1rem 0;
+	background-color: $dsa-yellow;
+
+	#banner-content {
+		p,
+		#banner-link {
+			display: inline-block;
+		}
+
+		p,
+		i {
+			color: $body-text-color;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		i {
+			margin-left: .5rem;
+			line-height: 1.5;
+		}
+
+		#banner-link {
+			&:hover p {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
 #page-header {
+	position: relative;
 	text-align: left;
 	background-color: $dsa-red;
 
-	#banner {
-		position: relative;
-		z-index: 1;
+	#background-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		padding: 1rem 0;
-		background-color: $dsa-yellow;
+		height: 100%;
+		overflow: hidden;
 
-		#banner-content {
-			p,
-			#banner-link {
-				display: inline-block;
+		img {
+			position: absolute;
+			opacity: .15;
+			
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=15);
+
+			pointer-events: none;
+
+			@include large {
+				top: -6rem;
+				right: -5rem;
+				width: 30rem;
+				height: 30rem;
 			}
 
-			p,
-			i {
-				color: $body-text-color;
+			@include medium {
+				top: -4rem;
+				right: -4rem;
+				width: 26rem;
+				height: 26rem;
 			}
 
-			p {
-				margin: 0;
+			@include small {
+				top: -2rem;
+				right: -5rem;
+				width: 22rem;
+				height: 22rem;
 			}
 
-			i {
-				margin-left: .5rem;
-				line-height: 1.5;
+			@include extra-small {
+				top: 0;
+				right: -6rem;
+				width: 18rem;
+				height: 18rem;
 			}
 
-			#banner-link {
-				&:hover p {
-					text-decoration: underline;
-				}
+			@include print {
+				top: 0;
+				right: -5rem;
+				width: 18rem;
+				height: 18rem;
 			}
 		}
 	}
@@ -335,61 +391,6 @@ a {
 		#page-title,
 		#tagline {
 			margin: 2rem 0 0 0;
-		}
-
-		#background-logo {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow-y: hidden;
-
-			img {
-				float: right;
-				opacity: .15;
-				
-				/* IE fixes */
-				zoom: 1;
-				filter: alpha(opacity=15);
-
-				pointer-events: none;
-
-				@include large {
-					margin-top: -6rem;
-					margin-right: -5rem;
-					width: 30rem;
-					height: 30rem;
-				}
-
-				@include medium {
-					margin-top: -4rem;
-					margin-right: -4rem;
-					width: 26rem;
-					height: 26rem;
-				}
-
-				@include small {
-					margin-top: -2rem;
-					margin-right: -5rem;
-					width: 22rem;
-					height: 22rem;
-				}
-
-				@include extra-small {
-					margin-top: 0;
-					margin-right: -6rem;
-					width: 18rem;
-					height: 18rem;
-				}
-
-				@include print {
-					margin-top: 0;
-					margin-right: -5rem;
-					width: 18rem;
-					height: 18rem;
-				}
-			}
 		}
 
 		#top-buttons {
