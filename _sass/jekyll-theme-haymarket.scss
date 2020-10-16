@@ -775,7 +775,7 @@ a {
 
 	#nav-container {
 		.nav-group {
-			display: inline-block;
+			float: left;
 			vertical-align: top;
 			width: 30%;
 			padding-right: 4rem;
@@ -797,10 +797,10 @@ a {
 			a {
 				color: $secondary-text-color;
 			}
+		}
 
-			@include medium {
-				width: 40%;
-			}
+		.nav-group:nth-child(3n+1) {
+			clear: left;
 		}
 
 		#social-container {
@@ -843,10 +843,27 @@ a {
 		}
 	}
 
+	@include medium {
+		#nav-container {
+			.nav-group {
+				width: 40%;
+			}
+
+			.nav-group:nth-child(3n+1) {
+				clear: none;
+			}
+
+			.nav-group:nth-child(2n+1) {
+				clear: left;
+			}
+		}
+	}
+
 	@include small {
 		#nav-container {
 			.nav-group {
-				display: block;
+				float: none;
+				width: 100%;
 			}
 
 			.nav-group:nth-child(n+2) {
