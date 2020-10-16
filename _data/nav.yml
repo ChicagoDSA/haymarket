@@ -1,3 +1,7 @@
+menu:
+  en: Menu
+  es: Menú
+
 elements:
   - group: 
     en: Add navigation

@@ -48,7 +48,7 @@
 			<div id="menu">
 				<div id="menu-icon">
 					<i class="fas fa-bars"></i>
-					<p>Menu</p>
+					<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 				</div>
 				<div id="menu-content">
 					{% for group in site.data.nav.elements %}
