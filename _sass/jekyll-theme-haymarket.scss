@@ -522,7 +522,7 @@ a {
 		}
 
 		dd {
-			margin-bottom: 1rem;
+			margin: 0 0 1rem 2rem;
 			padding: 0;
 		}
 	}
@@ -787,6 +787,8 @@ a {
 
 			li {
 				list-style-type: none;
+				text-indent: -1rem;
+				margin-left: 1rem;
 			}
 
 			h4 {
