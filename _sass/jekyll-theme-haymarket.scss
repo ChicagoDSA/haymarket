@@ -893,6 +893,10 @@ a {
 					display: block;
 					line-height: 1.75rem;
 				}
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 
 			#twitter {
