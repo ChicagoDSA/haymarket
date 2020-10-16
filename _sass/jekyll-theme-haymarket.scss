@@ -538,7 +538,7 @@ a {
 		}
 
 		dd {
-			margin-bottom: 1rem;
+			margin: 0 0 1rem 2rem;
 			padding: 0;
 		}
 	}
@@ -791,8 +791,9 @@ a {
 
 	#nav-container {
 		.nav-group {
-			display: table-cell;
+			float: left;
 			vertical-align: top;
+			width: 30%;
 			padding-right: 4rem;
 
 			ul {
@@ -802,6 +803,8 @@ a {
 
 			li {
 				list-style-type: none;
+				text-indent: -1rem;
+				margin-left: 1rem;
 			}
 
 			h4 {
@@ -812,6 +815,10 @@ a {
 			a {
 				color: $secondary-text-color;
 			}
+		}
+
+		.nav-group:nth-child(3n+1) {
+			clear: left;
 		}
 
 		#social-container {
@@ -854,9 +861,32 @@ a {
 		}
 	}
 
+	@include medium {
+		#nav-container {
+			.nav-group {
+				width: 40%;
+			}
+
+			.nav-group:nth-child(3n+1) {
+				clear: none;
+			}
+
+			.nav-group:nth-child(2n+1) {
+				clear: left;
+			}
+		}
+	}
+
 	@include small {
-		#nav-container .nav-group {
-			display: block;	
+		#nav-container {
+			.nav-group {
+				float: none;
+				width: 100%;
+			}
+
+			.nav-group:nth-child(n+2) {
+				padding-left: 0;
+			}
 		}	
 	}
 }
