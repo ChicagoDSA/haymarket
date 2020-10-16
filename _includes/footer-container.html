@@ -1,6 +1,36 @@
+{% capture backToTopContent %}
+	<a href="#">{{ site.data.translations.back-to-top.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+{% endcapture %}
+
 <footer id="site-footer">
-	<div id="footer-rows">
-		{% include footer-nav.html %}
+	<div id="footer-content">
+		{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
+			<div id="social-container">
+				<h6>Follow us on social media</h6>
+
+				{% if site.chapter.twitter %}
+					<a id="twitter" class="social" href="{{ site.chapter.twitter }}">
+						<i class="fab fa-twitter"></i>
+					</a>
+				{% endif %}
+
+				{% if site.chapter.instagram %}
+					<a id="instagram" class="social" href="{{ site.chapter.instagram }}">
+						<i class="fab fa-instagram"></i>
+					</a>
+				{% endif %}
+
+				{% if site.chapter.facebook %}
+					<a id="facebook" class="social" href="{{ site.chapter.facebook }}">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				{% endif %}
+				<div style="clear: both;"></div> 
+			</div>
+			<p id="back-to-top">{{ backToTopContent }}</p>
+		{% else %}
+			<p id="back-to-top" class="no-siblings">{{ backToTopContent }}</p>
+		{% endif %}
 		<div style="clear: both;"></div> 
 	</div>
 </footer>

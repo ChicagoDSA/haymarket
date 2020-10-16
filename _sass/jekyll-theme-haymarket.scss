@@ -199,30 +199,6 @@ a {
 	font-weight: bold;
 }
 
-/* Styles nav in menu and footer */
-
-.nav-group {
-	ul {
-		margin-top: 0;
-		padding: 0;
-	}
-
-	li {
-		list-style-type: none;
-		text-indent: -1rem;
-		margin-left: 1rem;
-
-		a {
-			color: $secondary-text-color;
-		}
-	}
-
-	h4 {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-}
-
 /* Global styles */
 
 .btn,
@@ -482,6 +458,28 @@ a,
 			border: 2px solid $border-color;
 			background-color: #fff;
 
+			.nav-group {
+				ul {
+					margin-top: 0;
+					padding: 0;
+				}
+
+				li {
+					list-style-type: none;
+					text-indent: -1rem;
+					margin-left: 1rem;
+
+					a {
+						color: $secondary-text-color;
+					}
+				}
+
+				h4 {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
 			:last-child > ul {
 				margin-bottom: 0;
 			}
@@ -497,6 +495,7 @@ a,
 
 			h3 {
 				margin: 0;
+				white-space: nowrap;
 				line-height: 2.25rem;
 			}
 
@@ -867,96 +866,70 @@ a,
 	}
 }
 
-#footer-rows {
+#footer-content {
 	width: 100%;
 	padding-top: 2rem;
 	padding-bottom: 4rem;
 	font-size: 1rem;
 	border-top: solid 1px $border-color;
 
-	#nav-container {
-		.nav-group {
-			float: left;
-			width: 30%;
-			padding-right: 4rem;
-			vertical-align: top;
-			font-size: 1rem;
+	#social-container {
+		float: left;
+
+		h6 {
+			margin: 0 0 1rem 0;
 		}
 
-		.nav-group:nth-child(3n+1) {
-			clear: left;
+		.social {
+			float: left;
+			width: 1.75rem;
+			height: 1.75rem;
+			margin-right: .5rem;
+			text-align: center;
+			font-size: 1.125rem;
+			color: $white;
+			border-radius: .5rem;
+
+			.fab {
+				display: block;
+				line-height: 1.75rem;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		#twitter {
+			background-color: #1da1f2;
+		}
+
+		#instagram {
+			background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+		}
+
+		#facebook {
+			background-color: #4267b2;
+		}
+	}
+
+	#back-to-top {
+		float: right;
+		margin: 0;
+	}
+
+	#back-to-top.no-siblings {
+		float: left;
+	}
+
+	@include extra-small {
+		#social-container,
+		#back-to-top {
+			float: none;
 		}
 
 		#social-container {
-			padding-top: .5rem;
-
-			.social {
-				float: left;
-				width: 1.75rem;
-				height: 1.75rem;
-				margin-right: .5rem;
-				text-align: center;
-				font-size: 1.125rem;
-				color: $white;
-				border-radius: .5rem;
-
-				.fab {
-					display: block;
-					line-height: 1.75rem;
-				}
-
-				&:hover {
-					text-decoration: none;
-				}
-			}
-
-			#twitter {
-				background-color: #1da1f2;
-			}
-
-			#instagram {
-				background: radial-gradient(circle at 20% 120%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-			}
-
-			#facebook {
-				background-color: #4267b2;
-			}
+			margin-bottom: 1rem;
 		}
-	}
-
-	.no-nav {
-		p {
-			max-width: 24rem;
-			margin-top: 0;
-		}
-	}
-
-	@include medium {
-		#nav-container {
-			.nav-group {
-				width: 40%;
-			}
-
-			.nav-group:nth-child(3n+1) {
-				clear: none;
-			}
-
-			.nav-group:nth-child(2n+1) {
-				clear: left;
-			}
-		}
-	}
-
-	@include small {
-		#nav-container {
-			.nav-group {
-				float: none;
-				width: 100%;
-			}
-
-			.nav-group:nth-child(n+2) {
-				padding-left: 0;
-			}
-		}	
 	}
 }
