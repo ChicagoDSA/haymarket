@@ -138,7 +138,6 @@ a {
 
 .btn,
 .column-fix {
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
 
 	&:hover {
@@ -204,7 +203,37 @@ a {
 	font-weight: bold;
 }
 
+/* Styles nav in menu and footer */
+
+.nav-group {
+	ul {
+		margin-top: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style-type: none;
+		text-indent: -1rem;
+		margin-left: 1rem;
+
+		a {
+			color: $secondary-text-color;
+		}
+	}
+
+	h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
 /* Global styles */
+
+.btn,
+.column-fix,
+#menu-content {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+}
 
 .cover-background {
 	overflow: hidden;
@@ -245,46 +274,97 @@ a {
 	}
 }
 
+#banner {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	padding: 1rem 0;
+	background-color: $dsa-yellow;
+
+	#banner-content {
+		p,
+		#banner-link {
+			display: inline-block;
+		}
+
+		p,
+		i {
+			color: $body-text-color;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		i {
+			margin-left: .5rem;
+			line-height: 1.5;
+		}
+
+		#banner-link {
+			&:hover p {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
 #page-header {
-	overflow: hidden;
+	position: relative;
 	text-align: left;
 	background-color: $dsa-red;
 
-	h1, h2, h3, a {
-		color: $white;
-	}
-
-	#banner {
-		position: relative;
-		z-index: 1;
+	#background-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
-		padding: 1rem 0;
-		background-color: $dsa-yellow;
+		height: 100%;
+		overflow: hidden;
 
-		#banner-content {
-			p,
-			#banner-link {
-				display: inline-block;
+		img {
+			position: absolute;
+			opacity: .15;
+			
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=15);
+
+			pointer-events: none;
+
+			@include large {
+				top: -6rem;
+				right: -5rem;
+				width: 30rem;
+				height: 30rem;
 			}
 
-			p,
-			i {
-				color: $body-text-color;
+			@include medium {
+				top: -4rem;
+				right: -4rem;
+				width: 26rem;
+				height: 26rem;
 			}
 
-			p {
-				margin: 0;
+			@include small {
+				top: -2rem;
+				right: -5rem;
+				width: 22rem;
+				height: 22rem;
 			}
 
-			i {
-				margin-left: .5rem;
-				line-height: 1.5;
+			@include extra-small {
+				top: 0;
+				right: -6rem;
+				width: 18rem;
+				height: 18rem;
 			}
 
-			#banner-link {
-				&:hover p {
-					text-decoration: underline;
-				}
+			@include print {
+				top: 0;
+				right: -5rem;
+				width: 18rem;
+				height: 18rem;
 			}
 		}
 	}
@@ -295,10 +375,22 @@ a {
 		padding-bottom: 3rem;
 
 		#top-buttons,
+		#menu,
 		#chapter,
 		#page-title,
 		#tagline {
 			position: relative;
+		}
+
+		#name a,
+		#page-title,
+		#tagline {
+			color: $white;
+		}
+
+		#page-title,
+		#tagline {
+			margin: 2rem 0 0 0;
 		}
 
 		#top-buttons {
@@ -342,11 +434,58 @@ a {
 			}
 		}
 
+		#menu {
+			display: table-cell;
+			padding-right: 1.5rem;
+			vertical-align: middle;
+
+			#menu-icon {
+				text-align: center;
+				color: $white;
+
+				i {
+					display: block;
+					font-size: 2rem;
+				}
+
+				p {
+					margin: 0;
+					font-size: .75rem;
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		#menu-content {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			z-index: 2;
+			width: 12rem;
+			padding: 1rem;
+			font-size: 1rem;
+			border: 2px solid $border-color;
+			background-color: #fff;
+
+			:last-child > ul {
+				margin-bottom: 0;
+			}
+		}
+
+		#menu:hover #menu-content {
+			display: block;
+		}
+
 		#chapter {
-			padding-bottom: 0;
+			display: table-cell;
+			vertical-align: middle;
 
 			h3 {
-				margin-top: 0;
+				margin: 0;
 				line-height: 2.25rem;
 			}
 
@@ -372,8 +511,6 @@ a {
 		}
 
 		#page-title {
-			margin: 0;
-
 			@include large {
 				font-size: 3.25rem;
 			}
@@ -389,7 +526,6 @@ a {
 
 		#tagline {
 			max-width: 75%;
-			margin-bottom: 0;
 			font-size: 1.25rem;
 			font-weight: normal;
 
@@ -403,52 +539,6 @@ a {
 
 			@include print{
 				font-size: 1.125rem;
-			}
-		}
-
-		#background-logo img {
-			position: absolute;
-			opacity: .15;
-			
-			/* IE fixes */
-			zoom: 1;
-			filter: alpha(opacity=15);
-
-			pointer-events: none;
-
-			@include large {
-				top: -6rem;
-				right: -5rem;
-				width: 30rem;
-				height: 30rem;
-			}
-
-			@include medium {
-				top: -4rem;
-				right: -4rem;
-				width: 26rem;
-				height: 26rem;
-			}
-
-			@include small {
-				top: -2rem;
-				right: -5rem;
-				width: 22rem;
-				height: 22rem;
-			}
-
-			@include extra-small {
-				top: 0;
-				right: -6rem;
-				width: 18rem;
-				height: 18rem;
-			}
-
-			@include print {
-				top: 0;
-				right: -5rem;
-				width: 18rem;
-				height: 18rem;
 			}
 		}
 	}
@@ -776,29 +866,10 @@ a {
 	#nav-container {
 		.nav-group {
 			float: left;
-			vertical-align: top;
 			width: 30%;
 			padding-right: 4rem;
-
-			ul {
-				margin-top: 0;
-				padding: 0;
-			}
-
-			li {
-				list-style-type: none;
-				text-indent: -1rem;
-				margin-left: 1rem;
-			}
-
-			h4 {
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-
-			a {
-				color: $secondary-text-color;
-			}
+			vertical-align: top;
+			font-size: 1rem;
 		}
 
 		.nav-group:nth-child(3n+1) {
@@ -821,6 +892,10 @@ a {
 				.fab {
 					display: block;
 					line-height: 1.75rem;
+				}
+
+				&:hover {
+					text-decoration: none;
 				}
 			}
 
