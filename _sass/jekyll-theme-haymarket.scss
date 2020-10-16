@@ -204,6 +204,26 @@ a {
 	font-weight: bold;
 }
 
+/* Styles nav in menu and footer */
+
+.nav-group {
+	ul {
+		margin-top: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style-type: none;
+		text-indent: -1rem;
+		margin-left: 1rem;
+	}
+
+	h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
 /* Global styles */
 
 .cover-background {
@@ -302,6 +322,11 @@ a {
 			position: relative;
 		}
 
+		#page-title,
+		#tagline {
+			margin: 2rem 0 0 0;
+		}
+
 		#background-logo img {
 			position: absolute;
 			opacity: .15;
@@ -393,22 +418,50 @@ a {
 			display: table-cell;
 			padding-right: 1.5rem;
 			vertical-align: middle;
-			text-align: center;
-			color: $white;
 
-			i {
-				display: block;
-				font-size: 2rem;
+			#menu-icon {
+				text-align: center;
+				color: $white;
+
+				i {
+					display: block;
+					font-size: 2rem;
+				}
+
+				p {
+					margin: 0;
+					font-size: .75rem;
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+
+		#menu-content {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			z-index: 2;
+			width: 12rem;
+			padding: 1rem;
+			font-size: 1rem;
+			border: 2px solid $border-color;
+			background-color: #fff;
+
+			li a {
+				color: $secondary-text-color;
 			}
 
-			p {
-				margin: 0;
-				font-size: .75rem;
+			:last-child > ul {
+				margin-bottom: 0;
 			}
+		}
 
-			&:hover {
-				cursor: pointer;
-			}
+		#menu:hover #menu-content {
+			display: block;
 		}
 
 		#chapter {
@@ -442,8 +495,6 @@ a {
 		}
 
 		#page-title {
-			margin-top: 2rem;
-
 			@include large {
 				font-size: 3.25rem;
 			}
@@ -459,7 +510,6 @@ a {
 
 		#tagline {
 			max-width: 75%;
-			margin-bottom: 0;
 			font-size: 1.25rem;
 			font-weight: normal;
 
@@ -800,27 +850,12 @@ a {
 	#nav-container {
 		.nav-group {
 			float: left;
-			vertical-align: top;
 			width: 30%;
 			padding-right: 4rem;
+			vertical-align: top;
+			font-size: 1rem;
 
-			ul {
-				margin-top: 0;
-				padding: 0;
-			}
-
-			li {
-				list-style-type: none;
-				text-indent: -1rem;
-				margin-left: 1rem;
-			}
-
-			h4 {
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-
-			a {
+			li a {
 				color: $secondary-text-color;
 			}
 		}
