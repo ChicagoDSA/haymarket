@@ -381,20 +381,20 @@ a,
 		#top-buttons {
 			margin: 0 0 2rem 0;
 			padding-left: 0;
+			overflow: hidden;
+			border-radius: 0 0 .25rem .25rem;
 
 			li {
-				float: left;
+				display: table-cell;
 				padding: .125rem .5rem;
 				list-style-type: none;
+				white-space: nowrap;
+				text-overflow: ellipsis;
 				background-color: $white;
 
 				a {
 					color: $body-text-color;
 				}
-			}
-
-			li:first-child {
-				border-radius: 0 0 0 .25rem;
 			}
 
 			li:nth-child(n+2) {
@@ -405,12 +405,10 @@ a,
 				border-radius: 0 0 .25rem 0;
 			}
 
-			li:first-child:nth-last-child(2) {
-				border-radius: 0 0 .25rem .25rem;
-			}
-
 			#join {
 				padding-left: .5rem;
+				max-width: 50%;
+				overflow: hidden;
 				background-color: $dsa-purple;
 
 				a {
@@ -833,14 +831,14 @@ a,
 				top: 0;
 				width: 100%;
 				white-space: nowrap;
-				overflow: hidden;
 				text-overflow: ellipsis;
+				overflow: hidden;
 
 				h4,
 				h5 {
 					white-space: nowrap;
-					overflow: hidden;
 					text-overflow: ellipsis;
+					overflow: hidden;
 				}
 
 				h4 {
