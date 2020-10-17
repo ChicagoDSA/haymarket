@@ -19,6 +19,11 @@ elements:
           url:
             en: another-page
             es: es/otra-pagina
+      - page:
+          en: An external link
+          es: Un enlace externo
+          external: yes
+          url: https://www.dsausa.org/
   - group:
     en: Another group
     es: Otro grupo

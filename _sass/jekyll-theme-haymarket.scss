@@ -473,8 +473,14 @@ a,
 					text-indent: -1rem;
 					margin-left: 1rem;
 
-					a {
+					a,
+					i {
 						color: $secondary-text-color;
+					}
+
+					i {
+						display: inline;
+						margin-left: .125rem;
 					}
 				}
 
