@@ -96,19 +96,15 @@ photo:
 4. Add these two groups:
 
 ```yaml
-credits: 
-  this-site-was-made-by:
-    en: This site was made by
-  a-chapter-of-the:
-    en: a chapter of the
-  DSA:
-    en: Democratic Socialists of America
-
 join:
   text:
     en: Join DSA
   link: # Override DSA national link
     en:
+    
+back-to-top:
+  en: Back to top
+  es: Ve arriba
 ```
 
 ### Add a homepage
