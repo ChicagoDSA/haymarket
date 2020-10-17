@@ -104,7 +104,6 @@ join:
     
 back-to-top:
   en: Back to top
-  es: Ve arriba
 ```
 
 ### Add a homepage
