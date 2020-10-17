@@ -26,6 +26,12 @@
 	}
 }
 
+@mixin minimum {
+	@media screen and (max-width: #{$minimum-breakpoint}) {
+		@content;
+	}
+}
+
 @mixin print {
 	@media print {
 		@content;
@@ -548,6 +554,21 @@ a,
 
 			@include print{
 				font-size: 1.125rem;
+			}
+		}
+
+		@include minimum {
+			#menu {
+				padding-bottom: 1.5rem;
+			}
+
+			#chapter {
+				display: block;
+
+				#logo {
+					float: none;
+					margin-bottom: .5rem;
+				}
 			}
 		}
 	}
