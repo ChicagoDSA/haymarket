@@ -168,6 +168,10 @@ elements:
           en: Another link
           url:
             en: another-page
+      - page:
+          en: An external link
+          external: yes
+          url: https://www.dsausa.org/
   - group:
     en: Another group
     items:
