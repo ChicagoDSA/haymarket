@@ -456,7 +456,7 @@ a,
 			top: 25%;
 			left: 25%;
 			z-index: 2;
-			width: 12rem;
+			min-width: 12rem;
 			padding: 1rem;
 			font-size: 1rem;
 			border: 2px solid $border-color;
@@ -507,6 +507,7 @@ a,
 				width: 2.25rem;
 				height: 2.25rem;
 				margin-right: .5rem;
+				line-height: 0;
 				border-radius: .5rem;
 				background-color: $white;
 			}
