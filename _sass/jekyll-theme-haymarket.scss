@@ -58,6 +58,7 @@ body * {
 body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 	font-family: "ManifoldDSA", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.5;
@@ -582,7 +583,6 @@ a,
 .main-content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-	overflow: hidden;
 	word-wrap: break-word;
 
 	table,
