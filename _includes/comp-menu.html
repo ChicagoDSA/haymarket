@@ -11,9 +11,6 @@
 					{% for item in group.items %}
 						<li>
 							<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
-							{% if item.page.external == true %}
-								<i class="fas fa-external-link-alt"></i>
-							{% endif %}
 						</li>
 					{% endfor %}
 				</ul>

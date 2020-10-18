@@ -22,7 +22,6 @@ elements:
       - page:
           en: An external link
           es: Un enlace externo
-          external: yes
           url: https://www.dsausa.org/
   - group:
     en: Another group
