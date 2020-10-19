@@ -386,7 +386,7 @@ a,
 			padding-left: 0;
 
 			li {
-				display: table-cell;
+				float: left;
 				padding: .125rem .5rem;
 				list-style: none;
 				white-space: nowrap;
@@ -562,7 +562,7 @@ a,
 				list-style: none;
 
 				.desktop-menu-group {
-					display: table-cell;
+					float: left;
 					position: relative;
 					padding: .125rem .5rem;
 					background-color: $white;
