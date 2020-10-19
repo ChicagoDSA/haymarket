@@ -384,8 +384,6 @@ a,
 		#top-buttons {
 			margin: 0 0 2rem 0;
 			padding-left: 0;
-			overflow: hidden;
-			border-radius: 0 0 .25rem .25rem;
 
 			li {
 				display: table-cell;
@@ -544,8 +542,6 @@ a,
 			margin-top: 1rem;
 
 			ul {
-				display: table;
-				table-layout: fixed;
 				width: 100%;
 				padding-left: 0;
 				list-style: none;
@@ -553,22 +549,20 @@ a,
 				.desktop-menu-group {
 					display: table-cell;
 					position: relative;
-					float: left;
+					padding: .125rem .5rem;
+					background-color: $white;
 
 					i {
+						margin-left: .25rem;
 						vertical-align: text-bottom;
 					}
 
 					.desktop-menu-header {
-						float: left;
-						padding: .125rem .5rem;
 						white-space: nowrap;
 						text-overflow: ellipsis;
-						overflow: hidden;
 						font-weight: bold;
 						text-decoration: none;
 						color: $body-text-color;
-						background-color: $white;
 					}
 
 					.desktop-hover-helper {
@@ -623,11 +617,11 @@ a,
 					}
 				}
 
-				:first-child > .desktop-menu-header {
+				:first-child {
 					border-radius: .25rem 0 0 .25rem;
 				}
 
-				:nth-last-child(2) > .desktop-menu-header {
+				:nth-last-child(2) {
 					border-radius: 0 .25rem .25rem 0;
 				}
 			}

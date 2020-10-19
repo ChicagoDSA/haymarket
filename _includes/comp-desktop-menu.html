@@ -2,10 +2,7 @@
 	<ul>
 		{% for group in site.data.nav.elements %}
 			<li class="desktop-menu-group">
-				<a class="desktop-menu-header" href="#" aria-haspopup="true">
-					{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
-					<i class="fas fa-angle-down"></i>
-				</a>
+				<a class="desktop-menu-header" href="#" aria-haspopup="true">{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-angle-down"></i></a>
 				<div class="desktop-hover-helper">
 					<ul aria-label="submenu">
 						{% for item in group.items %}
