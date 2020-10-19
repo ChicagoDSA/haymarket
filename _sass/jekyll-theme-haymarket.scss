@@ -499,6 +499,8 @@ a,
 						margin-bottom: 0;
 					}
 				}
+
+				/* Split to support IE */
 			
 				&:hover {
 					display: block;
@@ -508,6 +510,8 @@ a,
 					display: block;
 				}
 			}
+
+			/* Split to support IE */
 
 			&:hover > #mobile-hover-helper {
 				display: block;
@@ -611,20 +615,30 @@ a,
 								}
 							}
 						}
+
+						/* Split to support IE */
 			
-						&:hover,
+						&:hover {
+							display: block;
+						}
+
 						&:focus {
 							display: block;
 						}
 					}
 
-					&:hover > div,
-					&:focus-within > div {
+					&:hover {
+						cursor: pointer;
+					}
+
+					/* Split to support IE */
+
+					&:hover > div {
 						display: block;
 					}
 
-					&:hover {
-						cursor: pointer;
+					&:focus-within > div {
+						display: block;
 					}
 				}
 
