@@ -5,18 +5,20 @@
 			<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 		</a>
 	</div>
-	<div id="mobile-menu-content" aria-label="submenu">
-		{% for group in site.data.nav.elements %}
-			<div class="nav-group">
-				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
-				<ul>
-					{% for item in group.items %}
-						<li>
-							<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		{% endfor %}
+	<div id="hover-helper">
+		<div id="mobile-menu-content" aria-label="submenu">
+			{% for group in site.data.nav.elements %}
+				<div>
+					<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
+					<ul>
+						{% for item in group.items %}
+							<li>
+								<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 </div>
