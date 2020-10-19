@@ -376,6 +376,12 @@ a,
 			color: $white;
 		}
 
+		#top-buttons,
+		#desktop-menu ul {
+			float: left;
+			background-color: $white;
+		}
+
 		#page-title,
 		#tagline {
 			margin: 2rem 0 0 0;
@@ -384,6 +390,7 @@ a,
 		#top-buttons {
 			margin: 0 0 2rem 0;
 			padding-left: 0;
+			border-radius: 0 0 .25rem .25rem;
 
 			li {
 				float: left;
@@ -391,7 +398,6 @@ a,
 				list-style: none;
 				white-space: nowrap;
 				text-overflow: ellipsis;
-				background-color: $white;
 
 				a {
 					color: $body-text-color;
@@ -400,7 +406,6 @@ a,
 
 			#join {
 				padding-left: .5rem;
-				max-width: 50%;
 				overflow: hidden;
 				background-color: $dsa-purple;
 
@@ -408,11 +413,6 @@ a,
 					color: $white;
 				}
 			}
-
-			:first-child {
-				border-radius: 0 0 0 .25rem;
-			}
-			
 
 			:nth-child(n+2) {
 				padding-left: 0;
@@ -557,15 +557,15 @@ a,
 			margin-top: 1rem;
 
 			ul {
-				width: 100%;
+				margin: 0;
 				padding-left: 0;
 				list-style: none;
+				border-radius: .25rem;
 
 				.desktop-menu-group {
 					float: left;
 					position: relative;
 					padding: .125rem .5rem;
-					background-color: $white;
 
 					i {
 						margin-left: .25rem;
