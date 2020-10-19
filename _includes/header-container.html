@@ -45,7 +45,7 @@
 			<div style="clear: both;"></div> 
 		</ul>
 		{% if site.data.nav.elements %}
-			{% include comp-menu.html %}
+			{% include comp-mobile-menu.html %}
 		{% endif %}
 		<div id="chapter">
 			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
@@ -79,6 +79,9 @@
 			</div>
 			<div style="clear: both;"></div> 
 		</div>
+		{% if site.data.nav.elements %}
+			{% include comp-desktop-menu.html %}
+		{% endif %}
 		<h1 id="page-title">
 			{% if page.headline %}
 				{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
