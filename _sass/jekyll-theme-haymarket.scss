@@ -548,13 +548,13 @@ a,
 				border-radius: .25rem;
 				background-color: $white;
 
-				li {
+				.desktop-menu-group {
 					display: table-cell;
 					position: relative;
 					padding: .125rem .5rem;
 					font-weight: bold;
 
-					a {
+					.desktop-menu-header {
 						color: $body-text-color;
 						text-decoration: none;
 					}
@@ -577,6 +577,7 @@ a,
 							font-size: 1rem;
 							border: 2px solid $border-color;
 							background-color: #fff;
+							cursor: default;
 
 							li {
 								display: block;
@@ -606,6 +607,10 @@ a,
 					&:hover > div,
 					&:focus-within > div {
 						display: block;
+					}
+
+					&:hover {
+						cursor: pointer;
 					}
 				}
 			}
