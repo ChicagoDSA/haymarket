@@ -42,9 +42,8 @@
 				{% endif %}
 				<a href="{{ joinURL }}">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 			</li>
-			<div style="clear: both;"></div> 
 		</ul>
-		<div style="clear:both"></div>
+		<div style="clear: both;"></div> 
 		{% if site.data.nav.elements %}
 			{% include comp-mobile-menu.html %}
 		{% endif %}
@@ -74,6 +73,7 @@
 			<div id="name">
 				<h3>
 					<a id="name-link" href="{{ chapterURL }}">{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+					<div style="clear:both"></div>
 				</h3>
 			</div>
 		</div>
