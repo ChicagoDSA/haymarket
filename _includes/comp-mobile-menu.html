@@ -5,11 +5,11 @@
 			<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 		</a>
 	</div>
-	<div id="hover-helper">
+	<div id="mobile-hover-helper">
 		<div id="mobile-menu-content" aria-label="submenu">
 			{% for group in site.data.nav.elements %}
-				<div>
-					<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
+				<div class="mobile-menu-group">
+					<li class="mobile-menu-header">{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</li>
 					<ul>
 						{% for item in group.items %}
 							<li>

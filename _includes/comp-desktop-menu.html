@@ -6,7 +6,7 @@
 					{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
 					<i class="fas fa-angle-down"></i>
 				</a>
-				<div>
+				<div class="desktop-hover-helper">
 					<ul aria-label="submenu">
 						{% for item in group.items %}
 						<li>

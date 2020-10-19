@@ -115,6 +115,7 @@ h4 {
 
 h5,
 #top-buttons li,
+.mobile-menu-group li,
 #desktop-menu ul {
 	font-size: .9375rem;
 }
@@ -452,7 +453,7 @@ a,
 				}
 			}
 
-			#hover-helper {
+			#mobile-hover-helper {
 				display: none;
 				position: absolute;
 				top: 0;
@@ -468,25 +469,26 @@ a,
 					border-radius: .25rem;
 					background-color: #fff;
 
-					div {
+					li {
+						margin-left: 1rem;
+						list-style: none;
+						text-indent: -1rem;
+					}
+
+					.mobile-menu-group {
+						.mobile-menu-header {
+							font-weight: bold;
+						}
+
 						ul {
 							margin-top: 0;
 							padding: 0;
-						}
 
-						li {
-							margin-left: 1rem;
-							list-style: none;
-							text-indent: -1rem;
-
-							a {
-								color: $secondary-text-color;
+							li {
+								a {
+									color: $secondary-text-color;
+								}
 							}
-						}
-
-						h4 {
-							margin-top: 0;
-							margin-bottom: 0;
 						}
 					}
 
@@ -501,8 +503,8 @@ a,
 				}
 			}
 
-			&:hover > #hover-helper,
-			&:focus-within > #hover-helper {
+			&:hover > #mobile-hover-helper,
+			&:focus-within > #mobile-hover-helper {
 				display: block;
 			}
 		}
@@ -554,16 +556,16 @@ a,
 					padding: .125rem .5rem;
 					font-weight: bold;
 
+					i {
+						vertical-align: text-bottom;
+					}
+
 					.desktop-menu-header {
 						color: $body-text-color;
 						text-decoration: none;
 					}
 
-					i {
-						vertical-align: text-bottom;
-					}
-
-					div {
+					.desktop-hover-helper {
 						display: none;
 						position: absolute;
 						top: 0;
