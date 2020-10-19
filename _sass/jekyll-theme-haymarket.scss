@@ -217,7 +217,7 @@ a {
 }
 
 a,
-#mobile-menu-icon {
+#mobile-menu-icon a {
 	&:focus {
 		outline: 2px dashed $body-link-color;
 	}
@@ -428,6 +428,11 @@ a,
 				text-align: center;
 				color: $white;
 
+				a {
+					display: block;
+					color: $white;
+				}
+
 				i {
 					display: block;
 					font-size: 2rem;
@@ -440,10 +445,10 @@ a,
 
 				&:hover {
 					cursor: pointer;
-				}
 
-				&:hover #menu-content {
-					display: block;
+					a {
+						text-decoration: none;
+					}
 				}
 			}
 
@@ -457,6 +462,7 @@ a,
 				padding: 1rem;
 				font-size: 1rem;
 				border: 2px solid $border-color;
+				border-radius: .25rem;
 				background-color: #fff;
 
 				.nav-group {
@@ -484,13 +490,19 @@ a,
 				:last-child > ul {
 					margin-bottom: 0;
 				}
+
+				&:hover,
+				&:focus {
+					display: block;
+				}
 			}
 
 			.visible-menu {
 				display: block;
 			}
 
-			&:hover #mobile-menu-content {
+			&:hover > #mobile-menu-content,
+			&:focus-within > #mobile-menu-content {
 				display: block;
 			}
 		}
@@ -543,7 +555,7 @@ a,
 					font-weight: bold;
 
 					a {
-						color: $section-headings-color;
+						color: $body-text-color;
 						text-decoration: none;
 					}
 

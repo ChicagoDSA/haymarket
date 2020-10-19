@@ -1,9 +1,11 @@
 <div id="mobile-menu">
-	<div id="mobile-menu-icon" tabindex="0">
-		<i class="fas fa-bars"></i>
-		<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
+	<div id="mobile-menu-icon">
+		<a href="#" aria-haspopup="true">
+			<i class="fas fa-bars"></i>
+			<p>{{ site.data.nav.menu.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
+		</a>
 	</div>
-	<div id="mobile-menu-content">
+	<div id="mobile-menu-content" aria-label="submenu">
 		{% for group in site.data.nav.elements %}
 			<div class="nav-group">
 				<h4>{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h4>
