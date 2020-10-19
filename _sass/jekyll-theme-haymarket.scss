@@ -129,8 +129,8 @@ p {
 }
 
 a {
-	color: $body-link-color;
 	text-decoration: none;
+	color: $body-link-color;
 
 	&:hover {
 		text-decoration: underline;
@@ -398,14 +398,6 @@ a,
 				a {
 					color: $body-text-color;
 				}
-
-				&:nth-last-child(2) {
-					border-radius: 0 0 .25rem 0;
-				}
-
-				&:nth-child(n+2) {
-					padding-left: 0;
-				}
 			}
 
 			#join {
@@ -417,6 +409,14 @@ a,
 				a {
 					color: $white;
 				}
+			}
+
+			:nth-last-child(2) {
+				border-radius: 0 0 .25rem 0;
+			}
+
+			:nth-child(n+2) {
+				padding-left: 0;
 			}
 		}
 
@@ -545,24 +545,30 @@ a,
 
 			ul {
 				display: table;
+				table-layout: fixed;
+				width: 100%;
 				padding-left: 0;
 				list-style: none;
-				border-radius: .25rem;
-				background-color: $white;
 
 				.desktop-menu-group {
 					display: table-cell;
 					position: relative;
-					padding: .125rem .5rem;
-					font-weight: bold;
 
 					i {
 						vertical-align: text-bottom;
 					}
 
 					.desktop-menu-header {
-						color: $body-text-color;
+						float: left;
+						width: 100%;
+						padding: .125rem .5rem;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						font-weight: bold;
 						text-decoration: none;
+						color: $body-text-color;
+						background-color: $white;
 					}
 
 					.desktop-hover-helper {
@@ -578,6 +584,7 @@ a,
 							padding: 1rem;
 							font-size: 1rem;
 							border: 2px solid $border-color;
+							border-radius: .25rem;
 							background-color: #fff;
 							cursor: default;
 
@@ -614,6 +621,14 @@ a,
 					&:hover {
 						cursor: pointer;
 					}
+				}
+
+				:first-child > .desktop-menu-header {
+					border-radius: .25rem 0 0 .25rem;
+				}
+
+				:nth-last-child(2) > .desktop-menu-header {
+					border-radius: 0 .25rem .25rem 0;
 				}
 			}
 		}
@@ -730,8 +745,8 @@ a,
 
 		th {
 			font-weight: bold;
-			background-image: linear-gradient(-180deg, $border-color, $white 100%);
 			border-bottom: 0;
+			background-image: linear-gradient(-180deg, $border-color, $white 100%);
 		}
 
 		tr:first-child td {

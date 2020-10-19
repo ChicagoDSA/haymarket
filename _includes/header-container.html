@@ -72,12 +72,9 @@
 			
 			<div id="name">
 				<h3>
-					<a id="name-link" href="{{ chapterURL }}">
-					{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear: both;"></div>
-					</a>
+					<a id="name-link" href="{{ chapterURL }}">{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 				</h3>
 			</div>
-			<div style="clear: both;"></div> 
 		</div>
 		{% if site.data.nav.elements %}
 			{% include comp-desktop-menu.html %}
