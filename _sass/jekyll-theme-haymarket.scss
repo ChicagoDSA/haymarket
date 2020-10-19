@@ -380,11 +380,6 @@ a,
 			margin: 2rem 0 0 0;
 		}
 
-		#top-buttons li:nth-child(n+2),
-		#desktop-menu ul li:nth-child(n+2) {
-			padding-left: 0;
-		}
-
 		#top-buttons {
 			margin: 0 0 2rem 0;
 			padding-left: 0;
@@ -405,6 +400,10 @@ a,
 
 				&:nth-last-child(2) {
 					border-radius: 0 0 .25rem 0;
+				}
+
+				&:nth-child(n+2) {
+					padding-left: 0;
 				}
 			}
 
@@ -529,7 +528,6 @@ a,
 
 		#desktop-menu {
 			margin-top: 1rem;
-			border-radius: .25rem;
 
 			ul {
 				display: table;
@@ -542,7 +540,6 @@ a,
 					display: table-cell;
 					position: relative;
 					padding: .125rem .5rem;
-					white-space: nowrap;
 					font-weight: bold;
 
 					a {
@@ -583,17 +580,19 @@ a,
 
 									&:hover {
 										text-decoration: underline;
-										cursor: pointer;
 									}
 								}
 							}
 						}
+			
+						&:hover,
+						&:focus {
+							display: block;
+						}
 					}
 
 					&:hover > div,
-					&:focus-within > div,
-					div:hover,
-					div:focus {
+					&:focus-within > div {
 						display: block;
 					}
 				}
