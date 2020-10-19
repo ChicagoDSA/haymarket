@@ -397,7 +397,6 @@ a,
 				padding: .125rem .5rem;
 				list-style: none;
 				white-space: nowrap;
-				text-overflow: ellipsis;
 
 				a {
 					color: $body-text-color;
@@ -406,7 +405,6 @@ a,
 
 			#join {
 				padding-left: .5rem;
-				overflow: hidden;
 				background-color: $dsa-purple;
 
 				a {
@@ -543,6 +541,7 @@ a,
 
 			#name {
 				display: inline-block;
+				white-space: nowrap;
 
 				a {
 					display: block;
@@ -574,7 +573,6 @@ a,
 
 					.desktop-menu-header {
 						white-space: nowrap;
-						text-overflow: ellipsis;
 						font-weight: bold;
 						text-decoration: none;
 						color: $body-text-color;
