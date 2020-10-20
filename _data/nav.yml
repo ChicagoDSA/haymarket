@@ -3,10 +3,16 @@ menu:
   es: Menú
 
 elements:
+  - page:
+      en: Add navigation
+      es: Agregar navegación
+      url: 
+        en: another-page
+        es: es/otra-pagina
   - group: 
-    en: Add navigation
-    es: Agregar navegación
-    items:
+    en: With groups
+    es: Con grupos
+    pages:
       - page:
           en: Link to a page
           es: Enlace a una página
@@ -22,7 +28,7 @@ elements:
   - group:
     en: Another group
     es: Otro grupo
-    items:
+    pages:
       - page:
           en: Use Markdown *styling*
           es: Utilice Markdown *estilo*

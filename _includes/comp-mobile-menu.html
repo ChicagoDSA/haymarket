@@ -7,17 +7,23 @@
 	</div>
 	<div id="mobile-hover-helper">
 		<div id="mobile-menu-content" aria-label="submenu">
-			{% for group in site.data.nav.elements %}
-				<div class="mobile-menu-group">
-					<li class="mobile-menu-header">{{ group.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</li>
-					<ul>
-						{% for item in group.items %}
-							<li>
-								<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
+			{% for element in site.data.nav.elements %}
+				{% if element.pages %}
+					<div class="mobile-menu-group">
+						<li class="mobile-menu-header">{{ element.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</li>
+						<ul>
+							{% for item in element.pages %}
+								<li>
+									<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% else %}
+					<div class="single-menu-item">
+						<a href="{{ element.page.url.[page.lang] | default: element.page.url | relative_url }}" aria-haspopup="true">{{ element.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+					</div>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>
