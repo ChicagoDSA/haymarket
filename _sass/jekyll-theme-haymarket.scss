@@ -484,7 +484,8 @@ a,
 						margin-bottom: 0;
 					}
 
-					li {
+					li,
+					.single-menu-item {
 						margin-left: 1rem;
 						list-style: none;
 						text-indent: -1rem;
