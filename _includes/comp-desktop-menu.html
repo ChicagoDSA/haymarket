@@ -8,7 +8,7 @@
 						<ul aria-label="submenu">
 							{% for item in element.pages %}
 							<li>
-								<a href="{{ item.page.url.[page.lang] | default: item.page.url | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+								<a href="{{ item.page.url.[page.lang] | default: item.page.url.default | relative_url }}">{{ item.page.[page.lang] | default: item.page.en | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 							</li>
 							{% endfor %}
 						</ul>
@@ -16,7 +16,7 @@
 				</li>
 			{% else %}
 				<li class="single-menu-item">
-					<a href="{{ element.page.url.[page.lang] | default: element.page.url | relative_url }}">{{ element.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+					<a href="{{ element.page.url.[page.lang] | default: element.page.url.default | relative_url }}">{{ element.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 				</li>
 			{% endif %}
 		{% endfor %}

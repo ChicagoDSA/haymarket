@@ -99,8 +99,9 @@ photo:
 join:
   text:
     en: Join DSA
-  link: # Override DSA national link
-    en:
+  url: # Override DSA national link
+    default: # Apply a link to all languages
+    en: # Or define specific values
     
 back-to-top:
   en: Back to top
@@ -159,7 +160,8 @@ menu:
 elements:
   - page:
       en: Add navigation
-      url: # Declare a link on this line to apply it to all languages
+      url: 
+        default: # Apply a link to all languages
         en: another-page
   - group: 
     en: With groups
@@ -197,7 +199,8 @@ elements:
 text:
   en: # Style your text with Markdown
   es: # Add translations
-link: # Declare a link on this line to apply it to all languages
+url:
+  default: # Apply a link to all languages
   en: # Or add language-specific links
 ``` 
 

@@ -2,6 +2,7 @@
 text:
   en: "**Here's a banner:** you can turn it off/on, add styling, and link to other pages"
   es: "**Aquí hay un banner:** puede activarlo/desactivarlo, agregarle estilo y vincularlo a otras páginas"
-link:
+url:
+  default: # Apply a link to all languages
   en: another-page
   es: es/otra-pagina

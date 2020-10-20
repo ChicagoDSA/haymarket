@@ -1,7 +1,7 @@
-{% if site.data.banner.link.[page.lang] or site.data.banner.link %}
+{% if site.data.banner.url.[page.lang] or site.data.banner.url.default %}
 	<div id="banner">
 		<div id="banner-content">
-			<a id="banner-link" href="{{ site.data.banner.link.[page.lang] | default: site.data.banner.link | relative_url }}">
+			<a id="banner-link" href="{{ site.data.banner.url.[page.lang] | default: site.data.banner.url.default | relative_url }}">
 				<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 			</a>
 		</div>
@@ -37,8 +37,8 @@
 				{% endfor %}
 			</ul>
 			<div id="join">
-				{% if site.data.nav.join.link.[page.lang] %}
-					{% assign joinURL = site.data.nav.join.link.[page.lang] | relative_url %}
+				{% if site.data.nav.join.url.[page.lang] or site.data.nav.join.url.default %}
+					{% assign joinURL = site.data.nav.join.url.[page.lang] | default: site.data.nav.join.url.default | relative_url %}
 				{% else %}
 					{% assign joinURL = "https://www.dsausa.org/join" %}
 				{% endif %}

@@ -7,6 +7,7 @@ elements:
       en: Add navigation
       es: Agregar navegación
       url: 
+        default: # Apply a link to all languages
         en: another-page
         es: es/otra-pagina
   - group: 
@@ -40,9 +41,9 @@ join:
   text:
     en: Join DSA
     es: Hágase miembro de DSA
-  link: # Override DSA national link
-    en:
-    es:
+  url: # Override DSA national link
+    default: # Apply a link to all languages
+    en: # Or define specific values
 
 back-to-top:
   en: Back to top
