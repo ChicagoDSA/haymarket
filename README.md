@@ -157,9 +157,13 @@ menu:
   en: Menu
 
 elements:
+  - page:
+      en: Add navigation
+      url: 
+        en: another-page
   - group: 
-    en: Add navigation
-    items:
+    en: With groups
+    pages:
       - page:
           en: Link to a page
           url: 
@@ -170,7 +174,7 @@ elements:
             en: another-page
   - group:
     en: Another group
-    items:
+    pages:
       - page:
           en: Use Markdown *styling*
           url:
