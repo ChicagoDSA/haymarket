@@ -16,7 +16,7 @@
 				</li>
 			{% else %}
 				<li class="single-menu-item">
-					<a href="{{ element.page.url.[page.lang] | default: element.page.url | relative_url }}" aria-haspopup="true">{{ element.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+					<a href="{{ element.page.url.[page.lang] | default: element.page.url | relative_url }}">{{ element.page.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 				</li>
 			{% endif %}
 		{% endfor %}
