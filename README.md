@@ -159,7 +159,7 @@ menu:
 elements:
   - page:
       en: Add navigation
-      url: 
+      url: # Declare a link on this line to apply it to all languages
         en: another-page
   - group: 
     en: With groups
