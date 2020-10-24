@@ -234,7 +234,7 @@ a,
 
 /* Layout */
 
-#banner-content,
+#announcement-content,
 #project-area,
 .headline-image-container,
 .main-content,
@@ -255,7 +255,7 @@ a,
 	}
 }
 
-#banner-content,
+#announcement-content,
 #project-area,
 .main-content,
 #site-footer {
@@ -264,16 +264,16 @@ a,
 	}
 }
 
-#banner {
+#announcement {
 	position: relative;
 	z-index: 1;
 	width: 100%;
 	padding: 1rem 0;
 	background-color: $dsa-yellow;
 
-	#banner-content {
+	#announcement-content {
 		p,
-		#banner-link {
+		#announcement-link {
 			display: inline-block;
 		}
 
@@ -291,7 +291,7 @@ a,
 			line-height: 1.5;
 		}
 
-		#banner-link {
+		#announcement-link {
 			&:hover p {
 				text-decoration: underline;
 			}
@@ -300,6 +300,7 @@ a,
 }
 
 #page-header {
+	display: block;
 	position: relative;
 	text-align: left;
 	background-color: $dsa-red;

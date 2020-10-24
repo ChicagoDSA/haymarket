@@ -1,21 +1,21 @@
-{% if site.data.banner.url.[page.lang] or site.data.banner.url.default %}
-	<div id="banner">
-		<div id="banner-content">
-			<a id="banner-link" href="{{ site.data.banner.url.[page.lang] | default: site.data.banner.url.default | relative_url }}">
-				<p>{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+{% if site.data.announcement.url.[page.lang] or site.data.announcement.url.default %}
+	<div id="announcement">
+		<div id="announcement-content">
+			<a id="announcement-link" href="{{ site.data.announcement.url.[page.lang] | default: site.data.announcement.url.default | relative_url }}">
+				<p>{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 			</a>
 		</div>
 		<div style="clear:both"></div>
 	</div>
-{% elsif site.data.banner.text.[page.lang] %}
-	<div id="banner">
-		<p id="banner-content">
-			{{ site.data.banner.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
+{% elsif site.data.announcement.text.[page.lang] %}
+	<div id="announcement">
+		<p id="announcement-content">
+			{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
 		</p>
 		<div style="clear:both"></div>
 	</div>
 {% endif %}
-<div id="page-header">
+<banner id="page-header" role="banner">
 	<div id="background-logo">
 		{% include header-DSA-logo.html %}
 	</div>
@@ -94,4 +94,4 @@
 			<h2 id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
 		{% endif %}
 	</div>
-</div>
+</banner>

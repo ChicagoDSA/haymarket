@@ -188,12 +188,12 @@ elements:
 - In order to use the `list-tiles` component, you need to create a collection folder. Reference and enable it in `_config.yml`. 
 - This repository's example website has a collection called `tiles`.
 
-### Display a site-wide banner
+### Display a site-wide announcement
 
-- Create a filed named `_data/banner.yml`. Add this to it:
+- Create a filed named `_data/announcement.yml`. Add this to it:
 
 ```yaml
-# Add content here to enable a site-wide, top banner
+# Add content here to enable a site-wide announcement
 text:
   en: # Style your text with Markdown
   es: # Add translations
@@ -202,7 +202,7 @@ url:
   en: # Or add language-specific links
 ``` 
 
-- If `_data` contains `banner.yml`, and `banner.yml` contains these values, the banner will be visible.
+- If `_data` contains `announcement.yml`, and `announcement.yml` contains these values, the announcement will be visible.
 
 ### Translate your content into other languages
 
