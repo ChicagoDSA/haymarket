@@ -6,4 +6,4 @@
 	{% assign pngURL = "assets/images/DSA-logo-reverse.png" %}
 {% endif %}
 
-<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt="{{ site.data.translations.logo-description.[page.lang] | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}">
+<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt>
