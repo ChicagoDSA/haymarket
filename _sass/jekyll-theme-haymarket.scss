@@ -371,7 +371,7 @@ a,
 			position: relative;
 		}
 
-		#name a,
+		#chapter a,
 		#page-title,
 		#tagline {
 			color: $white;
@@ -549,23 +549,10 @@ a,
 			vertical-align: middle;
 
 			h3 {
-				margin: 0;
-				line-height: 2.25rem;
-			}
-
-			#logo {
-				float: left;
-				width: 2.25rem;
-				height: 2.25rem;
-				margin-right: .5rem;
-				line-height: 0;
-				border-radius: .5rem;
-				background-color: $white;
-			}
-
-			#name {
 				display: inline-block;
+				margin: 0;
 				white-space: nowrap;
+				line-height: 2.25rem;
 
 				a {
 					display: block;
@@ -576,6 +563,16 @@ a,
 					&:hover {
 						text-decoration: none;
 					}
+				}
+
+				#logo {
+					float: left;
+					width: 2.25rem;
+					height: 2.25rem;
+					margin-right: .5rem;
+					line-height: 0;
+					border-radius: .5rem;
+					background-color: $white;
 				}
 			}
 		}
@@ -717,26 +714,6 @@ a,
 		@include small {
 			#mobile-menu {
 				display: table-cell;
-			}
-
-			#desktop-menu {
-				display: none;
-			}
-		}
-
-		@include minimum {
-			#mobile-menu {
-				display: table-cell;
-				padding-bottom: 1.5rem;
-			}
-
-			#chapter {
-				display: block;
-
-				#logo {
-					float: none;
-					margin-bottom: .5rem;
-				}
 			}
 
 			#desktop-menu {

@@ -8,8 +8,6 @@ El texto puede estar **en negrita**, _italico_ o ~~tachado~~.
 
 [Enlace a otra página](otra-pagina).
 
-Debe haber espacios en blanco entre los párrafos.
-
 Debe haber espacios en blanco entre los párrafos. Recomendamos incluir un archivo README o un archivo con información sobre su proyecto.
 
 # Título 1
