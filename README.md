@@ -86,8 +86,6 @@ description:
   en: A GitHub Pages theme to easily launch Chicago DSA websites.
 chapter-name:
   en: Your DSA Chapter
-logo-description: # Alt text for screen readers
-  en: Two hands holding each other. A rose is behind them.
 photo:
   en: Photo
 ```
