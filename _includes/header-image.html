@@ -1,5 +1,5 @@
 <div class="headline-image-container">
-	<div class="headline-image cover-background" style="background-image: url('{{ include.image | relative_url }}');" role="text"></div>
+	<div class="headline-image cover-background" style="background-image: url('{{ include.image | relative_url }}');"></div>
 	{% if include.description or include.credit %}
 		{% include comp-image-caption.html description=include.description credit=include.credit %}
 	{% endif %}
