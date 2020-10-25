@@ -1,0 +1,28 @@
+<div id="top-buttons">
+	<ul>
+		{% if page.lang-ref != null %}
+			{% for collection in site.collections %}
+				{% assign name = collection.label %}
+				{% assign languages = site.[name] | where: "lang-ref", page.lang-ref | sort: "lang" %}
+				{% if languages.size > 1 %}
+					{% for item in languages %}
+						{% if item.lang == page.lang %}
+							<li><a href="{{ item.url | relative_url }}"><b>{{ site.data.translations.[item.lang] }}</b></a></li>
+						{% else %}
+							<li><a href="{{ item.url | relative_url }}">{{ site.data.translations.[item.lang] }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	</ul>
+	<div id="join">
+		{% if site.data.nav.join.url.[page.lang] or site.data.nav.join.url.default %}
+			{% assign joinURL = site.data.nav.join.url.[page.lang] | default: site.data.nav.join.url.default | relative_url %}
+		{% else %}
+			{% assign joinURL = "https://www.dsausa.org/join" %}
+		{% endif %}
+		<a href="{{ joinURL }}">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+	</div>
+</div>
+<div style="clear: both;"></div>

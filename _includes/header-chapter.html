@@ -1,0 +1,27 @@
+<div id="chapter">
+	{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
+		{% capture logo %}
+			<div id="logo">
+				<img src="{{ site.chapter.header-logo-svg | relative_url }}" onerror="this.src='{{ site.chapter.header-logo-png-fallback | relative_url }}'; this.onerror=null;" draggable="false" alt>
+			</div>
+		{% endcapture %}
+	{% else %}
+		{% capture logo %}
+			<div id="logo">
+				<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt>
+			</div>
+		{% endcapture %}
+	{% endif %}
+	
+	{% if site.chapter.url %}
+		{% assign chapterURL = site.chapter.url %}
+	{% elsif page.lang == "en" %}
+		{% assign chapterURL = "/" | relative_url %}
+	{% else %}
+		{% assign chapterURL = page.lang | relative_url %}
+	{% endif %}
+	
+	<h3>
+		<a id="name-link" href="{{ chapterURL }}">{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear:both"></div></a>
+	</h3>
+</div>

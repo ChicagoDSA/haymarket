@@ -1,97 +1,17 @@
-{% if site.data.announcement.url.[page.lang] or site.data.announcement.url.default %}
-	<div id="announcement">
-		<div id="announcement-content">
-			<a id="announcement-link" href="{{ site.data.announcement.url.[page.lang] | default: site.data.announcement.url.default | relative_url }}">
-				<p>{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
-			</a>
-		</div>
-		<div style="clear:both"></div>
-	</div>
-{% elsif site.data.announcement.text.[page.lang] %}
-	<div id="announcement">
-		<p id="announcement-content">
-			{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
-		</p>
-		<div style="clear:both"></div>
-	</div>
-{% endif %}
+{% include header-announcement.html %}
 <banner id="page-header" role="banner">
 	<div id="background-logo">
 		{% include header-DSA-logo.html %}
 	</div>
 	<div id="project-area">
-		<div id="top-buttons">
-			<ul>
-				{% for collection in site.collections %}
-					{% assign name = collection.label %}
-					{% assign languages = site.[name] | where: "lang-ref", page.lang-ref | sort: "lang" %}
-					{% if languages.size > 1 %}
-						{% for item in languages %}
-							{% if item.lang == page.lang %}
-								<li><a href="{{ item.url | relative_url }}"><b>{{ site.data.translations.[item.lang] }}</b></a></li>
-							{% else %}
-								<li><a href="{{ item.url | relative_url }}">{{ site.data.translations.[item.lang] }}</a></li>
-							{% endif %}
-						{% endfor %}
-					{% endif %}
-				{% endfor %}
-			</ul>
-			<div id="join">
-				{% if site.data.nav.join.url.[page.lang] or site.data.nav.join.url.default %}
-					{% assign joinURL = site.data.nav.join.url.[page.lang] | default: site.data.nav.join.url.default | relative_url %}
-				{% else %}
-					{% assign joinURL = "https://www.dsausa.org/join" %}
-				{% endif %}
-				<a href="{{ joinURL }}">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
-			</div>
-		</div>
-		<div style="clear: both;"></div> 
+		{% include header-top-buttons.html %} 
 		{% if site.data.nav.elements %}
 			{% include comp-mobile-menu.html %}
 		{% endif %}
-		<div id="chapter">
-			{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
-				{% capture logo %}
-					<div id="logo">
-						<img src="{{ site.chapter.header-logo-svg | relative_url }}" onerror="this.src='{{ site.chapter.header-logo-png-fallback | relative_url }}'; this.onerror=null;" draggable="false" alt>
-					</div>
-				{% endcapture %}
-			{% else %}
-				{% capture logo %}
-					<div id="logo">
-						<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt>
-					</div>
-				{% endcapture %}
-			{% endif %}
-			
-			{% if site.chapter.url %}
-				{% assign chapterURL = site.chapter.url %}
-			{% elsif page.lang == "en" %}
-				{% assign chapterURL = "/" | relative_url %}
-			{% else %}
-				{% assign chapterURL = page.lang | relative_url %}
-			{% endif %}
-			
-			<h3>
-				<a id="name-link" href="{{ chapterURL }}">{{ logo }}{{ site.data.translations.chapter-name.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<div style="clear:both"></div></a>
-			</h3>
-		</div>
+		{% include header-chapter.html %} 
 		{% if site.data.nav.elements %}
 			{% include comp-desktop-menu.html %}
 		{% endif %}
-		<h1 id="page-title">
-			{% if page.headline %}
-				{{ page.headline | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
-			{% elsif page.title %}
-				{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
-			{% else %}
-				{{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}
-			{% endif %}
-		</h1>
-		{% if page.subhead %}
-			<h2 id="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
-		{% elsif page.description %}
-			<h2 id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
-		{% endif %}
+		{% include header-title.html %} 
 	</div>
 </banner>
