@@ -6,7 +6,7 @@
 	<h1 id="page-title">{{ site.data.translations.title.[page.lang] | default: site.github.repository_name | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h1>
 {% endif %}
 {% if page.subhead %}
-	<h2 id="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
+	<p id="tagline">{{ page.subhead | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 {% elsif page.description %}
-	<h2 id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h2>
+	<p id="tagline">{{ page.description | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</p>
 {% endif %}

@@ -41,9 +41,9 @@ defaults:
     scope:
       path: "" # All files
     values:
+      lang: en
       layout: default
       image: assets/images/og-image.png # Social media preview
-      lang: en
   
   # Set URLs and language code for collections
   # English   

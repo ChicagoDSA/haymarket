@@ -1,16 +1,16 @@
 <div id="chapter">
 	{% if site.chapter.header-logo-svg && site.chapter.header-logo-png-fallback %}
-		{% capture logo %}
+		{%- capture logo -%}
 			<div id="logo">
 				<img src="{{ site.chapter.header-logo-svg | relative_url }}" onerror="this.src='{{ site.chapter.header-logo-png-fallback | relative_url }}'; this.onerror=null;" draggable="false" alt>
 			</div>
-		{% endcapture %}
+		{%- endcapture -%}
 	{% else %}
-		{% capture logo %}
+		{%- capture logo -%}
 			<div id="logo">
 				<img src="{{ 'assets/images/DSA-logo-color.svg' | relative_url }}" onerror="this.src='{{ 'assets/images/DSA-logo-color.png' | relative_url }}'; this.onerror=null;" draggable="false" alt>
 			</div>
-		{% endcapture %}
+		{%- endcapture -%}
 	{% endif %}
 	
 	{% if site.chapter.url %}
