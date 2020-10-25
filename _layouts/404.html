@@ -13,7 +13,11 @@
 
 				{% include header-title.html %}
 
-				{% include comp-button.html text="Go to our homepage" link={{ "/" | relative_url }} %} 
+				{% capture url %}
+					{{ "/" | relative_url }}
+				{% endcapture %}
+
+				{% include comp-button.html text="Go to our homepage" link=url %} 
 
 				{{ "/" | relative_url }}
 
