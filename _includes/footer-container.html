@@ -1,7 +1,6 @@
 {% capture backToTopContent %}
 	<a href="#">{{ site.data.nav.back-to-top.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 {% endcapture %}
-
 <footer id="site-footer" role="contentinfo">
 	<div id="footer-content">
 		{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
