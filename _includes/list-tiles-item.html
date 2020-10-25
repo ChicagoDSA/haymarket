@@ -3,11 +3,9 @@
 		<div class="overlay"></div>
 	</div>
 {% endcapture %}
-
 {% capture colorBackground %}
 	<div class="color-background"></div>
 {% endcapture %}
-
 {% if item.image != site.defaults[0].values.image %}
 	{% assign tileClass = "tile-container-image" %}
 	{% assign background = imageBackground %}
@@ -15,7 +13,6 @@
 	{% assign tileClass = "tile-container-text" %}
 	{% assign background = colorBackground %}
 {% endif %}
-
 <li class="{{ tileClass }}">
 	<div class="column-fix">
 		<a href="{{ include.link }}">
