@@ -220,7 +220,7 @@ Add helpful links.
 ```
 
 - This page applies to every subdirectory and language.
-- To enable post-error language switching, copy this file into `_pages/my-other-language-folder` and remove `permalink`.   
+- To enable post-error language switching, copy this file into `_pages/ISO-language-code` and remove `permalink`. [Here's a list] of valid ISO language codes.   
 
 ### Translate your content into other languages
 
