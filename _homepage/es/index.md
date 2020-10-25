@@ -6,7 +6,7 @@ subhead: Agrega un subtítulo personalizado.
 
 El texto puede estar **en negrita**, _italico_ o ~~tachado~~.
 
-[Enlace a otra página](otra-pagina).
+[Enlace a otra página](otra-pagina) y [configure un 404 personalizado](inexistente).
 
 Debe haber espacios en blanco entre los párrafos. Recomendamos incluir un archivo README o un archivo con información sobre su proyecto.
 
