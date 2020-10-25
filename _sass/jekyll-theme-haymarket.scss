@@ -140,6 +140,62 @@ a {
 
 /* Global components */
 
+#background-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	img {
+		position: absolute;
+		opacity: .15;
+		pointer-events: none;
+		
+		/* IE fixes */
+		zoom: 1;
+		filter: alpha(opacity=15);
+
+		@include large {
+			top: -6rem;
+			right: -5rem;
+			width: 30rem;
+			height: 30rem;
+		}
+
+		@include medium {
+			top: -4rem;
+			right: -4rem;
+			width: 26rem;
+			height: 26rem;
+		}
+
+		@include small {
+			top: -2rem;
+			right: -5rem;
+			width: 22rem;
+			height: 22rem;
+		}
+
+		@include extra-small {
+			top: 0;
+			right: -6rem;
+			width: 18rem;
+			height: 18rem;
+		}
+
+		@include print {
+			top: 0;
+			right: -5rem;
+			width: 18rem;
+			height: 18rem;
+		}
+	}
+}
+
+/* Buttons appear in #404 and #main-content */
+
 .btn,
 .column-fix {
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
@@ -168,12 +224,12 @@ a {
 	background-color: $dsa-red;
 }
 
-/* Images appear in body and .main-content */
+/* Images appear in body and #main-content */
 
-.headline-image-container {
+#headline-image-container {
 	margin: 0 auto;
 
-	.headline-image {
+	#headline-image {
 		height: 20rem;
 		border-left: 1rem solid $dsa-red;
 	}
@@ -234,8 +290,8 @@ a,
 
 #announcement-content,
 #project-area,
-.headline-image-container,
-.main-content,
+#headline-image-container,
+#main-content,
 #site-footer {
 	margin: 0 auto;
 
@@ -255,11 +311,24 @@ a,
 
 #announcement-content,
 #project-area,
-.main-content,
+#main-content,
 #site-footer {
 	@include small {
 		padding: 0 1rem;
 	}
+}
+
+#not-found,
+#page-header {
+	background-color: $dsa-red;
+}
+
+#not-found {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 #announcement {
@@ -301,61 +370,6 @@ a,
 	display: block;
 	position: relative;
 	text-align: left;
-	background-color: $dsa-red;
-
-	#background-logo {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-
-		img {
-			position: absolute;
-			opacity: .15;
-			pointer-events: none;
-			
-			/* IE fixes */
-			zoom: 1;
-			filter: alpha(opacity=15);
-
-			@include large {
-				top: -6rem;
-				right: -5rem;
-				width: 30rem;
-				height: 30rem;
-			}
-
-			@include medium {
-				top: -4rem;
-				right: -4rem;
-				width: 26rem;
-				height: 26rem;
-			}
-
-			@include small {
-				top: -2rem;
-				right: -5rem;
-				width: 22rem;
-				height: 22rem;
-			}
-
-			@include extra-small {
-				top: 0;
-				right: -6rem;
-				width: 18rem;
-				height: 18rem;
-			}
-
-			@include print {
-				top: 0;
-				right: -5rem;
-				width: 18rem;
-				height: 18rem;
-			}
-		}
-	}
 
 	#project-area {
 		position: relative;
@@ -722,7 +736,7 @@ a,
 	}
 }
 
-.main-content {
+#main-content {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	word-wrap: break-word;

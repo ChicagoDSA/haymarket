@@ -1,9 +1,11 @@
-{% if site.chapter.background-logo-svg && site.chapter.background-logo-png-fallback && site.chapter.logo-description %}
-	{% assign svgURL = site.chapter.background-logo-svg %}
-	{% assign pngURL = site.chapter.background-logo-png %}
-{% else %}
-	{% assign svgURL = "/assets/images/DSA-logo-reverse.svg" %}
-	{% assign pngURL = "assets/images/DSA-logo-reverse.png" %}
-{% endif %}
+<div id="background-logo">
+	{% if site.chapter.background-logo-svg && site.chapter.background-logo-png-fallback && site.chapter.logo-description %}
+		{% assign svgURL = site.chapter.background-logo-svg %}
+		{% assign pngURL = site.chapter.background-logo-png %}
+	{% else %}
+		{% assign svgURL = "/assets/images/DSA-logo-reverse.svg" %}
+		{% assign pngURL = "assets/images/DSA-logo-reverse.png" %}
+	{% endif %}
 
-<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt>
+	<img src="{{ svgURL | relative_url }}" onerror="this.src='{{ pngURL | relative_url }}'; this.onerror=null;" draggable="false" alt>
+</div>
