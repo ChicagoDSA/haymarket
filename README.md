@@ -220,7 +220,6 @@ Add helpful links.
 ```
 
 - This page applies to every subdirectory and language.
-- To enable post-error language switching, copy this file into `_pages/ISO-language-code` and remove `permalink`. [Here's a list](https://www.loc.gov/standards/iso639-2/php/code_list.php) of valid ISO-639-1 language codes.   
 
 ### Translate your content into other languages
 
