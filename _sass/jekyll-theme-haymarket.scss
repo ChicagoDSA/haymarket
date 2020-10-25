@@ -140,62 +140,6 @@ a {
 
 /* Global components */
 
-#background-logo {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-
-	img {
-		position: absolute;
-		opacity: .15;
-		pointer-events: none;
-		
-		/* IE fixes */
-		zoom: 1;
-		filter: alpha(opacity=15);
-
-		@include large {
-			top: -6rem;
-			right: -5rem;
-			width: 30rem;
-			height: 30rem;
-		}
-
-		@include medium {
-			top: -4rem;
-			right: -4rem;
-			width: 26rem;
-			height: 26rem;
-		}
-
-		@include small {
-			top: -2rem;
-			right: -5rem;
-			width: 22rem;
-			height: 22rem;
-		}
-
-		@include extra-small {
-			top: 0;
-			right: -6rem;
-			width: 18rem;
-			height: 18rem;
-		}
-
-		@include print {
-			top: 0;
-			right: -5rem;
-			width: 18rem;
-			height: 18rem;
-		}
-	}
-}
-
-/* Buttons appear in #404 and #main-content */
-
 .btn,
 .column-fix {
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1);
@@ -288,7 +232,6 @@ a,
 
 /* Layout */
 
-#not-found #content,
 #announcement-content,
 #project-area,
 #headline-image-container,
@@ -310,78 +253,12 @@ a,
 	}
 }
 
-#not-found #content,
 #announcement-content,
 #project-area,
 #main-content,
 #site-footer {
 	@include small {
 		padding: 0 1rem;
-	}
-}
-
-#not-found,
-#page-header {
-	background-color: $dsa-red;
-
-	#page-title,
-	#tagline {
-		position: relative;
-		margin: 2rem 0 0 0;
-		color: $white;
-	}
-
-	#page-title {
-		@include large {
-			font-size: 3.25rem;
-		}
-
-		@include medium {
-			font-size: 2.25rem;
-		}
-
-		@include small {
-			font-size: 2.25rem;
-		}
-	}
-
-	#tagline {
-		max-width: 75%;
-		font-size: 1.25rem;
-		font-weight: normal;
-
-		@include medium{
-			font-size: 1.125rem;
-		}
-
-		@include small{
-			font-size: 1.125rem;
-		}
-
-		@include print{
-			font-size: 1.125rem;
-		}
-	}
-}
-
-#not-found {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-
-	#content {
-		position: relative;
-		margin-top: 4rem;
-
-		.btn-container {
-			margin-top: 2rem;
-
-			.btn {
-				background-color: $dsa-purple;
-			}
-		}
 	}
 }
 
@@ -424,6 +301,61 @@ a,
 	display: block;
 	position: relative;
 	text-align: left;
+	background-color: $dsa-red;
+
+	#background-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			opacity: .15;
+			pointer-events: none;
+			
+			/* IE fixes */
+			zoom: 1;
+			filter: alpha(opacity=15);
+
+			@include large {
+				top: -6rem;
+				right: -5rem;
+				width: 30rem;
+				height: 30rem;
+			}
+
+			@include medium {
+				top: -4rem;
+				right: -4rem;
+				width: 26rem;
+				height: 26rem;
+			}
+
+			@include small {
+				top: -2rem;
+				right: -5rem;
+				width: 22rem;
+				height: 22rem;
+			}
+
+			@include extra-small {
+				top: 0;
+				right: -6rem;
+				width: 18rem;
+				height: 18rem;
+			}
+
+			@include print {
+				top: 0;
+				right: -5rem;
+				width: 18rem;
+				height: 18rem;
+			}
+		}
+	}
 
 	#project-area {
 		position: relative;
@@ -432,13 +364,21 @@ a,
 
 		#top-buttons,
 		#mobile-menu,
-		#chapter {
+		#chapter,
+		#page-title,
+		#tagline {
 			position: relative;
 		}
 
 		#top-buttons,
 		#desktop-menu ul {
 			float: left;
+		}
+
+		#page-title,
+		#tagline {
+			margin: 2rem 0 0 0;
+			color: $white;
 		}
 
 		#top-buttons {
@@ -731,6 +671,38 @@ a,
 				.single-menu-item:last-child a {
 					margin-right: 0;
 				}
+			}
+		}
+
+		#page-title {
+			@include large {
+				font-size: 3.25rem;
+			}
+
+			@include medium {
+				font-size: 2.25rem;
+			}
+
+			@include small {
+				font-size: 2.25rem;
+			}
+		}
+
+		#tagline {
+			max-width: 75%;
+			font-size: 1.25rem;
+			font-weight: normal;
+
+			@include medium{
+				font-size: 1.125rem;
+			}
+
+			@include small{
+				font-size: 1.125rem;
+			}
+
+			@include print{
+				font-size: 1.125rem;
 			}
 		}
 
