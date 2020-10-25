@@ -375,9 +375,12 @@ a,
 		position: relative;
 		margin-top: 4rem;
 
-		.btn {
+		.btn-container {
 			margin-top: 2rem;
-			background-color: $dsa-purple;
+
+			.btn {
+				background-color: $dsa-purple;
+			}
 		}
 	}
 }
