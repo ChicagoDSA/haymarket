@@ -204,6 +204,22 @@ url:
 
 - If `_data` contains `announcement.yml`, and `announcement.yml` contains these values, the announcement will be visible.
 
+### Enable a custom 404 page
+
+- Create `_pages/404.md` with this front matter:
+
+```
+---
+permalink: /404.html
+layout: 404
+title: Page not found
+headline: 404
+description: Oops! We couldn't find the page you're looking for.
+---
+```
+
+- This page applies to all languages and subdirectories.
+
 ### Translate your content into other languages
 
 The example site also has a complete Spanish translation. For everything to work:
