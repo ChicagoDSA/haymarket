@@ -211,9 +211,8 @@ url:
 ```
 ---
 permalink: /404
-lang-ref: 404
-title: Custom 404 page
-description: We couldn't find the page you're looking for.
+title: Page not found
+description: It may have moved.
 ---
 ```
 
