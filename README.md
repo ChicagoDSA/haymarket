@@ -215,8 +215,6 @@ lang-ref: 404
 title: Custom 404 page
 description: We couldn't find the page you're looking for.
 ---
-
-Add helpful links.
 ```
 
 - This page applies to every subdirectory and language.
