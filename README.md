@@ -212,11 +212,15 @@ url:
 ---
 permalink: /404
 title: Page not found
-description: It may have moved.
+description: We couldn't find the page you're looking for.
+headline: 404
 ---
+
+Help users go [home]({{"/"|relative_url}}).
 ```
 
 - This page applies to every subdirectory and language.
+- Use `{{"/"|relative_url}}` to reference top-level directories.
 
 ### Translate your content into other languages
 
