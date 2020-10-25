@@ -220,7 +220,7 @@ Add helpful links.
 ```
 
 - This page applies to every subdirectory and language.
-- If you wanted to enable post-error language switching, and your site was translated into Spanish, you would copy this file into `_pages/es` and remove `permalink`.   
+- To enable post-error language switching, copy this file into `_pages/my-other-language-folder` and remove `permalink`.   
 
 ### Translate your content into other languages
 
