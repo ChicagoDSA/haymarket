@@ -206,19 +206,21 @@ url:
 
 ### Enable a custom 404 page
 
-- Create `_pages/404.md` with this front matter:
+- Create `_pages/404.md` with the following content:
 
 ```
 ---
-permalink: /404.html
-layout: 404
-title: Page not found
-headline: 404
-description: Oops! We couldn't find the page you're looking for.
+permalink: /404
+lang-ref: 404
+title: Custom 404 page
+description: We couldn't find the page you're looking for.
 ---
+
+Add helpful links.
 ```
 
-- This page applies to all languages and subdirectories.
+- This page applies to every subdirectory and language.
+- If you wanted to enable post-error language switching, and your site was translated into Spanish, you would copy this file into `_pages/es` and remove `permalink`.   
 
 ### Translate your content into other languages
 
