@@ -377,6 +377,7 @@ a,
 
 		#page-title,
 		#tagline {
+			max-width: 75%;
 			margin: 2rem 0 0 0;
 			color: $white;
 		}
@@ -671,38 +672,6 @@ a,
 				.single-menu-item:last-child a {
 					margin-right: 0;
 				}
-			}
-		}
-
-		#page-title {
-			@include large {
-				font-size: 3.25rem;
-			}
-
-			@include medium {
-				font-size: 2.25rem;
-			}
-
-			@include small {
-				font-size: 2.25rem;
-			}
-		}
-
-		#tagline {
-			max-width: 75%;
-			font-size: 1.25rem;
-			font-weight: normal;
-
-			@include medium{
-				font-size: 1.125rem;
-			}
-
-			@include small{
-				font-size: 1.125rem;
-			}
-
-			@include print{
-				font-size: 1.125rem;
 			}
 		}
 
