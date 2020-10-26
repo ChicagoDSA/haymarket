@@ -216,7 +216,7 @@ description: We couldn't find the page you're looking for.
 headline: 404
 ---
 
-Help users go [home]({{"/"|relative_url}}).
+Help users [go home]({{"/"|relative_url}}).
 ```
 
 - This page applies to every subdirectory and language.
