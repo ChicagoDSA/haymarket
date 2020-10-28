@@ -692,19 +692,20 @@ a,
 	margin-bottom: 2rem;
 	word-wrap: break-word;
 
-	table,
-	th,
-	td,
-	.note {
-		border: 2px solid $border-color;
-	}
-
+	blockquote,
 	table,
 	.tile-list,
 	.event-list,
 	.note {
 		margin-top: 1.5rem;
 		margin-bottom: 2rem;
+	}
+
+	table,
+	th,
+	td,
+	.note {
+		border: 2px solid $border-color;
 	}
 
 	ul,
