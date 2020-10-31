@@ -33,7 +33,7 @@ chapter:
 google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
-remote_theme: ChicagoDSA/haymarket
+remote_theme: ChicagoDSA/haymarket # Append @vX.X.X to specify a version number
 
 # Set default front matter for Markdown files
 defaults:
@@ -101,6 +101,9 @@ join:
     default: # Apply a link to all languages
     en: # Or define specific values
     
+follow-us:
+  en: Follow us on social media
+
 back-to-top:
   en: Back to top
 ```

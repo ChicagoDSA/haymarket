@@ -5,7 +5,7 @@
 	<div id="footer-content">
 		{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 			<div id="social-container">
-				<h6>Follow us on social media</h6>
+				<h6>{{ site.data.nav.follow-us.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h6>
 				{% if site.chapter.twitter %}
 					<a id="twitter" class="social" href="{{ site.chapter.twitter }}" aria-label="Twitter">
 						<i class="fab fa-twitter"></i>
