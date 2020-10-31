@@ -5,7 +5,7 @@ menu:
 elements:
   - page:
       en: Add navigation
-      es: Agregar navegación
+      es: Agrega navegación
       url: 
         default: # Apply a link to all languages
         en: another-page
@@ -16,7 +16,7 @@ elements:
     pages:
       - page:
           en: Link to a page
-          es: Enlace a una página
+          es: Enlaza a una página
           url: 
             en: another-page
             es: es/otra-pagina
@@ -32,7 +32,7 @@ elements:
     pages:
       - page:
           en: Use Markdown *styling*
-          es: Utilice Markdown *estilo*
+          es: Utiliza Markdown *estilo*
           url:
             en: another-page
             es: es/otra-pagina
@@ -40,12 +40,12 @@ elements:
 join:
   text:
     en: Join DSA
-    es: Hágase miembro de DSA
+    es: Hazte miembro de DSA
   url: # Override DSA national link
     default: # Apply a link to all languages
     en: # Or define specific values
 
 back-to-top:
   en: Back to top
-  es: Ve arriba
+  es: Volver arriba
         
