@@ -115,6 +115,6 @@ Utiliza baldosas para diseñar tus colecciones. Agrega un límite opcional.
 
 Inserta el contenido de Markdown aquí.
 
-[¡Se admiten todos los tipos, incluidos los enlaces!!](otra-pagina)
+[¡Se admiten todos los tipos, incluidos los enlaces!](otra-pagina)
 {% endcapture %}
 {% include comp-note.html content=note %}
