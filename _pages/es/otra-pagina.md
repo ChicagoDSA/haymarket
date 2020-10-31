@@ -4,6 +4,6 @@ title: Otra página
 description: Esta es solo otra página.
 ---
 
-## Bienvenidos a otra página
+## Bienvenidxs a otra página
 
 _camarada_
