@@ -79,33 +79,34 @@ collections:
 2. Add the following content:
 
 ```yaml
+# Supported languages
 en: English
+
+# Website info
 title:
   en: Haymarket theme
 description:
   en: A GitHub Pages theme to easily launch Chicago DSA websites.
 chapter-name:
   en: Your DSA Chapter
-photo:
-  en: Photo
-```
 
-3. In your root directory, create another file named `_data/nav.yml`.
-4. Add these two groups:
-
-```yaml
+# Join DSA button
 join:
   text:
     en: Join DSA
   url: # Override DSA national link
     default: # Apply a link to all languages
     en: # Or define specific values
-    
+
+# Footer
 follow-us:
   en: Follow us on social media
-
 back-to-top:
   en: Back to top
+
+# Other content
+photo:
+  en: Photo
 ```
 
 ### Add a homepage
@@ -152,7 +153,7 @@ This is another page.
 
 ### Add custom navigation
 
-1. At the top of `_data/nav.yml`, paste the following:
+1. Create a file named `_data/nav.yml`. Add this to it:
 
 ```yaml
 menu:
