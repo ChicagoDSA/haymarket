@@ -45,6 +45,10 @@ join:
     default: # Apply a link to all languages
     en: # Or define specific values
 
+follow-us:
+  en: Follow us on social media
+  es: Síguenos en las redes sociales
+
 back-to-top:
   en: Back to top
   es: Volver arriba
