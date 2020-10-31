@@ -6,37 +6,37 @@ subhead: Agrega un subtítulo personalizado.
 
 El texto puede estar **en negrita**, _italico_ o ~~tachado~~.
 
-[Enlace a otra página](otra-pagina) y [configure un 404 personalizado](inexistente).
+[Enlaza a otra página](otra-pagina) y [configura un 404 personalizado](inexistente).
 
 Debe haber espacios en blanco entre los párrafos. Recomendamos incluir un archivo README o un archivo con información sobre su proyecto.
 
 # Título 1
 
-Este es un párrafo normal que sigue a un encabezado. GitHub es una plataforma de alojamiento de código para el control de versiones y la colaboración. Le permite a usted y a otros trabajar juntos en proyectos desde cualquier lugar.
+Este es un párrafo normal que sigue a un título. GitHub es una plataforma de alojamiento de código para el control de versiones y la colaboración. Le permite a usted y a otros trabajar juntos en proyectos desde cualquier lugar.
 
 ## Título 2
 
-> Esta es una cita en bloque que sigue a un encabezado.
+> Esta es una cita en bloque que sigue a un título.
 >
-> Cuando algo es lo suficientemente importante, lo haces incluso si las probabilidades no están a tu favor.
+> No vamos a luchar contra el capitalismo con el capitalismo Negro, pero vamos a luchar contra el socialismo.
 
 ### Título 3
 
-Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite opcional.
+Utiliza baldosas para diseñar tus colecciones. Agrega un límite opcional.
 
 {% include list-tiles.html collection="tiles" limit=4 %}
 
 #### Título 4
 
-* Esta es una lista desordenada que sigue a un encabezado.
-* Esta es una lista desordenada que sigue a un encabezado.
-* Esta es una lista desordenada que sigue a un encabezado.
+* Esta es una lista desordenada que sigue a un título.
+* Esta es una lista desordenada que sigue a un título.
+* Esta es una lista desordenada que sigue a un título.
 
 ##### Título 5
 
-1. Esta es una lista ordenada siguiendo un encabezado.
-2. Esta es una lista ordenada siguiendo un encabezado.
-3. Esta es una lista ordenada siguiendo un encabezado.
+1. Esta es una lista ordenada que sigue a un título.
+2. Esta es una lista ordenada que sigue a un título.
+3. Esta es una lista ordenada que sigue a un título.
 
 ###### Título 6
 
@@ -47,7 +47,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 | ok           | buenas `oreos`        | hmm    |
 | ok           | buena gota de `zoute` | yumm   |
 
-### Hay una regla horizontal debajo de esto.
+### Hay una línea horizontal debajo de esto.
 
 * * *
 
@@ -85,9 +85,9 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 
 ![Perfil lateral de W.E.B. DuBois](../assets/images/theme-WEB-DuBois.png)
 
-### Foto grande con pie de foto
+### Foto grande con leyenda
 
-{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="Un anuncio para el rally de Haymarket." credit="[¡Dale crédito a tu fuente y conéctate a su sitio web!](otra-pagina)" %}
+{% include comp-full-width-image.html image="assets/images/theme-Haymarket-flyer.png" description="Un volante anuncia el rally de Haymarket." credit="[¡Atribuye su fuente y enlaza a su sitio web!](otra-pagina)" %}
 
 ### Las listas de definiciones se pueden utilizar con sintaxis HTML.
 
@@ -102,7 +102,7 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 <dd>Rojo</dd>
 </dl>
 
-### Cargar eventos desde un calendario público de Teamup.
+### Carga eventos desde un calendario público de Teamup.
 
 {% include list-events.html calendar="ksc3uaa38o41o2vz8o" limit=2 %}
 
@@ -111,10 +111,10 @@ Utilice azulejos de pared para darle estilo a sus colecciones. Agrega un límite
 {% include comp-button.html text="Quiero contactar con la CE" link="otra-pagina" %}
 
 {% capture note %}
-#### Use una nota para resaltar información secundaria.
+#### Utiliza una nota para resaltar la información acreditativo.
 
-Inserte el contenido de Markdown aquí.
+Inserta el contenido de Markdown aquí.
 
-[¡Se admiten todos los tipos, incluidos los enlaces!](otra-pagina)
+[¡Se admiten todos los tipos, incluidos los enlaces!!](otra-pagina)
 {% endcapture %}
 {% include comp-note.html content=note %}
