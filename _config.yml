@@ -56,7 +56,7 @@ defaults:
     scope:
       path: _tiles/es
     values:
-      permalink: es/azulejos/:title # language-specific folder
+      permalink: es/baldosas/:title # language-specific folder
       lang: es
 
 # Manage lists of content with collections
