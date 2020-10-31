@@ -84,9 +84,9 @@ en: English
 
 # Website info
 title:
-  en: Haymarket theme
+  en: Your Website Title
 description:
-  en: A GitHub Pages theme to easily launch Chicago DSA websites.
+  en: Describe your website for search engines.
 chapter-name:
   en: Your DSA Chapter
 
@@ -153,7 +153,7 @@ This is another page.
 
 ### Add custom navigation
 
-1. Create a file named `_data/nav.yml`. Add this to it:
+- Create a file named `_data/nav.yml`. Add this to it:
 
 ```yaml
 menu:
@@ -184,8 +184,6 @@ elements:
           url:
             en: another-page
 ```
-
-2. Rebuild your site. You have a nav!
 
 ### Use collections to manage related content
 
