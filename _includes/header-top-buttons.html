@@ -17,12 +17,12 @@
 		{% endif %}
 	</ul>
 	<div id="join">
-		{% if site.data.nav.join.url.[page.lang] or site.data.nav.join.url.default %}
-			{% assign joinURL = site.data.nav.join.url.[page.lang] | default: site.data.nav.join.url.default | relative_url %}
+		{% if site.data.translations.join.url.[page.lang] or site.data.translations.join.url.default %}
+			{% assign joinURL = site.data.translations.join.url.[page.lang] | default: site.data.translations.join.url.default | relative_url %}
 		{% else %}
 			{% assign joinURL = "https://www.dsausa.org/join" %}
 		{% endif %}
-		<a href="{{ joinURL }}">{{ site.data.nav.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+		<a href="{{ joinURL }}">{{ site.data.translations.join.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 	</div>
 </div>
 <div style="clear: both;"></div>

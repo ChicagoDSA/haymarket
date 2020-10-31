@@ -1,11 +1,11 @@
 {% capture backToTopContent %}
-	<a href="#">{{ site.data.nav.back-to-top.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
+	<a href="#">{{ site.data.translations.back-to-top.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</a>
 {% endcapture %}
 <footer id="site-footer" role="contentinfo">
 	<div id="footer-content">
 		{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 			<div id="social-container">
-				<h6>{{ site.data.nav.follow-us.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h6>
+				<h6>{{ site.data.translations.follow-us.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h6>
 				{% if site.chapter.twitter %}
 					<a id="twitter" class="social" href="{{ site.chapter.twitter }}" aria-label="Twitter">
 						<i class="fab fa-twitter"></i>

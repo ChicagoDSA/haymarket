@@ -1,5 +1,8 @@
+# Supported languages
 en: English
 es: Español
+
+# Website info
 title:
   en: Haymarket theme
   es: Tema de Haymarket
@@ -9,7 +12,25 @@ description:
 chapter-name:
   en: Your DSA Chapter
   es: Su Capítulo de DSA
+
+# Join DSA button
+join:
+  text:
+    en: Join DSA
+    es: Hazte miembro de DSA
+  url: # Override DSA national link
+    default: # Apply a link to all languages
+    en: # Or define specific values
+
+# Footer
+follow-us:
+  en: Follow us on social media
+  es: Síguenxs en las redes sociales
+back-to-top:
+  en: Back to top
+  es: Volver arriba
+
+# Other content
 photo:
   en: Photo
   es: Foto
-  
