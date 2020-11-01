@@ -6,4 +6,4 @@ description: Esta es solo otra página.
 
 ## Bienvenidxs a otra página
 
-_camarada_
+_camaradx_
