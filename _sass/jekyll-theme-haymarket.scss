@@ -170,13 +170,6 @@ a {
 
 /* Global styles */
 
-#top-buttons ul li,
-#top-buttons #join,
-.mobile-menu-group ul li,
-#desktop-menu ul {
-	font-size: .9375rem;
-}
-
 #mobile-menu-content,
 .desktop-hover-helper ul,
 .btn,
@@ -336,6 +329,13 @@ a,
 		#page-title,
 		#tagline {
 			position: relative;
+		}
+
+		#top-buttons ul li,
+		#top-buttons #join,
+		.mobile-menu-group ul li,
+		#desktop-menu ul {
+			font-size: .9375rem;
 		}
 
 		#top-buttons,
