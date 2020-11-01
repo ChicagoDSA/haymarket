@@ -323,19 +323,20 @@ a,
 		padding-top: 0;
 		padding-bottom: 3rem;
 
+		#top-buttons ul li,
+		#top-buttons #join,
+		.single-menu-item,
+		.mobile-menu-group ul li,
+		#desktop-menu ul {
+			font-size: .9375rem;
+		}
+
 		#top-buttons,
 		#mobile-menu,
 		#chapter,
 		#page-title,
 		#tagline {
 			position: relative;
-		}
-
-		#top-buttons ul li,
-		#top-buttons #join,
-		.mobile-menu-group ul li,
-		#desktop-menu ul {
-			font-size: .9375rem;
 		}
 
 		#top-buttons,
@@ -456,7 +457,7 @@ a,
 
 					.mobile-menu-group {
 						margin: .5rem 0;
-						
+
 						.mobile-menu-header {
 							font-weight: bold;
 						}
