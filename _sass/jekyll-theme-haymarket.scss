@@ -106,11 +106,7 @@ h4 {
 	font-size: 1.125rem;
 }
 
-h5,
-#top-buttons li,
-#top-buttons #join,
-.mobile-menu-group li,
-#desktop-menu ul {
+h5 {
 	font-size: .9375rem;
 }
 
@@ -361,6 +357,7 @@ a,
 			#join {
 				padding: .125rem .5rem;	
 				white-space: nowrap;
+				font-size: .9375rem;
 			}
 
 			ul {
@@ -462,6 +459,8 @@ a,
 							padding: 0;
 
 							li {
+								font-size: .9375rem;
+
 								a {
 									color: $secondary-text-color;
 								}
@@ -545,6 +544,7 @@ a,
 				margin: 0;
 				padding-left: 0;
 				list-style: none;
+				font-size: .9375rem;
 
 				.desktop-menu-group,
 				.single-menu-item {
