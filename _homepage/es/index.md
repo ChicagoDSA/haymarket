@@ -18,7 +18,7 @@ Este es un párrafo normal que sigue a un título. GitHub es una plataforma de a
 
 > Esta es una cita en bloque que sigue a un título.
 >
-> No vamos a luchar contra el capitalismo con el capitalismo Negro, pero vamos a luchar contra el socialismo.
+> No vamos a luchar contra el capitalismo con el capitalismo Negro, pero vamos a luchar con el socialismo.
 
 ### Título 3
 
