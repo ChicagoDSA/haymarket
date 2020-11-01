@@ -42,13 +42,6 @@
 	margin: 2cm;
 }
 
-/* Disable font boosting on mobile browsers */
-
-body * {
-	max-height: 1000000rem; /* Chrome for Android */
-	-moz-text-size-adjust: none; /* Firefox Mobile */
-}
-
 /* Global elements */
 
 * {
