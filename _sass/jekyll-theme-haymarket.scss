@@ -170,10 +170,17 @@ a {
 
 /* Global styles */
 
-.btn,
-.column-fix,
+#top-buttons ul li,
+#top-buttons #join,
+.mobile-menu-group ul li,
+#desktop-menu ul {
+	font-size: .9375rem;
+}
+
 #mobile-menu-content,
-.desktop-hover-helper ul {
+.desktop-hover-helper ul,
+.btn,
+.column-fix {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 }
 
@@ -357,7 +364,6 @@ a,
 			#join {
 				padding: .125rem .5rem;	
 				white-space: nowrap;
-				font-size: .9375rem;
 			}
 
 			ul {
@@ -459,7 +465,6 @@ a,
 							padding: 0;
 
 							li {
-								font-size: .9375rem;
 
 								a {
 									color: $secondary-text-color;
@@ -544,7 +549,6 @@ a,
 				margin: 0;
 				padding-left: 0;
 				list-style: none;
-				font-size: .9375rem;
 
 				.desktop-menu-group,
 				.single-menu-item {
