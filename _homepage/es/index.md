@@ -108,7 +108,7 @@ Utiliza baldosas para diseñar tus colecciones. Agrega un límite opcional.
 
 ### Los botones son más prominentes que los enlaces.
 
-{% include comp-button.html text="Quiero contactar con la CE" link="otra-pagina" %}
+{% include comp-button.html text="Quiero contactar la CE" link="otra-pagina" %}
 
 {% capture note %}
 #### Utiliza una nota para resaltar la información acreditativo.
