@@ -657,7 +657,8 @@ a,
 		}
 
 		@include medium {
-			#page-title {
+			#page-title,
+			#tagline {
 				max-width: 80%;
 			}
 		}
@@ -671,13 +672,15 @@ a,
 				display: none;
 			}
 
-			#page-title {
+			#page-title,
+			#tagline {
 				max-width: 90%;
 			}
 		}
 
 		@include extra-small {
-			#page-title {
+			#page-title,
+			#tagline {
 				max-width: 100%;
 			}
 		}
