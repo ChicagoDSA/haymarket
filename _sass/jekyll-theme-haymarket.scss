@@ -356,7 +356,7 @@ a,
 
 		#page-title,
 		#tagline {
-			max-width: 75%;
+			max-width: 70%;
 			margin: 2rem 0 0 0;
 			color: $white;
 		}
@@ -656,6 +656,12 @@ a,
 			}
 		}
 
+		@include medium {
+			#page-title {
+				max-width: 80%;
+			}
+		}
+
 		@include small {
 			#mobile-menu {
 				display: table-cell;
@@ -663,6 +669,16 @@ a,
 
 			#desktop-menu {
 				display: none;
+			}
+
+			#page-title {
+				max-width: 90%;
+			}
+		}
+
+		@include extra-small {
+			#page-title {m
+				max-width: 100%;
 			}
 		}
 	}
