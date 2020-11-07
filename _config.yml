@@ -14,8 +14,7 @@ permalink: pretty
 
 # Set default front matter for Markdown files
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # All files
     values:
       lang: en
@@ -24,36 +23,30 @@ defaults:
   
   # Set URLs and language code for collections
   # English   
-  -
-    scope:
+  - scope:
       path: _homepage/en/index.md
     values:
       permalink: / # Set as index
-  -
-    scope:
+  - scope:
       path: _pages/en
     values:
       permalink: /:title
-  -
-    scope:
+  - scope:
       path: _tiles/en
     values:
       permalink: tiles/:title
   # Spanish
-  -
-    scope:
+  - scope:
       path: _homepage/es/index.md
     values:
       permalink: /es/
       lang: es
-  -
-    scope:
+  - scope:
       path: _pages/es
     values:
       permalink: es/:title # language-specific folder
       lang: es
-  -
-    scope:
+  - scope:
       path: _tiles/es
     values:
       permalink: es/baldosas/:title # language-specific folder
