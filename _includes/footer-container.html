@@ -6,9 +6,9 @@
 		{% if site.chapter.twitter or site.chapter.instagram or site.chapter.facebook %}
 			<div id="social-container">
 				<h6>{{ site.data.translations.follow-us.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}</h6>
-				{% if site.chapter.twitter %}
-					<a id="twitter" class="social" href="{{ site.chapter.twitter }}" aria-label="Twitter">
-						<i class="fab fa-twitter"></i>
+				{% if site.chapter.facebook %}
+					<a id="facebook" class="social" href="{{ site.chapter.facebook }}" aria-label="Facebook">
+						<i class="fab fa-facebook-f"></i>
 					</a>
 				{% endif %}
 				{% if site.chapter.instagram %}
@@ -16,9 +16,9 @@
 						<i class="fab fa-instagram"></i>
 					</a>
 				{% endif %}
-				{% if site.chapter.facebook %}
-					<a id="facebook" class="social" href="{{ site.chapter.facebook }}" aria-label="Facebook">
-						<i class="fab fa-facebook-f"></i>
+				{% if site.chapter.twitter %}
+					<a id="twitter" class="social" href="{{ site.chapter.twitter }}" aria-label="Twitter">
+						<i class="fab fa-twitter"></i>
 					</a>
 				{% endif %}
 				<div style="clear: both;"></div> 
