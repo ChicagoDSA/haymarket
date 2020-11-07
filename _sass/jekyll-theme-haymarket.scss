@@ -26,12 +26,6 @@
 	}
 }
 
-@mixin minimum {
-	@media screen and (max-width: #{$minimum-breakpoint}) {
-		@content;
-	}
-}
-
 @mixin print {
 	@media print {
 		@content;
@@ -135,7 +129,7 @@ a {
 	margin: 0 auto;
 
 	#headline-image {
-		height: 20rem;
+		height: 24rem;
 		border-left: 1rem solid $dsa-red;
 	}
 
@@ -144,6 +138,12 @@ a {
 
 		.image-caption {
 			padding: 0 1rem;
+		}
+	}
+
+	@include extra-small {
+		#headline-image {
+			height: 20rem;
 		}
 	}
 }
