@@ -52,6 +52,13 @@ body {
 	color: $body-text-color;
 }
 
+/* Disable font boosting on mobile browsers */
+
+body * {
+	max-height: 1000000rem; /* Chrome for Android */
+	-moz-text-size-adjust: none; /* Firefox Mobile */
+}
+
 h1,
 h2,
 h3,
