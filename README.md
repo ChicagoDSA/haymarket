@@ -37,8 +37,7 @@ remote_theme: ChicagoDSA/haymarket # Append @vX.X.X to specify a version number
 
 # Set default front matter for Markdown files
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # All files
     values:
       lang: en
@@ -47,13 +46,11 @@ defaults:
   
   # Set URLs and language code for collections
   # English   
-  -
-    scope:
+  - scope:
       path: _homepage/en/index.md
     values:
       permalink: / # Set as index
-  -
-    scope:
+  - scope:
       path: _pages/en
     values:
       permalink: /:title
