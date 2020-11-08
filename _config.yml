@@ -20,9 +20,9 @@ defaults:
       lang: en
       layout: default
       image: assets/images/og-image.png # Social media preview
-  
+
   # Set URLs and language code for collections
-  # English   
+  # English
   - scope:
       path: _homepage/en/index.md
     values:
@@ -63,3 +63,6 @@ collections:
     output: true
   tiles:
     output: true
+
+plugins:
+  - jekyll-redirect-from

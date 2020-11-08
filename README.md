@@ -13,7 +13,7 @@ A GitHub Pages theme to easily launch Chicago DSA websites.
 3. Under **Source**, select your default branch, and click **Save**.
 4. Go to the root directory of `my-new-site`. Click on the **Create new file** button and create a file named `_config.yml`.
 5. Open it and add the line: `remote-theme: ChicagoDSA/haymarket`.
-    - Optional: You can use a specific release by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
+   - Optional: You can use a specific release by setting `remote-theme: ChicagoDSA/haymarket@v1.0.0`. Replace `v1.0.0` with the version you want.
 
 ### Configuration
 
@@ -43,9 +43,9 @@ defaults:
       lang: en
       layout: default
       image: assets/images/og-image.png # Social media preview
-  
+
   # Set URLs and language code for collections
-  # English   
+  # English
   - scope:
       path: _homepage/en/index.md
     values:
@@ -146,7 +146,7 @@ subhead: <!-- optional display text -->
 This is another page.
 ```
 
-3. Commit your change, and your page will be published at `my-username.github.io/my-new-site/another-page`. Even though this page lives inside `_pages/en`, the `defaults` settings in `_config.yml` moved it to the site's root.  
+3. Commit your change, and your page will be published at `my-username.github.io/my-new-site/another-page`. Even though this page lives inside `_pages/en`, the `defaults` settings in `_config.yml` moved it to the site's root.
 
 ### Add custom navigation
 
@@ -159,15 +159,15 @@ menu:
 elements:
   - page:
       en: Add navigation
-      url: 
+      url:
         default: # Apply a link to all languages
         en: another-page
-  - group: 
+  - group:
     en: With groups
     pages:
       - page:
           en: Link to a page
-          url: 
+          url:
             en: another-page
       - page:
           en: Another link
@@ -184,7 +184,7 @@ elements:
 
 ### Use collections to manage related content
 
-- In order to use the `list-tiles` component, you need to create a collection folder. Reference and enable it in `_config.yml`. 
+- In order to use the `list-tiles` component, you need to create a collection folder. Reference and enable it in `_config.yml`.
 - This repository's example website has a collection called `tiles`.
 
 ### Display a site-wide announcement
@@ -199,7 +199,7 @@ text:
 url:
   default: # Apply a link to all languages
   en: # Or add language-specific links
-``` 
+```
 
 - If `_data` contains `announcement.yml`, and `announcement.yml` contains these values, the announcement will be visible.
 
@@ -216,6 +216,28 @@ description: We couldn't find the page you're looking for.
 ```
 
 - This page applies to every subdirectory and language.
+
+### Create client-side redirections
+
+This theme uses the [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from) plugin.
+
+To add a redirect-from to a page, add the array to the YAML front-matter of your existing page or post. For example:
+
+```yaml
+title: My amazing post
+redirect_from:
+  - /post/123456789
+  - /post/123456789/my-amazing-post
+```
+
+Similarly, users can be redirected away from the site, with redirect-to. For example:
+
+```yaml
+title: My amazing post
+redirect_to: http://www.github.com
+```
+
+**Note:** Using redirect_to or redirect_from with collections will only work with files which are output to HTML, such as .md, .textile, .html etc.
 
 ### Translate your content into other languages
 
@@ -240,7 +262,7 @@ gem "github-pages"
 
 #### Keep your repository tidy
 
-- Building your site locally will add a lot of files. Don't commit them. 
+- Building your site locally will add a lot of files. Don't commit them.
 - Create a `.gitignore` file in your root directory and add this:
 
 ```
