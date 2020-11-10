@@ -237,7 +237,7 @@ title: My amazing post
 redirect_to: http://www.github.com
 ```
 
-**Note:** Using redirect_to or redirect_from with collections will only work with files which are output to HTML, such as .md, .textile, .html etc.
+**Note:** Using redirect_to or redirect_from with collections will only work with files which are output to HTML, such as .md, .textile, and .html.
 
 ### Translate your content into other languages
 
