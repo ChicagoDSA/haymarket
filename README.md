@@ -34,6 +34,8 @@ google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket # Append @vX.X.X to specify a version number
+plugins:
+  - jekyll-redirect-from
 
 # Set default front matter for Markdown files
 defaults:
