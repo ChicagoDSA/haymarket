@@ -223,7 +223,7 @@ description: We couldn't find the page you're looking for.
 
 This theme uses the [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from) plugin.
 
-To add a redirect-from to a page, add the array to the YAML front-matter of your existing page or post. For example:
+To add a `redirect-from` to a page, add the array to the YAML front matter of your existing page or post. For example:
 
 ```yaml
 title: My amazing post
@@ -232,14 +232,14 @@ redirect_from:
   - /post/123456789/my-amazing-post
 ```
 
-Similarly, users can be redirected away from the site, with redirect-to. For example:
+Similarly, users can be redirected away from the site, with `redirect-to`. For example:
 
 ```yaml
 title: My amazing post
 redirect_to: http://www.github.com
 ```
 
-**Note:** Using redirect_to or redirect_from with collections will only work with files which are output to HTML, such as .md, .textile, and .html.
+**Note:** Using `redirect_to` or `redirect_from` with collections will only work with files which are output to HTML, such as .md, .textile, and .html.
 
 ### Translate your content into other languages
 
