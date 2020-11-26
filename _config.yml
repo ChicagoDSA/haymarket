@@ -21,6 +21,12 @@ defaults:
       layout: default
       image: assets/images/og-image.png # Social media preview
 
+  # Set redirects relative to base
+  - scope:
+      path: _redirect-to
+    values:
+      permalink: /:path
+
   # Set URLs and language code for collections
   # English
   - scope:
@@ -55,6 +61,9 @@ defaults:
 # Manage lists of content with collections
 # https://jekyllrb.com/docs/collections/
 collections:
+  # Export redirects
+  redirect-to:
+    output: true
   # Homepage translations
   homepage:
     output: true
