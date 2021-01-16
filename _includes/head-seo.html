@@ -9,7 +9,15 @@
 	{%- endcapture -%}
 	<title>{{ title | strip_newlines }}</title>
 {% endif %}
-
+<!-- Make sure staging site is not listed -->
+<script>
+	if (window.location.hostname === "cdsa-staging.netlify.app") {
+		let metaEl = document.createElement('meta');
+		metaEl.name = 'robots';
+		metaEl.content = 'noindex'
+		document.head.appendChild(metaEl);
+	}
+</script>
 <!-- Set title based on conditionals -->
 <meta property="og:title" content="{{ title | strip_newlines }}" />
 
