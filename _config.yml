@@ -13,7 +13,7 @@ teamup: cb7ef970fd2b7b1a85acd5a8a2ef6d7f77477648b0963c29c629391742f24c5a
 permalink: pretty
 plugins:
   - jekyll-redirect-from
-staging_url: cdsa-staging.netlify.app
+staging_url:
 
 # Set default front matter for Markdown files
 defaults:
