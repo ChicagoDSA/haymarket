@@ -228,6 +228,10 @@ description: We couldn't find the page you're looking for.
 
 - This page applies to every subdirectory and language.
 
+### Add a staging url
+
+You may add a `staging_url:` option to your config file in order to apply a `noindex` meta tag to your staging site. This will prevent search engines from crawling your staging instance, ensuring that your search rankings won't be harmed by repetative content.
+
 ### Create client-side redirections
 
 This theme uses the [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from) plugin.
