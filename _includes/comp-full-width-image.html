@@ -1,8 +1,13 @@
 <div class="full-width-image-container">
-	<picture>
-		<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
+	{% if site.jekyll_webp_installed %}
+		<picture>
+			<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
+			<img class= "full-width-image" src="{{ include.image | relative_url }}" />
+		</picture>
+	{% else %}
 		<img class= "full-width-image" src="{{ include.image | relative_url }}" />
-	</picture>
+	{% endif %}
+	
 	{% if include.description or include.credit %}
 		{% include comp-image-caption.html description=include.description credit=include.credit %}
 	{% endif %}
