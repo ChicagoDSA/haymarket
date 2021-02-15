@@ -138,6 +138,11 @@ a {
   margin: 0 auto;
 
   #headline-image {
+    height: 24rem;
+    border-left: 1rem solid $dsa-red;
+  }
+
+  #headline-image-webp {
     height: auto;
     border-left: 1rem solid $dsa-red;
   }
@@ -152,6 +157,9 @@ a {
 
   @include extra-small {
     #headline-image {
+      height: 20rem;
+    }
+    #headline-image-webp {
       height: auto;
     }
   }

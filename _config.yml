@@ -15,6 +15,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-webp
 staging_url:
+jekyll_webp_installed: true
 
 ############################################################
 # Site configuration for the WebP Generator Plugin

@@ -83,7 +83,11 @@ Use tiles to style your collections. Add an optional limit.
 
 ### Small image
 
+{% if site.jekyll_webp_installed %}
 {% include comp-sm-image.html image="assets/images/theme-WEB-DuBois.png" alt="Side profile of W.E.B. DuBois" %}
+{% else %}
+![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
+{% endif %}
 
 ### Large image with a caption
 

@@ -1,9 +1,13 @@
 <div id="headline-image-container">
-	<!-- <div id="headline-image" class="cover-background" style="background-image: url('{{ include.image | relative_url }}');"></div> -->
-	<picture>
-		<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
-		<img id="headline-image" class="cover-background" src="{{ include.image | relative_url }}" />
-	</picture>
+	{% if site.jekyll_webp_installed %}
+		<picture>
+			<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
+			<img id="headline-image-webp" class="cover-background" src="{{ include.image | relative_url }}" />
+		</picture>
+	{% else %}
+		<div id="headline-image" class="cover-background" style="background-image: url('{{ include.image | relative_url }}');"></div>
+	{% endif %}
+
 	{% if include.description or include.credit %}
 		{% include comp-image-caption.html description=include.description credit=include.credit %}
 	{% endif %}
