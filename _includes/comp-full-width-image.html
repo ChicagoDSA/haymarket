@@ -2,10 +2,10 @@
 	{% if site.jekyll_webp_installed %}
 		<picture>
 			<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
-			<img class= "full-width-image" src="{{ include.image | relative_url }}" />
+			<img class= "full-width-image" src="{{ include.image | relative_url }}" loading="lazy"/>
 		</picture>
 	{% else %}
-		<img class= "full-width-image" src="{{ include.image | relative_url }}" />
+		<img class= "full-width-image" src="{{ include.image | relative_url }}" loading="lazy"/>
 	{% endif %}
 	
 	{% if include.description or include.credit %}
