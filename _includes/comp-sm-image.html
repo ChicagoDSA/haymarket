@@ -1,7 +1,7 @@
-<div class="full-width-image-container">
+<div>
 	<picture>
 		<source srcset="{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp' }}" type="image/webp">
-		<img class= "full-width-image" src="{{ include.image | relative_url }}" />
+		<img src="{{ include.image | relative_url }}" alt="{{ include.alt }}"/>
 	</picture>
 	{% if include.description or include.credit %}
 		{% include comp-image-caption.html description=include.description credit=include.credit %}

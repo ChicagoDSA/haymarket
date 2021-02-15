@@ -28,9 +28,9 @@ Use tiles to style your collections. Add an optional limit.
 
 #### Header 4
 
-* This is an unordered list following a header.
-* This is an unordered list following a header.
-* This is an unordered list following a header.
+- This is an unordered list following a header.
+- This is an unordered list following a header.
+- This is an unordered list following a header.
 
 ##### Header 5
 
@@ -41,7 +41,7 @@ Use tiles to style your collections. Add an optional limit.
 ###### Header 6
 
 | head1        | head two            | three |
-|:-------------|:--------------------|:------|
+| :----------- | :------------------ | :---- |
 | ok           | good social justice | nice  |
 | out of stock | good and plenty     | nice  |
 | ok           | good `oreos`        | hmm   |
@@ -49,14 +49,14 @@ Use tiles to style your collections. Add an optional limit.
 
 ### There's a horizontal rule below this.
 
-* * *
+---
 
 ### Here is an unordered list:
 
-* Item foo
-* Item bar
-* Item baz
-* Item zip
+- Item foo
+- Item bar
+- Item baz
+- Item zip
 
 ### And an ordered list:
 
@@ -68,22 +68,22 @@ Use tiles to style your collections. Add an optional limit.
 ### And a nested list:
 
 - level 1 item
-	- level 2 item
-	- level 2 item
-		- level 3 item
-		- level 3 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
 - level 1 item
-	- level 2 item
-	- level 2 item
-	- level 2 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
 - level 1 item
-	- level 2 item
-	- level 2 item
+  - level 2 item
+  - level 2 item
 - level 1 item
 
 ### Small image
 
-![Side profile of W.E.B. DuBois](assets/images/theme-WEB-DuBois.png)
+{% include comp-sm-image.html image="assets/images/theme-WEB-DuBois.png" alt="Side profile of W.E.B. DuBois" %}
 
 ### Large image with a caption
 
@@ -111,6 +111,7 @@ Use tiles to style your collections. Add an optional limit.
 {% include comp-button.html text="I want to contact the EC" link="another-page" %}
 
 {% capture note %}
+
 #### Use a note to highlight supporting information.
 
 Add Markdown content here.
