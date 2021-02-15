@@ -34,8 +34,10 @@ google_analytics: # Tracking ID
 teamup: # Calendar API key
 permalink: pretty
 remote_theme: ChicagoDSA/haymarket # Append @vX.X.X to specify a version number
+staging_url:
 plugins:
   - jekyll-redirect-from
+jekyll_webp_installed: false
 
 # Set default front matter for Markdown files
 defaults:
@@ -265,6 +267,8 @@ The example site also has a complete Spanish translation. For everything to work
 ### Serve optimized .webP files
 
 Some of the templates use the `<picture>` tag to allow use of optimized .webP images in place of heavier .jpg and .png file types. You can utilize the [Jekyll WebP](https://github.com/sverrirs/jekyll-webp) plugin to generate .webP images from your .jpg and .png assets. Just add `jekyll-webp` to both your gemfile and config.yml file with any additional configuration as specified on the plugin's documentation, and the files will be converted and served on your next build.
+
+Additionally, in order to take advantage of the templates using the `<picture>` tag, you will need to set the `jekyll_webp_installed:` option in your config file to `true`.
 
 See Haymarket's `\_config.yml` for an example of how this can be implemented.
 
