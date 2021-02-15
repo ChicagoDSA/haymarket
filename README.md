@@ -262,6 +262,12 @@ The example site also has a complete Spanish translation. For everything to work
 2. `nav.yml` and `translations.yml` have line items for English (`en`). Add additional ones for your language.
 3. Within `_homepage`, `_pages`, and any collection directories, create an additional language folder. Put your translated Markdown files there.
 
+### Serve optimized .webP files
+
+Some of the templates use the `<picture>` tag to allow use of optimized .webP images in place of heavier .jpg and .png file types. You can utilize the [Jekyll WebP](https://github.com/sverrirs/jekyll-webp) plugin to generate .webP images from your .jpg and .png assets. Just add `jekyll-webp` to both your gemfile and config.yml file with any additional configuration as specified on the plugin's documentation, and the files will be converted and served on your next build.
+
+See Haymarket's `\_config.yml` for an example of how this can be implemented.
+
 ## Local development
 
 1. Open your terminal window and run `gem install github-pages`.
