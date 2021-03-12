@@ -1,6 +1,6 @@
 {% capture imageBackground %}
 {% if site.jekyll_webp_installed %}
-	<div class="image cover-background" style="background-image: url('{{ include.image | relative_url | replace:'.png','.webp' | replace:'.jpg','.webp'}}');" aria-label="{{ include.image-description }}">
+	<div class="image cover-background" style="background-image: url('{{ include.image | replace:.png','.webp' | replace:'.jpg','.webp'}}');" aria-label="{{ include.image-description }}">
 		<div class="overlay"></div>
 	</div>
 {% else %}
