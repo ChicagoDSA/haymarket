@@ -167,6 +167,8 @@ This is another page.
 
 2. Add your update content to the file, and it will appear listed on `your-base-url.com/updates` 
 
+3. If desired, you can control the index page title (if you want something other than "Updates", like "blog" or "announcements") by changing the name of the `updates/` directory and the front matter of `updates/index.html` accordingly. 
+
 Posts are native/baked-in to Jekyll. For more info on how they can be utilized, check out their [documentation](https://jekyllrb.com/docs/posts/).
 
 ### Add custom navigation
