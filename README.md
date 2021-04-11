@@ -161,6 +161,14 @@ This is another page.
 
 3. Commit your change, and your page will be published at `my-username.github.io/my-new-site/another-page`. Even though this page lives inside `_pages/en`, the `defaults` settings in `_config.yml` moved it to the site's root.
 
+### Adding "updates"
+
+1. Add a markdown file to the `_posts/` subdirectory with the filename format `yyyy-mm-dd-post-title.md`. Jekyll uses the date in the filename to organize the updates, so it is important that they are formatted this way. 
+
+2. Add your update content to the file, and it will appear listed on `your-base-url.com/updates` 
+
+Posts are native/baked-in to Jekyll. For more info on how they can be utilized, check out their [documentation](https://jekyllrb.com/docs/posts/).
+
 ### Add custom navigation
 
 - Create a file named `_data/nav.yml`. Add this to it:
