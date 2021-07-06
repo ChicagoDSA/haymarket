@@ -881,8 +881,6 @@ a,
 
   .tile-container-image,
   .tile-container-text {
-    height: 15rem;
-
     .column-fix {
       position: absolute;
       top: 0;
@@ -911,6 +909,8 @@ a,
   }
 
   .tile-container-image {
+    height: 15rem;
+
     .image .overlay {
       position: absolute;
       width: 100%;
@@ -935,6 +935,8 @@ a,
   }
 
   .tile-container-text {
+    height: 2rem;
+
     .color-background {
       background-color: $dsa-purple;
 
