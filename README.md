@@ -216,12 +216,8 @@ elements:
 
 ```yaml
 # Add content here to enable a site-wide announcement
-text:
-  en: # Style your text with Markdown
-  es: # Add translations
-url:
-  default: # Apply a link to all languages
-  en: # Or add language-specific links
+text: # Style with markdown
+url: # Apply a link
 ```
 
 - If `_data` contains `announcement.yml`, and `announcement.yml` contains these values, the announcement will be visible.
