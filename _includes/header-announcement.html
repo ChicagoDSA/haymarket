@@ -1,16 +1,18 @@
-{% if site.data.announcement.url.[page.lang] or site.data.announcement.url.default %}
+{% assign url_size = site.data.announcement.url.size %}
+{% assign text_size = site.data.announcement.text.size %}
+{% if url_size > 0 %}
 	<div id="announcement">
 		<div id="announcement-content">
-			<a id="announcement-link" href="{{ site.data.announcement.url.[page.lang] | default: site.data.announcement.url.default | relative_url }}">
-				<p>{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
+			<a id="announcement-link" href="{{ site.data.announcement.url | relative_url }}">
+				<p>{{ site.data.announcement.text | markdownify | remove: "<p>" | remove: "</p>" | strip_newlines }}<i class="fas fa-arrow-right"></i></p>
 			</a>
 		</div>
 		<div style="clear:both"></div>
 	</div>
-{% elsif site.data.announcement.text.[page.lang] %}
+{% elsif text_size > 0 %}
 	<div id="announcement">
 		<p id="announcement-content">
-			{{ site.data.announcement.text.[page.lang] | markdownify | remove: "<p>" | remove: "</p>" }}
+			{{ site.data.announcement.text | markdownify | remove: "<p>" | remove: "</p>" }}
 		</p>
 		<div style="clear:both"></div>
 	</div>
