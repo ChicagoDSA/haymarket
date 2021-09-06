@@ -1,8 +1,2 @@
-# Add content here to enable a site-wide announcement
-text:
-  en: "**Here's an announcement:** you can turn it off/on, add styling, and link to other pages"
-  es: "**Aquí hay un anuncio:** puedes apagarlo/encenderlo, agregar estilo y enlazar a otras páginas"
-url:
-  default: # Apply a link to all languages
-  en: another-page
-  es: es/otra-pagina
+text: "**Here's an announcement:** you can turn it off/on, add styling, and link to other pages"
+url: "another-page"
